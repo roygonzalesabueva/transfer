@@ -515,7 +515,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   padding: 20px 20px;
   border: 15px ;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
   opacity: 1;
 }
 
@@ -552,6 +552,28 @@ body {
 </style>
 
 
+<style>
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+</style> 
+
+
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -580,6 +602,12 @@ body {
   
     <img src="DAVAOSUR.png" width="310" height="120">
               <form class="pt-3" method="post" name="login" action="login.php">
+
+
+   
+              <h3><label><font color="BLUE" size="5"> Sign In </font></label></h3>
+
+
               
               <B><label>USERNAME</label></B><br>
               <div class="input-container">
@@ -605,7 +633,9 @@ body {
                 <div class="mt-3">
              <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="LOGIN" /> 
                 </div><br>
-                <h3>Register</h3> 
+                <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Register</button>
+                <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button>
+           
               </form>
            
         </div>
@@ -622,12 +652,143 @@ body {
 
     <!-- page-body-wrapper ends -->
 
-  
-
-
-  <!-- inject:js -->
  
-  <!-- endinject -->
+    <div class="modal fade" aria-hidden="true" id="form_modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="POST" action="save2.php">
+				<div class="modal-header">
+
+
+        
+
+
+
+
+
+
+
+					<h3 class="modal-title">Register</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-md-2"></div>
+					<div class="col-md-16">
+						
+						
+					<!--	<div class="form-group">
+							
+						<label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
+						</div>-->
+
+
+						<div class="form-group">
+							<label>Username</label>
+							<input type="text" name="username" class="form-control" required="required"/>
+						</div>
+
+            <div class="form-group">
+							<label>Password</label>
+							<input type="text" name="password" class="form-control" required="required"/>
+						</div>
+						
+						<div class="form-group">
+							<label>Email</label>
+							<input type="text" name="email" class="form-control" required="required"/>
+						</div>
+
+            <div class="form-group">
+							<label>School</label>
+							<input type="text" name="school" class="form-control" required="required"/>
+						</div>
+
+
+
+
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+					<button  class="btn btn-primary" name="save2"  ><span class="glyphicon glyphicon-save"></span> Save</button>
+					
+
+
+					</div>
+				</div>
+			
+				
+
+
+
+
+				
+			</form>
+		</div>
+	</div>
+</div>	
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" aria-hidden="true" id="form_modal2">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="POST" action="save3.php">
+				<div class="modal-header">
+					<h3 class="modal-title">Forgot Password</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-md-2"></div>
+					<div class="col-md-16">
+						
+						
+					<!--	<div class="form-group">
+							
+						<label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
+						</div>-->
+            <div class="form-group">
+							<label>Email</label>
+							<input type="text" name="email" class="form-control" required="required"/>
+						</div>
+
+						<div class="form-group">
+							<label>Username</label>
+							<input type="text" name="username" class="form-control" required="required"/>
+						</div>
+
+            <div class="form-group">
+							<label>Change Password</label>
+							<input type="text" name="password" class="form-control" required="required"/>
+						</div>
+						
+						
+
+
+
+
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+					<button  class="btn btn-primary" name="save3"  ><span class="glyphicon glyphicon-save"></span>YES</button>
+					
+
+
+					</div>
+				</div>
+			
+				
+
+
+
+
+				
+			</form>
+		</div>
+	</div>
+</div>	
+
+
+
 </body>
 
 </html>
