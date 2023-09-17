@@ -443,6 +443,38 @@ function myTimer() {
   }
 
 
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userschat WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: chat_client.php");
+      
+    }
+    
+
+  }
+
+
+
+
+
+
+
+
+
+
     
   }
 
@@ -508,21 +540,62 @@ body {font-family: Arial, Helvetica, sans-serif;}
   border: 20px solid dodgerblue;
 }
 
-/* Set a style for the submit button */
-.btn {
-  background-color: dodgerblue;
-  color: white;
-  padding: 20px 20px;
-  border: 15px ;
-  cursor: pointer;
-  width: 30%;
-  opacity: 1;
-}
+
 
 .btn:hover {
   opacity: 1;
 }
 </style>
+
+
+
+
+
+<style>
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+	
+
+
+
+
+
+
+
+
 
 
 
@@ -600,7 +673,7 @@ h3 {
             
          
   
-    <img src="DAVAOSUR.png" width="310" height="120">
+    <img src="DAVAOSUR.png" width="310" height="150">
               <form class="pt-3" method="post" name="login" action="login.php">
 
 
@@ -633,9 +706,10 @@ h3 {
                 <div class="mt-3">
              <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="LOGIN" /> 
                 </div><br>
-                <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Register</button>
+               
+                <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button>
                 <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button>
-           
+                
               </form>
            
         </div>

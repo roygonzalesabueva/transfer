@@ -296,7 +296,7 @@ body {
 
     
     <li> <B> <a <p id="demo"></p></a> </B> </li>
-		
+    <li> <a href="chatrecord.php"><B>Chat Room</B></a></li>
     <li>  
     <a href="indexclient_record.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><B>Transaction Status</B></a>
           </li>
