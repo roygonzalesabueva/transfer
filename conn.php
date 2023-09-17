@@ -1,5 +1,5 @@
 <?php
-	$conn=mysqli_connect("localhost", "root", "", "db_transfer");
+	$conn=mysqli_connect("localhost", "root", "@DavaosurDB2023", "db_transfer");
 	
 	if(!$conn){
 		die("Error: Failed to connect to database!");
@@ -8,7 +8,7 @@
 
 <?php
 $uname = "root";
-$dbpass = "";
+$dbpass = "@DavaosurDB2023";
 $host = "localhost";
 $db = "db_transfer";
 

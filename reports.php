@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","db_transfer");
+$con = mysqli_connect("localhost","root","@DavaosurDB2023","db_transfer");
 $sql = "select distinct mem_id from member1 order by  mem_id";
 $result = mysqli_query($con,$sql);
 ?>

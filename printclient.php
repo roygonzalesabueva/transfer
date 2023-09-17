@@ -10,7 +10,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "@DavaosurDB2023";
 $dbname = "db_transfer";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +19,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$conn = mysqli_connect("localhost","root","","db_transfer");
+$conn = mysqli_connect("localhost","root","@DavaosurDB2023","db_transfer");
 $sql = "SELECT * FROM memberclient WHERE trackid='{$_POST['trackid']}'";
 $result = mysqli_query($conn,$sql);
 
