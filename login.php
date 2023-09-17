@@ -762,7 +762,7 @@ h3 {
 
             <div class="form-group">
 							<label>Password</label>
-							<input type="text" name="password" class="form-control" required="required"/>
+							<input type="password" name="password" class="form-control" required="required"/>
 						</div>
 						
 						<div class="form-group">
@@ -834,7 +834,7 @@ h3 {
 
             <div class="form-group">
 							<label>Change Password</label>
-							<input type="text" name="password" class="form-control" required="required"/>
+							<input type="password" name="password" class="form-control" required="required"/>
 						</div>
 						
 						
