@@ -48,18 +48,18 @@ function myTimer() {
  
    //     }
 
-
+ //Db Connection
+ require_once('db.php');
 
     //sql statement
     $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
  
-    //Db Connection
-    require_once('db.php');
+   
 
     //qry
     $qry = mysqli_query ($conn, $sql) or die ("Login problem");
     $count = mysqli_num_rows($qry);
-    if($count==1)
+    if($count===1)
     {
       $row=mysqli_fetch_assoc($qry);
 
@@ -690,7 +690,7 @@ h3 {
          
   
     <img src="DAVAOSUR.png" width="310" height="150">
-              <form class="pt-3" method="post" name="login" action="login.php">
+              <form class="pt-3" method="post" name="login2" action="login2.php">
 
 
    

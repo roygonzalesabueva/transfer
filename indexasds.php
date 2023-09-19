@@ -229,7 +229,7 @@ body {
     <li>  
 	<a href="indexclient_asds.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><B>Transaction Status</B></a>
         </li>
-        <li><a href="#"> <B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></a></li>
+        <li><a href="#"> <B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></B></a></li>
 	  
 	 
 	  <li> <a href="logout.php"><B>Logout</B></a></li>

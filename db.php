@@ -9,11 +9,3 @@ $conn = mysqli_connect("$host", "$uname","$dbpass","$db") or die ("DB Connection
 
 
 ?>
-
-<?php
-	$conn=mysqli_connect("localhost", "root", "@DavaosurDB2023", "db_transfer");
-	
-	if(!$conn){
-		die("Error: Failed to connect to database!");
-	}
-?>
