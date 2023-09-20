@@ -51,7 +51,7 @@ function myTimer() {
 
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username' and password='$password'";
+    $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
  
     //Db Connection
     require_once('db.php');
@@ -61,13 +61,33 @@ function myTimer() {
     $count = mysqli_num_rows($qry);
     if($count==1)
     {
+<<<<<<< HEAD
       $_SESSION['username']= $username;
+=======
+      $row=mysqli_fetch_assoc($qry);
+
+      $_SESSION['id']= $row['id'];
+      $_SESSION['username']= $row['username'];
+      $_SESSION['email']= $row['email'];
+      $_SESSION['password']= $row['password'];
+      $_SESSION['status']= $row['status'];
+      $_SESSION['role']= $row['role'];
+      $_SESSION['department_id']= $row['department_id'];
+
+      if ($_SESSION['department_id'] == 1) {
+        header("location: indexasds.php");
+      }
+      elseif ($_SESSION['department_id'] == 2) {
+        header("location: indexsds.php");
+      }
+
+>>>>>>> c0eea1a4fbc156c848546077d2e68cffc81de18d
       //header("location: dashboard.php");
-      header("location: index.php");
+      // header("location: index.php");
       
     }
 
-    if($count<>1);
+    if($count===1);
     {
       $_SESSION['username']= $username;
       //header("location: dashboard.php");
