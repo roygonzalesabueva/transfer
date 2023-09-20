@@ -61,9 +61,6 @@ function myTimer() {
     $count = mysqli_num_rows($qry);
     if($count==1)
     {
-<<<<<<< HEAD
-      $_SESSION['username']= $username;
-=======
       $row=mysqli_fetch_assoc($qry);
 
       $_SESSION['id']= $row['id'];
@@ -81,7 +78,6 @@ function myTimer() {
         header("location: indexsds.php");
       }
 
->>>>>>> c0eea1a4fbc156c848546077d2e68cffc81de18d
       //header("location: dashboard.php");
       // header("location: index.php");
       
