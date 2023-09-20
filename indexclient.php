@@ -2,9 +2,6 @@
 
 
 
-<?php
-include_once("session.php")
-?>
 
 
 
@@ -288,7 +285,7 @@ div.c {
 <!--<nav class="navbar navbar-inverse">-->
   <div class="container-fluid">
     <div class="navbar-header">
-	<img src="DAVAOSUR.png" width="150" height="70">
+	<img src="DAVAOSUR.png" width="230" height="120">
  </div>
   <!--  <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
@@ -302,11 +299,11 @@ div.c {
       <li><a href="#">Page 2</a></li>
     </ul>-->
     <ul class="nav navbar-nav navbar-right">
-	<li><a <B><p id="demo"></p></B> </a> </li>
-      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li>
-      <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
-	  <li><a href="index.php"> <font size="2"> <span class="glyphicon glyphicon-remove"></span><B> Close</B></font> </a></li>
 	
+      <!-- <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li> -->
+      <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
+	  <!-- <li><a href="index.php"> <font size="2"> <span class="glyphicon glyphicon-remove"></span><B> Close</B></font> </a></li>
+	 -->
     </ul>
 
   </div>
@@ -364,22 +361,36 @@ div.c {
 
 <center><font size="5"> 
 DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
-		 <B>Transaction Details</B>
+		 <B>ENTER TRANSACTION ID</B>
+<br>
+		 <a <B><p id="demo"></p></B> </a> 
 		  </font></center>
 	 
-	
+		  
 	
 
 	
 	<form class="" action="printclient.php" method="post" target="_blank">
 
 	
+<br><br><br>
 
-	
-	<input type="text"  name="trackid">
+	<div class="row align-items-center">
+	<div class="col-lg-4"></div>
+		<div class="col-lg-4 offset-col-3">
+			<div class="col-lg-10"><div class="form-group">
+				<!-- <label for="search">View</label> -->
+				<input type="tel" class="form-control-lg form-control" name="trackid">
+			</div></div>
+			<div class="col-lg-2"><button type="submit" class="btn btn-primary" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>   View </button></center></div>
+			
+			
+
+		</div>
+		<div class="col-lg-4"></div>
+	</div>
 	<!-- <input type="submit" name="search"  value="Print"> -->
-	 <button type="submit" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>    Print </button>
-
+	 
 	<!--<select class="" name="trackid">-->
 	
 	
@@ -389,23 +400,23 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 	
 
 
-	<form class="" action="indexclient.php" method="post" target="_blank">
+	<!--<form class="" action="indexclient.php" method="post" target="_blank">-->  
 	<!--<form action="indexclient.php" method="post" enctype="multipart/form-data">   -->           
 
 
-				<input type="text" placeholder="Search ID.."  name="valueToSearch"> 
+				<!-- <input type="text" placeholder="Search ID.."  name="valueToSearch">  -->
 		
 				<!-- <input type="submit" name="search"  value="Search"> -->
 		
 				<!-- <button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>-->
 
-				 <button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>
-	</form>
+				 <!-- <button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button> -->
+	<!-- </form> -->
 	
 
 
 
-			<table class="table table-bordered">
+			<!-- <table class="table table-bordered">
 
 
 
@@ -458,7 +469,7 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 
 			</table>
 
-		</div></center>
+		</div></center> -->
 
 
 

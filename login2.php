@@ -51,38 +51,6 @@ function myTimer() {
 
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username' and password='$password'";
- 
-    //Db Connection
-    require_once('db.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['username']= $username;
-      //header("location: dashboard.php");
-      header("location: index.php");
-      
-    }
-
-    if($count<>1);
-    {
-      $_SESSION['username']= $username;
-      //header("location: dashboard.php");
-    //  header("location: index.php");
-  echo"<script>alert('Error=Incorrect User Name or password.')</script>";
-   
-
-
-    }
-
-
-
-
-
-    //sql statement
     $sql = "SELECT * FROM user_tbl WHERE username='$username' and password='$password'";
  
     //Db Connection
@@ -110,59 +78,6 @@ function myTimer() {
         header("location: indexsds.php");
       }
 
-      elseif ($_SESSION['department_id'] == 3) {
-        header("location: indexrecord.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 4) {
-        header("location: indexqueue.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 5) {
-        header("location: indexhrmo.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 6) {
-        header("location: indexsgod.php");
-      }
-      elseif ($_SESSION['department_id'] == 7) {
-        header("location: indexcid.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 8) {
-        header("location: indexacct.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 10) {
-        header("location: indexsupply.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 11) {
-        header("location: indexbudget.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 12) {
-        header("location: indexcashier.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 13) {
-        header("location: indexlegal.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 14) {
-        header("location: indexdpsu.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 15) {
-        header("location: index_trans.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 16) {
-        header("location: index.php");
-      }
-
-
-
       //header("location: dashboard.php");
       // header("location: index.php");
       
@@ -181,16 +96,6 @@ function myTimer() {
 
 
 
-
-
-
-
-
-
-
-
-
-
   //else {
 
 		//	echo"<script>alert('error=Incorrect User Name or password.')</script>";
@@ -198,42 +103,360 @@ function myTimer() {
 
 
 
+{
+
+    //sql statement
+    $sql = "SELECT * FROM usersds WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexsds.php");
+      
+      
+    }
+   
+
+
+  }
+
+
+
+{
+
+    //sql statement
+    $sql = "SELECT * FROM userasds WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexasds.php");
+      
+      
+    }
+
+
+  }
+
+
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userrecord WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexrecord.php");
+      
+    }
+
+
+
+  }
+
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userqueue WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexqueue.php");
+      
+    }
+
+
+
+  }
+
+
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userhrmo WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexhrmo.php");
+      
+    }
+
+
+  }
+
+
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM usersgod WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexsgod.php");
+      
+    }
+
+
+
+  }
+
+
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM usercid WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexcid.php");
+      
+    }
+
+
+
+
+  }
 
 
 
 
 
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM useracct WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexacct.php");
+      
+    }
 
 
 
 
+  }
+
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM usersupply WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexsupply.php");
+      
+    }
 
 
 
 
-
-
-
-
-
-
-
-
-
+  }
 
 
 
   
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userbudget WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexbudget.php");
+      
+    }
+
+
+  }
+
+
+
+  
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM usercashier WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexcashier.php");
+      
+    }
+    
+
+  }
+
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userlegal WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexlegal.php");
+      
+    }
+    
+
+  }
 
 
 
 
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM userdpsu WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: indexdpsu.php");
+      
+    }
+    
+
+  }
 
 
 
 
+  {
 
+    //sql statement
+    $sql = "SELECT * FROM usertrans WHERE username='$username' and password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
 
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: index_trans.php");
+      
+    }
+    
+
+  }
 
 
 
@@ -467,7 +690,7 @@ h3 {
          
   
     <img src="DAVAOSUR.png" width="310" height="150">
-              <form class="pt-3" method="post" name="login" action="login.php">
+              <form class="pt-3" method="post" name="login" action="login2.php">
 
 
    

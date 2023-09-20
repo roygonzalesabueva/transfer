@@ -36,7 +36,7 @@ class MyPDF extends FPDF {
        
       
 	
-    $this->Image('logo2.PNG',76,2,56,0);
+    $this->Image('logo2.PNG',32,1,148,0);
     $this->SetFont('Times','B',18);
     $this->Cell(0,70,'___________________________________________________________',0,0,'C');
  
@@ -55,6 +55,9 @@ class MyPDF extends FPDF {
         
       
         $this->Cell(195,10,'-----CLAIM STUB-----',0,0,'C');	
+        $this->Ln();
+        $this->SetFont('Times','B',10);
+        $this->Cell(195,10,'-----Note: Follow the link to monitor your document/s "http://localhost/transfer/indexclient.php"-----',0,0,'C');	
         $this->Ln();	
        
 		
@@ -83,7 +86,7 @@ $this->Image('logo4.png',10,200,65,0);
 	
 	
 	
-$this->Image('logo3.png',10,270,100,0);
+$this->Image('logo3.png',28,270,155,0);
 //	$this->SetFont('Times','B',10);
   //  $this->Cell(110,320,'Address: Northern Paligue, Padada, Davao del Sur',0,0,'C');
 //	$this->Cell(-132,330,'Website: www.depeddavaodelsur.ph',0,0,'C');
