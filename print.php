@@ -57,7 +57,7 @@ class MyPDF extends FPDF {
         $this->Cell(195,10,'-----CLAIM STUB-----',0,0,'C');	
         $this->Ln();
         $this->SetFont('Times','B',10);
-        $this->Cell(195,10,'-----Note: Follow the link to monitor your document/s "http://localhost/transfer/indexclient.php"-----',0,0,'C');	
+        $this->Cell(195,10,'-----Note: Follow the link to monitor your document/s "http://202.137.126.59/transfer/indexclient.php"-----',0,0,'C');	
         $this->Ln();	
        
 		
