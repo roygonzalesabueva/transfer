@@ -33,7 +33,7 @@ class MyPDF extends FPDF {
        
       
 	
-    $this->Image('logo2.PNG',76,2,56,0);
+    $this->Image('logo2.PNG',30,1,150,0);
     $this->SetFont('Times','B',18);
     $this->Cell(0,70,'___________________________________________________________',0,0,'C');
  
@@ -51,7 +51,7 @@ class MyPDF extends FPDF {
 
         
       
-        $this->Cell(195,20,'Progress of Data Transactions',0,0,'C');	
+        $this->Cell(195,20,'TRANSACTIONS HISTORY',0,0,'C');	
         $this->Ln();	
        
 		
@@ -81,7 +81,7 @@ $this->Cell(-195,200,'',0,0,'C');
 	
 	
 	
-$this->Image('logo3.png',10,270,100,0);
+$this->Image('logo3.png',25,270,160,0);
 	//$this->SetFont('Times','B',10);
   //  $this->Cell(110,320,'Address: Northern Paligue, Padada, Davao del Sur',0,0,'C');
 //	$this->Cell(-132,330,'Website: www.depeddavaodelsur.ph',0,0,'C');

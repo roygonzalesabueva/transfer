@@ -1,12 +1,4 @@
-<?php
-// Your PHP code and processing here
 
-// Refresh the page after 3 seconds (adjust the value as needed)
-$refreshDelay = 15;
-header("refresh: $refreshDelay");
-
-// The rest of your PHP code and HTML content
-?>
 
 
 
@@ -341,7 +333,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 25%;
+        width: 20%;
         padding: 0 10px;
 
     }
@@ -418,8 +410,9 @@ function myTimer() {
       <li><a href="#">Page 2</a></li>
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
+         <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction ID</B></font></button>
 
-                <li> <B> <a <p id="demo"></p></a> </B> </li>
+                <li> <B> <p id="demo"></p> </B> </li>
                 <li> <a href="chat_index.php"><B>Chat Room</B></a></li>
                 <li>
                     <a href="indexclient.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><B>Transaction
@@ -443,17 +436,28 @@ function myTimer() {
   | <a href="indexsgod.php">SGOD</a> | <a href="indexsupply.php">Supply</a> | <a href="indexlegal.php">Legal</a> | <a href="indexcashier.php">Cashier</a>
   | <a href="indexdpsu.php">DPSU</a>   | <a href="indexacct.php">Accounting</a> | <a href="indexbudget.php">Budget</a> | <a href="indexqueue.php">Queue</a> | <a href="index_trans.php">New Transaction / Claim</a></h5> </center>
 
-
-		
-		
 <br>
+  <!-- <center> -->
 
 
-    <center>
+
+
+
+<!--  
+
+<button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal2"><font size="5"> <B>Claim</font></B> </button>
+-->
+
+<!-- </center> -->
+		
+
+
+
+    <!-- <center>
         <font size="5">
             <B> Documents Verification </B>
         </font>
-    </center>
+    </center> -->
 
 
 
@@ -463,7 +467,7 @@ function myTimer() {
         <div class="column">
             <div class="card">
                 <h3><B>Window 1<B></h3>
-                <p>New Transaction</p>
+                <p>New Transaction ID</p>
 
 
 
@@ -488,7 +492,7 @@ function myTimer() {
 
                     <thead class="alert-info">
                         <tr>
-                            <th>Transaction_ID on queue</th>
+                            <th>On queue</th>
                             <!--  <th>Action</th>-->
 
 
@@ -545,19 +549,7 @@ while($fetch=mysqli_fetch_array($query)){
 
         <div class="column">
 
-            <!--<center>
-
-     <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="5"> <B>New Transaction</B></font></button>
-   
-
-  
-  
- 
-  
-      <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal2"><font size="5"> <B>Claim</font></B> </button>
-   
-
-</center>-->
+      
 
 
 
@@ -570,7 +562,10 @@ while($fetch=mysqli_fetch_array($query)){
 
 
             <form class="" action="print.php" method="post" target="_blank">
+
+            <div class="form-group">
                 <select class="" name="trackid">
+                    
                     <?php
 	while($rows =mysqli_fetch_array($result)){
 		echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
@@ -581,8 +576,10 @@ while($fetch=mysqli_fetch_array($query)){
 
 
                 </select>
-
-                <input type="submit" name="search" value="  Print   Claim   Stub">
+              
+              
+                <input type="submit" name="search" value="  Print">
+                </div>
             </form>
 
 
@@ -592,14 +589,14 @@ while($fetch=mysqli_fetch_array($query)){
 
             <form action="index.php" method="post" enctype="multipart/form-data">
 
-
+            <div class="form-group">
                 <input type="text" name="valueToSearch" placeholder="Search ID..">
 
                 <!--<input type="submit" name="search" value="Search"> -->
+               
+                <button type="submit" name="search" value="Search"><i class="fa fa-search"></i></button>
 
-                <button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>
-
-
+                </div>
             </form>
 
 
@@ -621,10 +618,10 @@ while($fetch=mysqli_fetch_array($query)){
                     <tr>
                         <th>Transaction_ID</th>
 
-                        <th>Sender/Client</th>
+                        <th>Sender</th>
                         <th>Transaction/Description</th>
                         <th>Receiver</th>
-                        <th>Remarks</th>
+                        <th>Remarks/Status</th>
                         <th>Date/Time</th>
                         <th>Notification</th>
                         <th>Action</th>
@@ -1058,7 +1055,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
-    <div class="modal fade" aria-hidden="true" id="form_modal">
+    <!-- <div class="modal fade" aria-hidden="true" id="form_modal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form method="POST" action="save.php">
@@ -1126,7 +1123,103 @@ while($fetch=mysqli_fetch_array($query)){
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" aria-hidden="true" id="form_modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="POST" action="save.php">
+				<div class="modal-header">
+					<h3 class="modal-title">Create Transaction ID</h3>
+				</div>
+				<div class="modal-body">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<div class="form-group">
+							<label>Transaction_ID </label>
+							<input type="text" id="trackid" name="trackid" class="form-control" required="required" readonly/>
+						</div>
+						<div class="form-group">
+							<label>Date/Time</label>
+							<input type="text" id="datetoday" name="datetoday" class="form-control" required="required" readonly/>
+						</div>
+						<div class="form-group">
+							<label>Sender/Client</label>
+							<input type="text" name="firstname" class="form-control" required="required"/>
+						</div>
+
+
+						<div class="form-group">
+							<label>Transaction/Description</label>
+							<input type="text" name="lastname" class="form-control" required="required"/>
+						</div>
+
+
+						
+						
+
+
+						  <div class="form-group">
+							<label>Receiver</label>
+
+							
+							<select id="country" name="section" class="form-control" required="required">
+									<option value="Records">Records</option>
+								<!--	<option value="SDS">SDS</option>
+									<option value="ASDS">ASDS</option>
+									<option value="SGOD">SGOD</option>
+									<option value="CID">CID</option>
+									<option value="HRMO">HRMO</option>
+									<option value="ACCOUNTING">ACCOUNTING</option>-->
+						</select>
+
+						
+						</div>
+
+
+						
+						<div class="form-group">
+							<label>Remarks/Status</label>
+							<input type="text" name="address" class="form-control" />
+						</div>
+
+
+
+					</div>
+				</div>
+				<br style="clear:both;"/>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
+					<button  class="btn btn-primary" name="save"  ><span class="glyphicon glyphicon-save"></span> Submit</button>
+					
+
+
+
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>	
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1307,23 +1400,23 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 <script type="text/javascript">
-function generateTrackingID() {
-    const d = new Date();
-    var month = d.getMonth();
-    var year = d.getFullYear();
-    var day = d.getDate();
-    var inputF = document.getElementById("trackid");
-    var inputD = document.getElementById("datetoday");
-    //var inputT = document.getElementById("datetoday");
+		function generateTrackingID(){
+			const d = new Date();
+			var month = d.getMonth();
+			var year = d.getFullYear();
+			var day = d.getDate();
+			var inputF = document.getElementById("trackid");
+			var inputD = document.getElementById("datetoday");
+			//var inputT = document.getElementById("datetoday");
 
-    inputF.setAttribute('value', year + "-" + (month + 1) + "" + (day) + "-" + (Math.floor(Math.random() * 100000) +
-        1));
+			inputF.setAttribute('value', year+"-"+(month+1)+""+(day)+"-"+(Math.floor(Math.random()*100000)+1));
 
-    inputD.setAttribute('value', year + "-" + (month + 1) + "-" + (day) + "-" + d.getHours() + ":" + d.getMinutes());
-    //inputT.setAttribute('value', year+"-"+(month+1)+"-"+(day)+"-"+d.getHours()+":"+d.getMinutes());
+			inputD.setAttribute('value', year+"-"+(month+1)+"-"+(day)+"-"+d.getHours()+":"+d.getMinutes());
+			//inputT.setAttribute('value', year+"-"+(month+1)+"-"+(day)+"-"+d.getHours()+":"+d.getMinutes());
 
-    //inputF.setAttribute('value', 'Marlon');
-}
+			//inputF.setAttribute('value', 'Marlon');
+		}			
+</script>
 
 
 <script type="text/javascript" >

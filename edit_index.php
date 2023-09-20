@@ -336,18 +336,9 @@ else{
 </div>
 
 <B>Remarks</B>
-<br>
 <div class="input-container">                
-<i class="fa fa-user icon"></i>
-
-<select type="text" name="address" value="<?php  echo $address;    ?>">
- 
-    <!--    <option type="text" name="address" value="<?php  echo $address;?>"</option> -->  
-        <option value="In Process">In Process</option>
-      <!--    <option value="Completed">Completed</option>-->
-          <option value="Incomplete Documents">Incomplete Documents</option>
-          
-        </select>
+<i class="fa fa-description  icon"></i>
+<input type="text" name="address" value="<?php  echo $address;    ?>">
 </div>
 <br>
 <input type="hidden" name="mem_id"  value=<?php echo $_GET['mem_id'];?> >

@@ -10,10 +10,6 @@
 
 
 
-<?php
-include_once("session.php")
-?>
-
 
 
 <link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
@@ -317,8 +313,7 @@ body {
 	<a href="indexclient_trans.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><B>Reports</B></a>
         </li>
 			
-      <li><a href="#"> <B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></a></li>
-	  
+       
 	 
 	  <li> <a href="logout.php"><B>Logout</B></a></li>
     </ul>
@@ -345,7 +340,8 @@ body {
 	
 <center>
 
-     <button class="btn btn-primary" onclick="generateTrackingID()" onclick="window.location.reload()"  type="button" data-toggle="modal" data-target="#form_modal"> <font size="5"> <B>New Transaction</B></font></button>
+     <button class="btn btn-primary" onclick="generateTrackingID()" onclick="window.location.reload()"  type="button" data-toggle="modal" data-target="#form_modal"> <font size="5"> <B>Create Priority No.</B></font></button>
+    
    
 
   

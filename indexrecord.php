@@ -233,7 +233,7 @@ body {
 /* Float four columns side by side */
 .column {
   float: left;
-  width: 28%;
+  width: 20%;
   padding: 0 4px;
 }
 
@@ -429,7 +429,7 @@ while($fetch=mysqli_fetch_array($query)){
 		
 		<!--<input type="submit" name="search" value="Search"> -->
 		
-		<button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>
+		<button type="submit" name="search" value="Search"><i class="fa fa-search"></i></button>
 		
         
         
@@ -449,10 +449,10 @@ while($fetch=mysqli_fetch_array($query)){
 					
 					<th>Transaction_ID</th>
 					
-					<th>Sender/Client</th>
+					<th>Sender</th>
                         <th>Transaction/Description</th>
 						<th>Receiver</th>
-						<th>Remarks</th>
+						<th>Remarks/Status</th>
 						<th>Date/Time</th>
 						<th>Notification</th>
 						<th>Action</th>
@@ -527,7 +527,7 @@ while($fetch=mysqli_fetch_array($query)){
 <!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
 <!--<center><a href="del_record.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:Blue'><font size="4"><B>Claimed</B></font></i></a></center>-->
 
-<button type="button" class="btn btn-link" data-target="#modal_confirmclaimed" data-toggle="modal"><span class="glyphicon glyphicon-save" style="font-size:16px;color:Blue" ></span><font size="4">Claimed</font></button>
+<button type="button" class="btn btn-link" data-target="#modal_confirmclaimed" data-toggle="modal"><font size="3">Claimed</font></button>
     
 
 <!--records-->
@@ -561,7 +561,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 </td>
 <td>
-<a href="edit_record.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-edit" style="font-size:16px;color:Blue"><font size="4"><B>Update</B></font></i></a>
+<a href="edit_record.php?mem_id=<?php echo $fetch['mem_id']?>"><font size="3">Edit</font></a>
 							
 								
 
