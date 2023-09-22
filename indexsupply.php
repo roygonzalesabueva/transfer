@@ -403,7 +403,10 @@ function myTimer() {
                                 <center><a href="del_supply.php?mem_id=<?php echo $fetch['mem_id']?>"><i
                                             class="fa fa-trash" style='font-size:16px;color:Blue'>
                                             <font size="4"><B>Del</B></font>
-                                        </i></a></center>
+                                        </i></a>
+                                    <a onclick="delete_employee('<?= $fetch['mem_id']; ?>')"
+                                        class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Delete </a>
+                                </center>
 
 
                             </td>
@@ -762,6 +765,32 @@ function myTimer() {
     }
     </script>
 
+
+
+    <script>
+    function delete_data(data_id) {
+        // alert('ok');
+        //window.location = ("action/admin/delete-employee.php?id=" + data_id);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this Data!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = ("del_supply.php?mem_id=" + data_id);
+            }
+
+        })
+
+
+    }
+    </script>
 </body>
 
 </html>
