@@ -62,9 +62,10 @@ if(isset($_POST['search']))
 
 <script>
 setInterval(myTimer, 1000);
+
 function myTimer() {
-  const d = new Date();
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    const d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
 }
 </script>
 
@@ -77,32 +78,34 @@ function myTimer() {
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-  <title>Del.S.U.R | Division of Davao del Sur </title>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-	
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>Del.S.U.R | Division of Davao del Sur </title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--send-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+    <!--send-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 
-<!--header-->
 
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--header-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
 
 <!--supply allert-->
 
@@ -113,81 +116,95 @@ function myTimer() {
 
 
 
+    <!--notificion-->
 
-<!--notificion-->
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+    .notification {
+        background-color: #555;
+        color: white;
+        text-decoration: none;
+        padding: 4px 6px;
+        position: relative;
+        display: inline-block;
+        border-radius: 6px;
+    }
 
-.notification {
-  background-color: #555;
-  color: white;
-  text-decoration: none;
-  padding: 4px 6px;
-  position: relative;
-  display: inline-block;
-  border-radius: 6px;
-}
+    .notification:hover {
+        background: Yellow;
+    }
 
-.notification:hover {
-  background: Yellow;
-}
-
-.notification .badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 5px 10px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-}
-</style>
-
+    .notification .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        background-color: red;
+        color: white;
+    }
+    </style>
 
 
 
 
 
-<style>
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+    <style>
+    .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-.dropdown-content a:hover {background-color: #ddd;}
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-.dropdown:hover .dropdown-content {display: block;}
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-</style>
-	
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
 
 	
 	
@@ -244,10 +261,10 @@ body {
       <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></font></a></li>
     </ul>
 
-  </div>
-</nav>
-  
-		
+                
+
+        </div>
+    </nav>
 
 
 <br><br><br><br>
@@ -284,12 +301,8 @@ body {
                 
 
 
-      <input type="text" name="valueToSearch" placeholder="Search ID.."> 
-		
-		<!--<input type="submit" name="search" value="Search"> -->
-		
-		<button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>
-		
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
 
     <br><br>
 			<table class="table table-bordered">
@@ -328,13 +341,10 @@ body {
 						<td><?php echo $fetch['address']?></td>
 					<td><?php echo $fetch['date_created']?></td>
 
+                </div>
+            </div>
 
-						<td>
-
-						<div class="dropdown">
-								<a href="#" class="notification"><i class="fa fa-bell-o" style="font-size:20px"></i><span class="badge">1</span></a>
-						
-							<div class="dropdown-content">
+            <form action="indexsupply.php" method="post" enctype="multipart/form-data">
 
 
               <a onclick="record('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Records</a>
@@ -371,7 +381,6 @@ body {
 			
 
 
-<!--records-->
 
 <!-- <div class="modal fade" id="modal_confirm" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered">
@@ -379,8 +388,6 @@ body {
     <div class="modal-header">
         <h3 class="modal-title">Transfer data to Records </h3>
     </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to Records?</h4></center>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
