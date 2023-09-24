@@ -335,21 +335,10 @@ else{
         </select>
 </div>
 
-<B>Remarks</B>
-<br>
+<B>Remarks/Status</B>
 <div class="input-container">                
-<i class="fa fa-user icon"></i>
-
-<select type="text" name="address" value="<?php  echo $address;    ?>">
- 
-    <!--    <option type="text" name="address" value="<?php  echo $address;?>"</option> -->  
-    <option value="Completed/Claimed">Completed/Claimed</option>
-    <option value="Approved/Claimed">Approved/Claimed</option>
-        <option value="In Process">In Process</option>
-        
-          <option value="Incomplete Documents">Incomplete Documents</option>
-          
-        </select>
+<i class="fa fa-description  icon"></i>
+<input type="text" name="address" value="<?php  echo $address;    ?>">
 </div>
 <br>
 <input type="hidden" name="mem_id"  value=<?php echo $_GET['mem_id'];?> >

@@ -285,7 +285,7 @@ div.c {
 <!--<nav class="navbar navbar-inverse">-->
   <div class="container-fluid">
     <div class="navbar-header">
-	<img src="DAVAOSUR.png" width="230" height="120">
+	<img src="davsur2.png" width="290" height="70">
  </div>
   <!--  <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>

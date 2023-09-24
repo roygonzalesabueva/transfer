@@ -20,7 +20,7 @@
 		//mysqli_query($conn, "INSERT INTO `membertracking` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 		mysqli_query($conn, "DELETE FROM `memberlegal` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
 		
-		echo"<script>alert('Data successfully transfer')</script>";
+		// echo"<script>confirm('Data successfully transfer')</script>";
 		echo"<script>window.location='indexlegal.php'</script>";
 		header("refresh:1; url=indexlegal.php");
 		header("refresh:1; url=indexdpsu.php");

@@ -278,15 +278,25 @@ div.c {
 
 	
 	</head>
-<body>
+	<body style="height:1500px">
 
 
 
-<nav class="navbar ">
-<!--<nav class="navbar navbar-inverse">-->
-  <div class="container-fluid">
-    <div class="navbar-header">
-	<img src="DAVAOSUR.png" width="150" height="70">  </div>
+<div class="container">
+
+
+
+
+</div>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-inverse">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+        <img src="davsur2.png" width="290" height="70">
+        </div>
   <!--  <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
@@ -299,8 +309,8 @@ div.c {
       <li><a href="#">Page 2</a></li>
     </ul>-->
     <ul class="nav navbar-nav navbar-right">
-	<li><B><p id="demo"></p></B> </li>
-      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li>
+    <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
+      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <font color="White" size="4"><B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </font></span></a></li>
       <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
     </ul>
 
@@ -322,7 +332,7 @@ div.c {
 
 
 	
-
+<br><br><br><br>
 	
 <!--<center>
 
@@ -395,10 +405,10 @@ div.c {
 						<th>Sender/Client</th>
                         <th>Transaction/Description</th>
 						<th>Receiver</th>
-						<th>Remarks</th>
+						<th>Remarks/Status</th>
 						<th>Date/Time</th>
-						<th>Date/Time Acted</th>
-						<th>Flow</th>
+						<!-- <th>Date/Time Acted</th> -->
+						<!-- <th>Flow</th> -->
 						
 		
 	
@@ -424,7 +434,7 @@ div.c {
 						
 						<td><?php echo $fetch['address']?></td>
 						<td><?php echo $fetch['date_created']?></td>
-						<td><i class="fa fa-arrow-down"></i></td>
+						<!-- <td><i class="fa fa-arrow-down"></i></td> -->
 						
 
 

@@ -286,15 +286,25 @@ body {
 	
 	
 	</head>
-<body>
+	<body style="height:1500px">
 
 
 
-<nav class="navbar ">
-<!--<nav class="navbar navbar-inverse">-->
-  <div class="container-fluid">
-    <div class="navbar-header">
-	<img src="DAVAOSUR.png" width="150" height="70"> </div>
+<div class="container">
+
+
+
+
+</div>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-inverse">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+        <img src="davsur2.png" width="290" height="70">
+        </div>
   <!--  <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
@@ -306,33 +316,29 @@ body {
       </li>
       <li><a href="#">Page 2</a></li>
     </ul>-->
-	<ul class="nav navbar-nav navbar-right">
-	<li> <B> <a <p id="demo"></p></a> </B> </li>
+    <ul class="nav navbar-nav navbar-right">
+    <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
 		
 	<li>  
-	<a href="indexclient_trans.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><B>Reports</B></a>
+	<a href="indexclient_trans.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
         </li>
 			
        
 	 
-	  <li> <a href="logout.php"><B>Logout</B></a></li>
+	  <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></a></font></li>
     </ul>
 
   </div>
 </nav>
 
 
-
-					
+<br><br><br><br>
 
 <div class="row">
   <div class="column">
     <div class="card">
 		
-			<center><font size="5"> <B>Division of Davao del Sur</B> <br>
-		 <B>Office of the Division Records</B> <br>
-		 <B>Now Serving</B>
-		 </font></center>
+			
 	
 		<br>
 	
@@ -340,7 +346,7 @@ body {
 	
 <center>
 
-     <button class="btn btn-primary" onclick="generateTrackingID()" onclick="window.location.reload()"  type="button" data-toggle="modal" data-target="#form_modal"> <font size="5"> <B>Create Priority No.</B></font></button>
+     <button class="btn btn-primary" onclick="generateTrackingID()" onclick="window.location.reload()"  type="button" data-toggle="modal" data-target="#form_modal"> <font size="5"> <B>Create New Transaction</B></font></button>
     
    
 
@@ -402,12 +408,13 @@ body {
 
 				<thead class="alert-info">
 					<tr>
+					
 						<th>Transaction_ID</th>
 					
 						<th>Sender/Client</th>
 						<th>Transaction/Description</th>
 						<th>Receiver</th>
-						<th>Remarks</th>
+						<th>Remarks/Status</th>
 						<th>Date/Time</th>
 						
 						
@@ -442,8 +449,20 @@ body {
 	
 
 <td>
-<a href="edit_indextrans.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-edit" style="font-size:12px;color:red"></i>Edit</a></center>
-							
+				
+
+
+<a type="button" class="btn btn-success" href="edit_indextrans.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-edit"
+                                    style='font-size:16px;color:White'>
+                                    <font size="4"><B>Edit
+                               </B></font>
+                               </i></a>
+
+
+
+
+
+
 								
 				 	</td>
 	
@@ -497,6 +516,9 @@ body {
 				<div class="modal-body">
 					<div class="col-md-2"></div>
 					<div class="col-md-8">
+
+					
+
 						<div class="form-group">
 							<label>Transaction_ID </label>
 							<input type="text" id="trackid" name="trackid" class="form-control" required="required" readonly/>
@@ -540,20 +562,8 @@ body {
 
 
 						<div class="form-group">
-							<label>Remarks</label>
-							<select  type="text" name="address" class="form-control" >
-						
-							<!--<select type="text" name="address" value="<?php  echo $address;    ?>">-->
- 
- <!--    <option type="text" name="address" value="<?php  echo $address;?>"</option> -->  
-						<!-- <option value="In Process">In Process</option>-->
-	  					 <!--<option value="Completed">Completed</option>
-	  					 <option value="Incomplete Documents">Incomplete Documents</option>-->
-	   
-						 </select>
-						
-						
-						
+							<label>Remarks/Status</label>
+							<input type="text" name="address" class="form-control" />
 						</div>
 
 
@@ -605,7 +615,7 @@ body {
 
 
 						<div class="form-group">
-							<label>Remarks</label>
+							<label>Remarks/Status</label>
 							<select  type="text" name="address" class="form-control" required="required"/>
 						
 							<!--<select type="text" name="address" value="<?php  echo $address;    ?>">-->
@@ -740,9 +750,11 @@ body {
 			var month = d.getMonth();
 			var year = d.getFullYear();
 			var day = d.getDate();
+			
 			var inputF = document.getElementById("trackid");
 			var inputD = document.getElementById("datetoday");
 			//var inputT = document.getElementById("datetoday");
+		
 
 			inputF.setAttribute('value', year+"-"+(month+1)+""+(day)+"-"+(Math.floor(Math.random()*100000)+1));
 

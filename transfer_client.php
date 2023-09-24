@@ -21,7 +21,7 @@
 		mysqli_query($conn, "DELETE FROM `memberclaim` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
 		mysqli_query($conn, "DELETE FROM `memberrecord` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
 		
-		echo"<script>alert('Data successfully transfer')</script>";
+		// echo"<script>confirm('Data successfully transfer')</script>";
 		echo"<script>window.location='indexrecord.php'</script>";
 	}
 ?>

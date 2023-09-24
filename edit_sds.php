@@ -336,22 +336,13 @@ else{
         </select>
 </div>
 
-<B>Remarks</B>
-<br>
+
+<B>Remarks/Status</B>
 <div class="input-container">                
-<i class="fa fa-user icon"></i>
-
-
-<select type="text" name="address" value="<?php  echo $address;    ?>">
- 
- <!--    <option type="text" name="address" value="<?php  echo $address;?>"</option> -->  
- <option value="Approved">Approved</option>
-     <option value="Disapproved">Disapproved</option>
-     
-     
-       
-     </select>
+<i class="fa fa-description  icon"></i>
+<input type="text" name="address" value="<?php  echo $address;    ?>">
 </div>
+
 <br>
 <input type="hidden" name="mem_id"  value=<?php echo $_GET['mem_id'];?> >
 <br>

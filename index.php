@@ -106,6 +106,18 @@ function myTimer() {
 
     <title>Del.S.U.R | Division of Davao del Sur </title>
 
+
+  <!--Header-->
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
     <!--modal with tables-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -168,7 +180,12 @@ function myTimer() {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!--footer-->
+    <!--supply allert-->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
 
 
 
@@ -333,7 +350,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 20%;
+        width: 22%;
         padding: 0 10px;
 
     }
@@ -374,8 +391,7 @@ function myTimer() {
 
 </head>
 
-<body>
-
+<body style="height:1500px">
 
 
 
@@ -387,13 +403,12 @@ function myTimer() {
     </div>
 
 
-    <nav class="navbar ">
+   <nav class="navbar navbar-inverse navbar-fixed-top">
         <!--<nav class="navbar navbar-inverse">-->
         <div class="container-fluid">
             <div class="navbar-header">
 
-                <img src="DAVAOSUR.png" width="150" height="70">
-
+            <img src="davsur2.png" width="290" height="70">
 
             </div>
 
@@ -410,37 +425,74 @@ function myTimer() {
       <li><a href="#">Page 2</a></li>
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
-         <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction ID</B></font></button>
 
-                <li> <B> <p id="demo"></p> </B> </li>
-                <li> <a href="chat_index.php"><B>Chat Room</B></a></li>
+            <li>    <a href="index.php"><div class="dropdown"></a>
+    <a href="#" > <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font></a>
+						
+							<div class="dropdown-content">
+
+              <a href="index.php">Admin</a>
+              <a href="indexrecord.php">Records</a>
+              <a href="indexsds.php">SDS</a>
+              <a href="indexasds.php">ASDS</a> 
+              <a href="indexhrmo.php">HRMO</a>
+              <a href="indexcid.php">CIS</a>
+              <a href="indexsgod.php">SGOD</a>
+              <a href="indexsupply.php">Supply</a>
+              <a href="indexlegal.php">Legal</a>
+              <a href="indexcashier.php">Cashier</a>
+              <a href="indexdpsu.php">DPSU</a> 
+              <a href="indexacct.php">Accounting</a>
+              <a href="indexbudget.php">Budget</a>
+              <a href="indexqueue.php">Queue</a>
+              <a href="index_trans.php">New Transaction / Claim</a>
+             
+</div></li> 
+
+
+
+
+
+
+
+
+
+
+
+
+       
+                <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
+                <li> <a href="chat_index.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
                 <li>
-                    <a href="indexclient.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><B>Transaction
-                            Status</B></a>
+                    <a href="indexclient.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction
+                            Status</B></font></a>
                 </li>
 
-                <li><a href="#"> <B><i class="fa fa-fw fa-user"></i> <span
-                                class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></a></li>
+                <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i> <span
+                                class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></font></a></li>
 
 
-                <li> <a href="logout.php"><B>Logout</B></a></li>
-            </ul>
+                <li> <a href="logout.php"><font color="White" size="4" ><B>Logout</B></font></a></li>
+               
+                        </ul>
 
-        </div>
+                      
+  
+
+ 
+   
+  
+
+</div>
     </nav>
 
-
-
-   
-  <center><h5> <a href="index.php">Admin</a> | <a href="indexrecord.php">Records</a> | <a href="indexsds.php">SDS</a> | <a href="indexasds.php">ASDS</a> | <a href="indexhrmo.php">HRMO</a> | <a href="indexcid.php">CID</a>
-  | <a href="indexsgod.php">SGOD</a> | <a href="indexsupply.php">Supply</a> | <a href="indexlegal.php">Legal</a> | <a href="indexcashier.php">Cashier</a>
-  | <a href="indexdpsu.php">DPSU</a>   | <a href="indexacct.php">Accounting</a> | <a href="indexbudget.php">Budget</a> | <a href="indexqueue.php">Queue</a> | <a href="index_trans.php">New Transaction / Claim</a></h5> </center>
-
-<br>
   <!-- <center> -->
 
+  
 
 
+  <br><br><br><br>
+   
 
 
 <!--  
@@ -451,7 +503,11 @@ function myTimer() {
 <!-- </center> -->
 		
 
-
+<div class="col-md-3"></div>
+	<!--  <div class="col-md-20 well">-->
+	<center><h3 class="text-primary"><B>Documents Verification </B></h3></center>
+		<hr style="border-top:1px dotted #ccc;"/>
+		
 
     <!-- <center>
         <font size="5">
@@ -466,6 +522,8 @@ function myTimer() {
     <div class="row">
         <div class="column">
             <div class="card">
+          
+            
                 <h3><B>Window 1<B></h3>
                 <p>New Transaction ID</p>
 
@@ -576,10 +634,24 @@ while($fetch=mysqli_fetch_array($query)){
 
 
                 </select>
-              
-              
-                <input type="submit" name="search" value="  Print">
+             
+                <button type="submit" class="btn btn-primary" name="search" value="Search"><span class="glyphicon glyphicon-print"></span></button>
+                <!-- <input type="submit"  name="search" value="  Print"> -->
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </form>
 
 
@@ -594,16 +666,16 @@ while($fetch=mysqli_fetch_array($query)){
 
                 <!--<input type="submit" name="search" value="Search"> -->
                
-                <button type="submit" name="search" value="Search"><i class="fa fa-search"></i></button>
+                <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
 
                 </div>
             </form>
 
 
 
+        
 
             <table class="table table-bordered">
-
 
 
 
@@ -633,6 +705,7 @@ while($fetch=mysqli_fetch_array($query)){
 
                     </tr>
                 </thead>
+
                 <tbody>
 
 
@@ -659,75 +732,70 @@ while($fetch=mysqli_fetch_array($query)){
                                         style="font-size:20px"></i><span class="badge">1</span></a>
 
                                 <div class="dropdown-content">
-                                  <!--  <a clss="btn-primary" <input type="hidden"
-                                        id="transrec<?php echo $fetch['mem_id']?>"
-                                        value="transferrecord.php?mem_id=<?php echo $fetch['mem_id']?>">
-
-                                        <a id="records" onclick="alert('hello')" href="javascript:void(0)"> Records</a>-->
+                                 
 
 
+
+
+
+
+<!-- 
                 <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Records</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmasds" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to ASDS</button>
-              <button type="button" class="btn btn-link" data-target="#modal_confirmhrmo" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to HRMO</button>
-              <button type="button" class="btn btn-link" data-target="#modal_confirmsds" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to SDS</button>
-              <button type="button" class="btn btn-link" data-target="#modal_confirmsgod" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to SGOD</button>
-              <button type="button" class="btn btn-link" data-target="#modal_confirmcid" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to CID</button>
-              <button type="button" class="btn btn-link" data-target="#modal_confirmdpsu" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to DPSU</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmhrmo" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to HRMO</button> -->
+              <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmsds" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to SDS</button> -->
+              <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmsgod" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to SGOD</button>
+              <button type="button" class="btn btn-link" data-target="#modal_confirmcid" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to CID</button> -->
+              <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmdpsu" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to DPSU</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmsupply" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Supply</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmcashier" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Cashier</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmbudget" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Budget</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmacct" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Accounting</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmlegal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Legal</button>
+              -->
 
 
 
 
 
+              <a onclick="indexrecord('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Records</a>
+              <a onclick="indexhrmo('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>HRMO</a>
+              <a onclick="indexsds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>SDS</a>
+              <a onclick="indexasds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>ASDS</a>
+              <a onclick="indexsgod('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>SGOD</a>
+              <a onclick="indexcid('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>CID</a>
+
+              <a onclick="indexdpsu('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>DPSU</a>
+              <a onclick="indexsupply('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Supply</a>
+              <a onclick="indexcashier('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Cashier</a>
+              <a onclick="indexbudget('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Budget</a>
+              <a onclick="indexacctg('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Accounting</a>
+              <a onclick="indexlegal('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Legal</a>
 
 
-
-                                     <!--    <a href="transferrecord.php?mem_id=<?php echo $fetch['mem_id']?>">Records</a>
-                                        <a href="transferhrmo.php?mem_id=<?php echo $fetch['mem_id']?>">HRMO</a>
-                                        <a href="transfersds.php?mem_id=<?php echo $fetch['mem_id']?>">SDS</a>
-                                        <a href="transferasds.php?mem_id=<?php echo $fetch['mem_id']?>">ASDS</a>
-                                        <a href="transfersgod.php?mem_id=<?php echo $fetch['mem_id']?>">SGOD</a>
-                                        <a href="transferscid.php?mem_id=<?php echo $fetch['mem_id']?>">CID</a>
-                                        <a href="transferdpsu.php?mem_id=<?php echo $fetch['mem_id']?>">DPSU</a>
-                                        <a href="transfersupply.php?mem_id=<?php echo $fetch['mem_id']?>">Supply</a>
-                                        <a href="transfercashier.php?mem_id=<?php echo $fetch['mem_id']?>">Cashier</a>
-                                        <a href="transferbudget.php?mem_id=<?php echo $fetch['mem_id']?>">Budget</a>
-                                        <a href="transferacct.php?mem_id=<?php echo $fetch['mem_id']?>">Accounting</a>
+                                     <!-- <a type="button" class="btn btn-link" href="transferrecord.php?mem_id=<?php //echo $fetch['mem_id']?>">Records</a> -->
+                                        <!-- <a type="button" class="btn btn-link" href="transferhrmo.php?mem_id=<?php// echo $fetch['mem_id']?>">HRMO</a> -->
+                                        <!-- <a type="button" class="btn btn-link" href="transfersds.php?mem_id=<?php //echo $fetch['mem_id']?>">SDS</a> -->
+                                        <!-- <a type="button" class="btn btn-link" href="transferasds.php?mem_id=<?php //echo $fetch['mem_id']?>">ASDS</a> -->
+                                        <!-- <a type="button" class="btn btn-link" href="transfersgod.php?mem_id=<?php //echo $fetch['mem_id']?>">SGOD</a> -->
+                                        <!-- <a type="button" class="btn btn-link" href="transferscid.php?mem_id=<?php //echo $fetch['mem_id']?>">CID</a> -->
+                                        <!-- <a type="button" class="btn btn-link" href="transferdpsu.php?mem_id=<?php //echo $fetch['mem_id']?>">DPSU</a>
+                                        <a type="button" class="btn btn-link" href="transfersupply.php?mem_id=<?php //echo $fetch['mem_id']?>">Supply</a>
+                                        <a type="button" class="btn btn-link" href="transfercashier.php?mem_id=<?php //echo $fetch['mem_id']?>">Cashier</a>
+                                        <a type="button" class="btn btn-link" href="transferbudget.php?mem_id=<?php// echo $fetch['mem_id']?>">Budget</a>
+                                        <a type="button" class="btn btn-link" href="transferacct.php?mem_id=<?php //echo $fetch['mem_id']?>">Accounting</a>
                                         
-                                        <a href="transferlegal.php?mem_id=<?php echo $fetch['mem_id']?>">Legal</a>-->
+                                        <a type="button" class="btn btn-link" href="transferlegal.php?mem_id=<?php //echo $fetch['mem_id']?>">Legal</a> -->
                                 </div>
                             </div>
 
                         </td>
                         <td>
                          
+                        <!-- <a type="button" class="btn btn-success" href="del.php?mem_id=<?php //echo $fetch['mem_id']?>"><font color="White" size="2">Delete</font></a>
+                                   -->
+                        <a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Delete</a>
 
-                                    <button type="button" class="btn btn-link" data-target="#modal_confirmdel" data-toggle="modal"><i class="fa fa-trash"></i><font color="blue" size="4"><B>Delete</B></font></button>
-          
-
-<!--records-->
-
-<div class="modal fade" id="modal_confirmdel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Delete </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to delete transaction?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="del.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
 
 
 
@@ -736,278 +804,14 @@ while($fetch=mysqli_fetch_array($query)){
                         </td>
 
                         <td>
-                        <a href="edit_index.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-edit"
-                                    style='font-size:16px;color:Blue'>
+                        <!-- <a type="button" class="btn btn-success" href="edit_index.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-edit"
+                                    style='font-size:16px;color:White'>
                                     <font size="4"><B>Edit
                                </B></font>
-                               </i></a>
+                               </i></a> -->
 
 
-<!--records-->
-
-<div class="modal fade" id="modal_confirm" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to Records </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to records?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferrecord.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-<!--asds-->
-
-<div class="modal fade" id="modal_confirmasds" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to ASDS </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to ASDS?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferasds.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-<!--hrmo-->
-
-<div class="modal fade" id="modal_confirmhrmo" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to HRMO </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to HRMO?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferhrmo.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-<!--sds-->
-
-<div class="modal fade" id="modal_confirmsds" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to SDS </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to SDS?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transfersds.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-
-<!--sgod-->
-
-<div class="modal fade" id="modal_confirmsgod" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to SGOD </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to SGOD?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transfersgod.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-<!--CID-->
-
-<div class="modal fade" id="modal_confirmcid" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to CID </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to CID?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferscid.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-<!--dpsu-->
-
-<div class="modal fade" id="modal_confirmdpsu" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to DPSU </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to DPSU?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferdpsu.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-<!--supply-->
-
-<div class="modal fade" id="modal_confirmsupply" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to supply </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to Supply?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transfersupply.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-<!--cashier-->
-
-<div class="modal fade" id="modal_confirmcashier" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to Cashier </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to Cashier?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transfercashier.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-<!--budget-->
-
-<div class="modal fade" id="modal_confirmbudget" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to Budget </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to Budget?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferbudget.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-
-<!--acct-->
-
-<div class="modal fade" id="modal_confirmacct" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to Accounting </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to Accounting?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferacct.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-
-<!--legal-->
-
-<div class="modal fade" id="modal_confirmlegal" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-    <div class="modal-header">
-        <h3 class="modal-title">Transfer data to Legal </h3>
-    </div>
-    <div class="modal-body">
-        <center><h4>Are you sure you want to transfer data to Legal?</h4></center>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-        <a type="button" class="btn btn-success" href="transferlegal.php?mem_id=<?php echo $fetch['mem_id']?>">Yes</a>
-    </div>
-</div>
-</div>
-</div>
-
-
-
-
-
+                               <a class=" btn btn-sm btn-success" href="edit_index.php?mem_id=<?php echo $fetch['mem_id']?>" ><i class="fa fa-edit" ></i>Update</a>
 
 
 
@@ -1054,76 +858,6 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
-
-    <!-- <div class="modal fade" aria-hidden="true" id="form_modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form method="POST" action="save.php">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Add New Record</h3>
-                    </div>
-                    <div class="modal-body">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <label>Tracking_ID </label>
-                                <input type="text" id="trackid" name="trackid" class="form-control" required="required"
-                                    readonly />
-                            </div>
-                            <div class="form-group">
-                                <label>Date_Forwarded</label>
-                                <input type="text" id="datetoday" name="datetoday" class="form-control"
-                                    required="required" readonly />
-                            </div>
-                            <div class="form-group">
-                                <label>Carrier/School</label>
-                                <input type="text" name="firstname" class="form-control" required="required" />
-                            </div>
-
-
-                            <div class="form-group">
-                                <label>File_Type/Name</label>
-                                <input type="text" name="lastname" class="form-control" required="required" />
-                            </div>
-
-
-
-
-
-
-                            <div class="form-group">
-                                <label>Office/Section</label>
-
-                                <input type="text" name="section" class="form-control" required="required" />
-
-                            </div>
-
-
-                            <div class="form-group">
-                                <label>Purpose</label>
-                                <input type="text" name="address" class="form-control" required="required" />
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                    <br style="clear:both;" />
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span
-                                class="glyphicon glyphicon-remove"></span> Close</button>
-                        <button class="btn btn-primary" name="save"><span class="glyphicon glyphicon-save"></span>
-                            Save</button>
-
-
-
-
-
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
 
 
 
@@ -1289,15 +1023,6 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
-    <!--modal-->
-    <!--
-
-<div class="container">
-  <h2>Office of Division Records</h2>
-  <h2>is Now Serving You</h2>
-   Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Modal</button>-->
-
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -1341,7 +1066,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 
                 <div class="modal-footer">
-                    <!--	<cemter><a href="del.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:20px;'></i>Del</a></center>-->
+                    <!--	<cemter><a href="del.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:20px;'></i>Del</a></center>-->
 
 
                     <!--   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
@@ -1361,6 +1086,10 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
+<!-- SUpply alert -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
+
 
 
 
@@ -1368,23 +1097,320 @@ while($fetch=mysqli_fetch_array($query)){
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
 
+<!-- Supply alert -->
+<script>
 
-    <!--<div class="footer">
-<img src="matatag.png" width="250" height="50">
-</div>-->
+function delete_data(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("del.php?mem_id=" + data_id);        
+        }
+    })
+}
+</script>
 
 
 
-    <!--Alert Okay or Cancel">-->
+
+<!-- Supply alert -->
+<script>
+
+function indexrecord(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferrecord.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
 
 
 
+<!-- Supply alert -->
+<script>
+
+function indexhrmo(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferhrmo.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
 
 
 
+<!-- Supply alert -->
+<script>
+
+function indexsds(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transfersds.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
 
 
 
+<!-- Supply alert -->
+<script>
+
+function indexasds(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferasds.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+<!-- Supply alert -->
+<script>
+
+function indexsgod(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transfersgod.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+<!-- Supply alert -->
+<script>
+
+function indexcid(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferscid.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+<!-- Supply alert -->
+<script>
+
+function indexdpsu(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferdpsu.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+<!-- Supply alert -->
+<script>
+
+function indexsupply(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transfersupply.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+<!-- Supply alert -->
+<script>
+
+function indexcashier(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transfercashier.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+
+<!-- Supply alert -->
+<script>
+
+function indexbudget(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferbudget.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+
+<!-- Supply alert -->
+<script>
+
+function indexacctg(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferacct.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+<!-- Supply alert -->
+<script>
+
+function indexlegal(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferlegal.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
 
 
 

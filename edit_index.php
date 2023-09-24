@@ -335,7 +335,7 @@ else{
         </select>
 </div>
 
-<B>Remarks</B>
+<B>Remarks/Status</B>
 <div class="input-container">                
 <i class="fa fa-description  icon"></i>
 <input type="text" name="address" value="<?php  echo $address;    ?>">

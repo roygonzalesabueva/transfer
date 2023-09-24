@@ -447,10 +447,11 @@ h3 {
 
 
 
+   
+  
 
 
 
-<br>
 
 
   <div class="container">
@@ -459,21 +460,20 @@ h3 {
       
       
         <div class="row w-100 mx-auto">
-       
+   
         
           <div class="col-lg- 100 mx-auto">
          
-            
-         
-  
-    <img src="DAVAOSUR.png" width="310" height="150">
+          
+      
               <form class="pt-3" method="post" name="login" action="login.php">
-
-
+              <img src="davsur2.png" width="350" height="80">
+            
+              <br><br>
    
-              <h3><label><font color="BLUE" size="5"> Sign In </font></label></h3>
+              <h1><label><font color="Black" size="4"> <B></B>Sign in with your Del.S.U.R account</B> </font></label></h1>
 
-
+              <br>
               
               <B><label>USERNAME</label></B><br>
               <div class="input-container">

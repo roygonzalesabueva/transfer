@@ -261,47 +261,38 @@ body {
 	
 	
 	</head>
-<body>
+  <body style="height:1500px">
+
+
+
+<div class="container">
 
 
 
 
+</div>
 
 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-inverse">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
 
-
-
-
-
-<nav class="navbar ">
-<!--<nav class="navbar navbar-inverse">-->
-  <div class="container-fluid">
-    <div class="navbar-header">
-    <img src="DAVAOSUR.png" width="150" height="70">   </div>
-  <!--  <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-    </ul>-->
+        <img src="davsur2.png" width="290" height="70">
+        </div>
     <ul class="nav navbar-nav navbar-right">
-	<li><B><p id="demo"></p></B> </li>
+	<li><a href="#"> <font color="White" size="4"><B><p id="demo"></p></B> </font></a></li>
      		
-  <li><a href="#"> <B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></a></li>
+  <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></font></a></li>
 	  
 	 
-	  <li> <a href="logout.php"><B>Logout</B></a></li>
+	  <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></font></a></li>
     </ul>
 
   </div>
 </nav>
 
-		
+		<br><br><br><br>
 <center><font size="5"> 
 		 <B>Office of the Division Records</B> <br>
 		 <B>Now Serving</B>
