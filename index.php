@@ -409,6 +409,7 @@ function myTimer() {
             <div class="navbar-header">
 
             <img src="davsur2.png" width="290" height="70">
+           
 
             </div>
 
@@ -425,6 +426,7 @@ function myTimer() {
       <li><a href="#">Page 2</a></li>
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
+            <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li> 
 
             <li>    <a href="index.php"><div class="dropdown"></a>
     <a href="#" > <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font></a>
@@ -637,6 +639,7 @@ while($fetch=mysqli_fetch_array($query)){
              
                 <button type="submit" class="btn btn-primary" name="search" value="Search"><span class="glyphicon glyphicon-print"></span></button>
                 <!-- <input type="submit"  name="search" value="  Print"> -->
+              
                 </div>
 
 
@@ -667,7 +670,7 @@ while($fetch=mysqli_fetch_array($query)){
                 <!--<input type="submit" name="search" value="Search"> -->
                
                 <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
-
+             
                 </div>
             </form>
 
