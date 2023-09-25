@@ -279,11 +279,13 @@ div.c {
 
 
 
+
+
 <nav class="navbar ">
 <!--<nav class="navbar navbar-inverse">-->
   <div class="container-fluid">
     <div class="navbar-header">
-	<img src="DAVAOSUR.png" width="150" height="70"> </div>
+	<img src="davsur2.png" width="290" height="70"> </div>
   <!--  <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>

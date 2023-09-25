@@ -237,7 +237,9 @@ body {
 
 
 
-<img src="DAVAOSUR.png" width="150" height="70">  
+
+
+	<img src="davsur2.png" width="290" height="70">
 <h4></h4>
 
 	<nav class="navbar navbar-default">
