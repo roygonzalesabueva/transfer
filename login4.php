@@ -34,7 +34,7 @@ function myTimer() {
   if(isset($_POST['login'])){
     //getting the form data
      $username = verify($_POST['username']);
-      // $password = verify($_POST['password']);
+      $password = verify($_POST['password']);
      
       
         
@@ -51,7 +51,7 @@ function myTimer() {
 
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username' ";
+    $sql = "SELECT * FROM users WHERE username='$username' and password='$password'";
  
     //Db Connection
     require_once('db.php');
@@ -83,8 +83,8 @@ function myTimer() {
 
 
     //sql statement
-    $sql = "SELECT * FROM users_tbl WHERE username='$username'";
-    // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
+    $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
+ 
     //Db Connection
     require_once('db.php');
 
@@ -240,7 +240,7 @@ function myTimer() {
   {
 
     //sql statement
-    $sql = "SELECT * FROM userschat WHERE username='$username' ";
+    $sql = "SELECT * FROM userschat WHERE username='$username' and password='$password'";
  
     //Db Connection
     require_once('conn.php');
@@ -299,20 +299,7 @@ function myTimer() {
 
 
 
-<!--supply allert-->
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-
-
-
-
-
-
-
-  
 
 <!-- icons sa Pass and User -->
 <style>
@@ -321,21 +308,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 
-
 .input-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   width: 100%;
   margin-bottom: 15px;
-
- 
- 
-  
-
-
-
-
-
 }
 
 .icon {
@@ -408,6 +385,20 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Required meta tags -->
    <title>Del.S.U.R | Division Davao del Sur</title>
   <!-- plugins:css -->
@@ -443,28 +434,6 @@ h3 {
 
 
 
-<!-- 
-<style>
-body {
-  background-color: lightblue;
-}
-</style> -->
-
-
- 
-<style> 
-  
-body {
-  background-image: url("mm.png");
-}
-</style> 
-
-
-
-
-
-
-
 
 
 
@@ -473,37 +442,7 @@ body {
 
 </head>
 
-<body >
-
-
-
-
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  
-  
-    <ul class="nav navbar-nav navbar-right">
-     
-      <li> <a href="login4.php"><font color="White" size="4"><B>Login</B></font></a></li>
-    </ul>
-
-  
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<body>
 
 
 
@@ -530,62 +469,39 @@ body {
               <form class="pt-3" method="post" name="login" action="login.php">
               <img src="davsur2.png" width="350" height="80">
             
-              <br><br><br>
+              <br><br>
    
-              <center><label><font color="White" size="4"> <B><h4>CHOOSE DEPARTMENT/SECTION</h4></B> </font></label></center>
+              <h1><label><font color="Black" size="4"> <B></B>Sign in with your Del.S.U.R account</B> </font></label></h1>
 
-          
+              <br>
               
-              <!-- <B><label>USERNAME</label></B><br> -->
+              <B><label>USERNAME</label></B><br>
               <div class="input-container">
                   
-                  <!-- <i class="fa fa-user icon"></i> -->
-
-                  <select type="text" name="username" class="form-control" required="required"/>
-
-                  <!-- <select type="text" name="username" value="<?php // echo $username;    ?> class="form-control" required="required"/> -->
- 
-        <option type="text" value="<?php  echo $username;?>"</option>   
-        <option value="Records">RECORDS</option>
-        <option value="Cashier">CASHIER</option>
-          <option value="SDS">SDS</option>
-          <option value="ASDS">ASDS</option>
-          <option value="SGOD">SGOD</option>
-          <option value="CID">CID</option>
-          <option value="HRMO">HRMO</option>
-          <option value="Accounting">ACCOUNTING</option>
-          <option value="Budget">BUDGET</option>
-          <option value="Supply">SUPPLY</option>
-          <option value="Legal">LEGAL</option>
-          <option value="DPSU">DPSU</option>
-        </select>
-</div>
-
-                  <!-- <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username" 
+                  <i class="fa fa-user icon"></i>
+                  <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username" 
                  
-                  value="<?php if(isset($_COOKIE['uname'])) echo $_COOKIE['uname'];?>"> -->
+                  value="<?php if(isset($_COOKIE['uname'])) echo $_COOKIE['uname'];?>">
 
+                
                        
-               <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="Continue" />
-        
+
 
                 </div>
                 
-               <!-- <B> <label>PASSWORD</label></B> -->
+               <B> <label>PASSWORD</label></B>
                <div class="input-container">
-                  <!-- <i class="fa fa-key icon"></i> -->
-<!--                
+    <i class="fa fa-key icon"></i>
+               
                   <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Password"
                    value="<?php if(isset($_COOKIE['upass'])) echo $_COOKIE['upass'];?>">
-                </div> -->
-                <!-- <div class="mt-3"> -->
-             <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="ENTER" />  -->
-             <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="ENTER" />  -->
-        
-            </div><br>
+                </div>
+                <div class="mt-3">
+             <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="LOGIN" /> 
+                </div><br>
                
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button> -->
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button> -->
+                <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button>
+                <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button>
                 
               </form>
            
@@ -737,39 +653,6 @@ body {
 		</div>
 	</div>
 </div>	
-
-
-
-
-<!-- SUpply alert -->
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
-
-
-
-<!-- Supply alert -->
-<script>
-
-function login(data_id) {
-    Swal.fire({
-        title: 'Are you sure?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, transfer it!',
-        closeOnConfirm: false,
-        closeOnCancel: false
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location = ("transfersupply_record.php?mem_id=" + data_id);   
-            
-            
-        }
-    })
-}
-</script>
-
 
 
 

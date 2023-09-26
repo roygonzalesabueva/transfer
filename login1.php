@@ -1,20 +1,11 @@
 
+
+
+
+
+
+
 <link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
-
-
-<script>
-setInterval(myTimer, 1000);
-function myTimer() {
-  const d = new Date();
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-}
-</script>
-
-
-
-
-
-
 
 
 
@@ -31,62 +22,20 @@ function myTimer() {
     return $data;
   }
 
-  if(isset($_POST['login'])){
+  if(isset($_POST['login1'])){
     //getting the form data
      $username = verify($_POST['username']);
       // $password = verify($_POST['password']);
+
      
-      
-        
 
-     // Cookie - last nani ayaw e apil sa first code na login
-     //   $remember = $_POST['remember'];
-     //   if($remember==1)
-      //  {
-      //    setcookie('uname' , $username, time()+60*60*24*10,"/");
-      //     setcookie('password' , $password, time()+60*60*24*10,"/");
- 
-   //     }
-
-
+    
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username' ";
+    $sql = "SELECT * FROM user_tbl WHERE username='$username'";
  
     //Db Connection
-    require_once('db.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['username']= $username;
-      //header("location: dashboard.php");
-      header("location: index.php");
-      
-    }
-
-    if($count<>1);
-    {
-      $_SESSION['username']= $username;
-      //header("location: dashboard.php");
-    //  header("location: index.php");
-  echo"<script>alert('Error=Incorrect User Name or password.')</script>";
-   
-
-
-    }
-
-
-
-
-
-    //sql statement
-    $sql = "SELECT * FROM users_tbl WHERE username='$username'";
-    // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
-    //Db Connection
-    require_once('db.php');
+    require_once('conn.php');
 
     //qry
     $qry = mysqli_query ($conn, $sql) or die ("Login problem");
@@ -104,14 +53,14 @@ function myTimer() {
       $_SESSION['department_id']= $row['department_id'];
 
       if ($_SESSION['department_id'] == 1) {
-        header("location: indexasds.php");
+        header("location: filesscnhs.php");
       }
       elseif ($_SESSION['department_id'] == 2) {
-        header("location: indexsds.php");
+        header("location: filesscces.php");
       }
 
       elseif ($_SESSION['department_id'] == 3) {
-        header("location: indexrecord.php");
+        header("location: filessnhs.php");
       }
 
       elseif ($_SESSION['department_id'] == 4) {
@@ -119,14 +68,14 @@ function myTimer() {
       }
 
       elseif ($_SESSION['department_id'] == 5) {
-        header("location: indexhrmo.php");
+        header("location: filesfnhs.php");
       }
 
       elseif ($_SESSION['department_id'] == 6) {
-        header("location: indexsgod.php");
+        header("location: filespnhs.php");
       }
       elseif ($_SESSION['department_id'] == 7) {
-        header("location: indexcid.php");
+        header("location: filesmnhs.php");
       }
 
       elseif ($_SESSION['department_id'] == 8) {
@@ -158,7 +107,7 @@ function myTimer() {
       }
 
       elseif ($_SESSION['department_id'] == 16) {
-        header("location: index.php");
+        header("location: home.php");
       }
 
 
@@ -180,67 +129,10 @@ function myTimer() {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-  //else {
-
-		//	echo"<script>alert('error=Incorrect User Name or password.')</script>";
-	//	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
   {
 
     //sql statement
-    $sql = "SELECT * FROM userschat WHERE username='$username' ";
+    $sql = "SELECT * FROM userschat WHERE username='$username'";
  
     //Db Connection
     require_once('conn.php');
@@ -254,10 +146,38 @@ function myTimer() {
       //header("location: dashboard.php");
       header("location: chat_client.php");
       
+      
     }
-    
-
+   
   }
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM users WHERE username='$username'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: files2.php");
+      
+      
+    }
+   
+  }
+
+
+
+
+
+
 
 
 
@@ -281,7 +201,17 @@ function myTimer() {
 <html lang="en">
 
 <head>
-<title>Del.S.U.R | Division of Davao del Sur </title>
+
+
+
+
+
+
+
+
+
+
+
 
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -298,71 +228,7 @@ function myTimer() {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
-<!--supply allert-->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-
-
-
-
-
-
-
-  
-
-<!-- icons sa Pass and User -->
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-
-
-
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-
- 
- 
-  
-
-
-
-
-
-}
-
-.icon {
-  padding: 18px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-}
-
-.input-field {
-  width: 100%;
-  padding: 30px;
-  outline: 5px;
-}
-
-.input-field:focus {
-  border: 20px solid dodgerblue;
-}
-
-
-
-.btn:hover {
-  opacity: 1;
-}
-</style>
-
+<link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
 
 
 
@@ -408,8 +274,59 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 
+
+
+
+
+
+
+
+<!-- icons sa Pass and User -->
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 18px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 30px;
+  outline: 5px;
+}
+
+.input-field:focus {
+  border: 20px solid dodgerblue;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
   <!-- Required meta tags -->
-   <title>Del.S.U.R | Division Davao del Sur</title>
+   <title>M.E.M.O. | Division Davao del Sur</title>
   <!-- plugins:css -->
  
   <!-- endinject -->
@@ -418,7 +335,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" href="images/logo.png" />
 
   <style>
 body {
@@ -439,79 +356,28 @@ h2 {
 h3 {
   text-align: right;
 }
-</style> 
+</style>
 
 
 
-<!-- 
-<style>
-body {
-  background-color: lightblue;
-}
-</style> -->
 
 
- 
+
 <style> 
   
 body {
-  background-image: url("mm.png");
+  background-image: url("bg.png");
 }
 </style> 
-
-
-
-
-
-
-
-
-
 
 
 
 
 </head>
 
-<body >
+<body>
 
-
-
-
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  
-  
-    <ul class="nav navbar-nav navbar-right">
-     
-      <li> <a href="login4.php"><font color="White" size="4"><B>Login</B></font></a></li>
-    </ul>
-
-  
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-  
-
-
+<br>
 
 
 
@@ -521,23 +387,43 @@ body {
       
       
         <div class="row w-100 mx-auto">
-   
+       
         
           <div class="col-lg- 100 mx-auto">
-         
-          
-      
-              <form class="pt-3" method="post" name="login" action="login.php">
-              <img src="davsur2.png" width="350" height="80">
-            
-              <br><br><br>
-   
-              <center><label><font color="White" size="4"> <B><h4>CHOOSE DEPARTMENT/SECTION</h4></B> </font></label></center>
 
-          
-              
-              <!-- <B><label>USERNAME</label></B><br> -->
-              <div class="input-container">
+
+
+          <br>    <br>
+
+
+
+          <img src="davsur2.png" width="330" height="80">
+
+            <br>    
+
+            <br>  
+       
+             <form class="pt-3" method="post" name="login1" action="login1.php">
+
+
+
+            
+    
+   
+   
+             <h1><label><font color="White" size="4"> <B>CHOOSE SCHOOL / DISTRICT</B> </font></label></h1>
+
+
+    
+ 
+
+
+
+             
+
+           
+         
+             <div class="input-container">
                   
                   <!-- <i class="fa fa-user icon"></i> -->
 
@@ -546,49 +432,55 @@ body {
                   <!-- <select type="text" name="username" value="<?php // echo $username;    ?> class="form-control" required="required"/> -->
  
         <option type="text" value="<?php  echo $username;?>"</option>   
-        <option value="Records">RECORDS</option>
-        <option value="Cashier">CASHIER</option>
-          <option value="SDS">SDS</option>
-          <option value="ASDS">ASDS</option>
-          <option value="SGOD">SGOD</option>
-          <option value="CID">CID</option>
-          <option value="HRMO">HRMO</option>
-          <option value="Accounting">ACCOUNTING</option>
-          <option value="Budget">BUDGET</option>
-          <option value="Supply">SUPPLY</option>
-          <option value="Legal">LEGAL</option>
-          <option value="DPSU">DPSU</option>
+        <option value="SCNHS">SCNHS</option>
+        <option value="SCCES">SCCES</option>
+          <option value="SNHS">SNHS</option>
+          <option value="PNHS">PNHS</option>
+          <option value="MNHS">MNHS</option>
+          <option value="FNHS">FNHS</option>
+          
         </select>
 </div>
-
-                  <!-- <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username" 
-                 
-                  value="<?php if(isset($_COOKIE['uname'])) echo $_COOKIE['uname'];?>"> -->
-
-                       
-               <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="Continue" />
-        
-
-                </div>
                 
-               <!-- <B> <label>PASSWORD</label></B> -->
+               <!-- <B> <label>PASSWORD</label></B>
                <div class="input-container">
-                  <!-- <i class="fa fa-key icon"></i> -->
-<!--                
+    <i class="fa fa-key icon"></i>
+               
                   <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Password"
                    value="<?php if(isset($_COOKIE['upass'])) echo $_COOKIE['upass'];?>">
                 </div> -->
-                <!-- <div class="mt-3"> -->
-             <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="ENTER" />  -->
-             <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="ENTER" />  -->
-        
-            </div><br>
-               
+                <div class="mt-3">
+             <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Continue" /> 
+                </div><br>
                 <!-- <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button> -->
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button> -->
-                
-              </form>
            
+                <!-- <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button> -->
+           
+               
+                
+              <!--    <div class="my-2 d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+
+
+                   
+                     <input type="checkbox" name ="remember" value="1" class="form-check-input">
+                     Keep me signed in
+                    </label>
+                  </div>
+                   <a href="#" class="auth-link text-black">Forgot password?</a>
+                </div>
+                <div class="mb-2">
+                  <button type="button" class="btn btn-block btn-facebook auth-form-btn">
+                    <i class="mdi mdi-facebook mr-2"></i> <a href="https://www.facebook.com" class="text-primary">Connect using facebook
+                  </button>
+                </div>
+               <div class="text-center mt-4 font-weight-light">
+                  Don't have an account? <a href="register.php" class="text-primary">Create</a>
+                </div>-->
+              </form>
+               
+            
         </div>
       </div>
       <!-- content-wrapper ends -->
@@ -599,12 +491,21 @@ body {
   <!-- plugins:js -->
  
   <!-- endinject -->
+      <!-- page-body-wrapper ends -->
 
 
-    <!-- page-body-wrapper ends -->
 
+
+
+  <!-- inject:js -->
  
-    <div class="modal fade" aria-hidden="true" id="form_modal">
+  <!-- endinject -->
+
+
+
+
+
+  <div class="modal fade" aria-hidden="true" id="form_modal">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form method="POST" action="save2.php">
@@ -741,34 +642,7 @@ body {
 
 
 
-<!-- SUpply alert -->
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
-
-
-
-<!-- Supply alert -->
-<script>
-
-function login(data_id) {
-    Swal.fire({
-        title: 'Are you sure?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, transfer it!',
-        closeOnConfirm: false,
-        closeOnCancel: false
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location = ("transfersupply_record.php?mem_id=" + data_id);   
-            
-            
-        }
-    })
-}
-</script>
 
 
 
