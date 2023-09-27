@@ -546,9 +546,9 @@ body {
                   <!-- <select type="text" name="username" value="<?php // echo $username;    ?> class="form-control" required="required"/> -->
  
         <option type="text" value="<?php  echo $username;?>"</option>   
-        <option value="Records">RECORDS</option>
+        <!-- <option value="Records">RECORDS</option> -->
         <option value="Cashier">CASHIER</option>
-          <option value="SDS">SDS</option>
+          <!-- <option value="SDS">SDS</option> -->
           <option value="ASDS">ASDS</option>
           <option value="SGOD">SGOD</option>
           <option value="CID">CID</option>
