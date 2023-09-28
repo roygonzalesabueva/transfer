@@ -299,7 +299,7 @@ div.c {
       <li><a href="#">Page 2</a></li>
     </ul>-->
     <ul class="nav navbar-nav navbar-right">
-	<li> <a href="http://202.137.126.58/Default"><font color="Black " size="2"><B>LOGOUT</B></a></font> </li>
+	<li> <a href="http://202.137.126.58/Logout"><font color="Black " size="2"><B>LOGOUT</B></a></font> </li>
 
       <!-- <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li> -->
       <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
