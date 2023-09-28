@@ -471,7 +471,7 @@ h3 {
             
               <br><br>
    
-              <h1><label><font color="Black" size="4"> <B></B>Sign in with your Del.S.U.R account</B> </font></label></h1>
+              <!-- <h1><label><font color="Black" size="4"> <B></B>Sign in with your Del.S.U.R account</B> </font></label></h1> -->
 
               <br>
               

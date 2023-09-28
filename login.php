@@ -484,7 +484,7 @@ body {
   
     <ul class="nav navbar-nav navbar-right">
      
-      <li> <a href="login4.php"><font color="White" size="4"><B>Login</B></font></a></li>
+      <!-- <li> <a href="login4.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
     </ul>
 
   
@@ -526,29 +526,35 @@ body {
           <div class="col-lg- 100 mx-auto">
          
           
-      
+          <br><br><br>
               <form class="pt-3" method="post" name="login" action="login.php">
               <img src="davsur2.png" width="350" height="80">
             
               <br><br><br>
    
-              <center><label><font color="White" size="4"> <B><h4>CHOOSE DEPARTMENT/SECTION</h4></B> </font></label></center>
+              <!-- <center><label><font color="White" size="4"> <B><h4>CHOOSE DEPARTMENT/SECTION</h4></B> </font></label></center> -->
 
           
+             
+<a href="indexclient.php" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
+
+           
+
+
+<a href="login4.php" class="btn btn-primary btn-block btn-lg"> DEPARTMENTAL DASHBOARD</a>
+
               
-              <!-- <B><label>USERNAME</label></B><br> -->
-              <div class="input-container">
+        
+              <!-- <div class="input-container">
                   
-                  <!-- <i class="fa fa-user icon"></i> -->
+                
 
                   <select type="text" name="username" class="form-control" required="required"/>
 
-                  <!-- <select type="text" name="username" value="<?php // echo $username;    ?> class="form-control" required="required"/> -->
- 
-        <option type="text" value="<?php  echo $username;?>"</option>   
-        <!-- <option value="Records">RECORDS</option> -->
+        <option type="text" value="<?php  //echo $username;?>"</option>   
+       
         <option value="Cashier">CASHIER</option>
-          <!-- <option value="SDS">SDS</option> -->
+
           <option value="ASDS">ASDS</option>
           <option value="SGOD">SGOD</option>
           <option value="CID">CID</option>
@@ -559,14 +565,14 @@ body {
           <option value="Legal">LEGAL</option>
           <option value="DPSU">DPSU</option>
         </select>
-</div>
+</div> -->
 
                   <!-- <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username" 
                  
                   value="<?php if(isset($_COOKIE['uname'])) echo $_COOKIE['uname'];?>"> -->
 
                        
-               <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="Continue" />
+               <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="Continue" /> -->
         
 
                 </div>
