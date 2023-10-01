@@ -1,4 +1,33 @@
 
+
+
+
+
+
+<?php
+  session_start();
+
+  if(!isset($_SESSION['username'])){
+
+    header("Location: http://202.137.126.58/");
+    exit();
+
+  }
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
 
 
@@ -483,6 +512,7 @@ body {
   
   
     <ul class="nav navbar-nav navbar-right">
+    <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
      
       <!-- <li> <a href="login4.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
     </ul>
