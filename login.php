@@ -1,37 +1,24 @@
 
+
+
+
+
+
+
+
 <?php
-session_start();
-
-    
-if (empty($_SESSION['user_id'])) {
-    echo "<p>String is Empty</p>";
-   // header("Location: http://202.137.126.58/");
-    //exit();
-} else {
-   
-    //$_SESSION['user_id'] = $userID;
-   // $_SESSION['username'] = $user;
-  //  $_SESSION['user_role'] = $role;
-   // $_SESSION['security_key'] = $key;
-   echo "<p>String is not Empty</p>";
-
-    //header("Location: admin/index.php");
-
-}
+  session_start();
 
 
 
+  if(!isset($_SESSION['username'])){
+
+    header("Location: http://202.137.126.58/");
+    exit();
+
+  }
 
 ?>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -61,21 +48,10 @@ function myTimer() {
 
 
 
+
+
+
 <?php
-  session_start();
-
-
-
-  if(!isset($_SESSION['username'])){
-
-    header("Location: http://202.137.126.58/");
-    exit();
-
-  }
-
-
-
-
 
   function verify($data){
     $data = trim($data);
@@ -86,9 +62,9 @@ function myTimer() {
 
   if(isset($_POST['login'])){
     //getting the form data
-     $username = verify($_POST['username']);
+    // $username = verify($_POST['username']);
       // $password = verify($_POST['password']);
-     
+     $username=strtolower($_SESSION['user_role']);
       
         
 
@@ -104,32 +80,32 @@ function myTimer() {
 
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username' ";
+    //$sql = "SELECT * FROM users WHERE username='$username' ";
  
     //Db Connection
     require_once('db.php');
 
     //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['username']= $username;
-      //header("location: dashboard.php");
-      header("location: index.php");
-      
-    }
-
-    if($count<>1);
-    {
-      $_SESSION['username']= $username;
+   // $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+   // $count = mysqli_num_rows($qry);
+  //  if($count==1)
+   // {
+     // $_SESSION['username']= $username;
       //header("location: dashboard.php");
     //  header("location: index.php");
-  echo"<script>alert('Error=Incorrect User Name or password.')</script>";
+      
+   // }
+
+   // if($count<>1);
+  //  {
+   //   $_SESSION['username']= $username;
+      //header("location: dashboard.php");
+    //  header("location: index.php");
+  //echo"<script>alert('Error=Incorrect User Name or password.')</script>";
    
 
 
-    }
+  //  }
 
 
 
@@ -139,7 +115,7 @@ function myTimer() {
     $sql = "SELECT * FROM users_tbl WHERE username='$username'";
     // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
     //Db Connection
-    require_once('db.php');
+    
 
     //qry
     $qry = mysqli_query ($conn, $sql) or die ("Login problem");
@@ -147,7 +123,7 @@ function myTimer() {
     if($count==1)
     {
       $row=mysqli_fetch_assoc($qry);
-
+    //  $_SESSION['user_role']
       $_SESSION['id']= $row['id'];
       $_SESSION['username']= $row['username'];
       $_SESSION['email']= $row['email'];
