@@ -1,5 +1,28 @@
 
+<?php
+session_start();
 
+    
+if (empty($_SESSION['user_id'])) {
+    echo "<p>String is Empty</p>";
+   // header("Location: http://202.137.126.58/");
+    //exit();
+} else {
+   
+    //$_SESSION['user_id'] = $userID;
+   // $_SESSION['username'] = $user;
+  //  $_SESSION['user_role'] = $role;
+   // $_SESSION['security_key'] = $key;
+   echo "<p>String is not Empty</p>";
+
+    //header("Location: admin/index.php");
+
+}
+
+
+
+
+?>
 
 
 
@@ -520,7 +543,6 @@ body {
 
   
 </nav>
-
 
 
 
