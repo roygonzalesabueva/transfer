@@ -17,6 +17,7 @@
     exit();
 
   }
+  echo $_SESSION['username'];
 
 ?>
 
