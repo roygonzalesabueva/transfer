@@ -1,9 +1,20 @@
 
 
 
+<?php
+  session_start();
 
 
 
+  if(!isset($_SESSION['username'])){
+
+    header("Location: http://202.137.126.58/");
+    exit();
+
+  }
+
+
+?>
 
 
 
