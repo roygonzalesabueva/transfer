@@ -125,7 +125,7 @@ function myTimer() {
       $row=mysqli_fetch_assoc($qry);
     //  $_SESSION['user_role']
       $_SESSION['id']= $row['id'];
-      $_SESSION['username']= $row['username'];
+      //$_SESSION['username']= $row['username'];
       $_SESSION['email']= $row['email'];
       $_SESSION['password']= $row['password'];
       $_SESSION['status']= $row['status'];
