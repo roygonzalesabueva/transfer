@@ -568,9 +568,10 @@ body {
 <a href="indexclient.php" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
 
            
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="DEPARTMENTAL DASHBOARD" /> 
+            
 
-
-<a href="login4.php" class="btn btn-primary btn-block btn-lg"> DEPARTMENTAL DASHBOARD</a>
+<!-- <a href="login.php" class="btn btn-primary btn-block btn-lg"> DEPARTMENTAL DASHBOARD</a> -->
 
               
         
