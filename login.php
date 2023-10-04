@@ -521,10 +521,10 @@ body {
         </div>
 
         <ul class="nav navbar-nav navbar-right">
-    <li> <a href="#"><font color="White" size="2"><B> <p id="demo"></p> </B></font></a> </li>
-    <li> <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></font></a></li>
+    <li> <a href="#"><font color="White" size="2"><B> <p id="demo"></p> </B></font></a> 
+     <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></font></a>
      
-      <li> <a href="http://202.137.126.58"><font color="White" size="2"><B>Home</B></font></a></li> 
+    <a href="http://202.137.126.58"><font color="White" size="2"><B>Home</B></font></a></li> 
       </ul>
 </div>
   
