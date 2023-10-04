@@ -513,7 +513,7 @@ body {
 
 </head>
 
-<body style="height:1500px">
+<body >
 
 
 
@@ -521,7 +521,7 @@ body {
 
 
 
- <nav class="navbar navbar-inverse navbar-fixed-top">
+ <nav class="navbar navbar-inverse ">
   <!-- <nav class="navbar navbar-inverse"> -->
     <div class="container-fluid">
         <div class="navbar-header">
