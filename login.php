@@ -510,14 +510,18 @@ body {
 
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  
-  
-    <ul class="nav navbar-nav navbar-right">
-    <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></a></font>
-     
-      <li> <a href="http://202.137.126.58"><font color="White" size="4"><B>Home</B></font></a></li> 
-    </ul>
+<div class="container-fluid">
+        <div class="navbar-header">
 
+       
+        </div>
+
+    <ul class="nav navbar-nav navbar-right">
+    <li> <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></a></font></li>
+     
+      <li> <a href="http://202.137.126.58"><font color="White" size="2"><B>Home</B></font></a></li> 
+    </ul>
+</div>
   
 </nav>
 
