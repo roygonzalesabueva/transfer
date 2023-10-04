@@ -515,7 +515,7 @@ body {
     <ul class="nav navbar-nav navbar-right">
     <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></a></font>
      
-      <!-- <li> <a href="login4.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
+      <li> <a href="http://202.137.126.58"><font color="White" size="4"><B>Home</B></font></a></li> 
     </ul>
 
   

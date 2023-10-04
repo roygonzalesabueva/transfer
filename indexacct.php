@@ -267,7 +267,7 @@ body {
 	
 
 
-        <li><a href="#"><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><font color="White" size="4"><B><?php echo $_SESSION['user'];?> </B></font></span></a></li>
+        <li><a href="#"><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><font color="White" size="4"><B><?php echo $_SESSION['username'];?> </B></font></span></a></li>
 	  
 	 
 	  <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></font></a></li>
