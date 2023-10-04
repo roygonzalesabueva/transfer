@@ -507,17 +507,14 @@ body {
 
 
 
-<div class="container">
+
 
 
 
  <nav class="navbar navbar-inverse navbar-fixed-top">
   <!-- <nav class="navbar navbar-inverse"> -->
     <div class="container-fluid">
-        <div class="navbar-header">
-
        
-        </div>
 
         <ul class="nav navbar-nav navbar-right">
     <li> <a href="#"><font color="White" size="2"><B> <p id="demo"></p> </B></font></a> </li>
