@@ -509,7 +509,7 @@ body {
 
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav >
 <div class="container-fluid">
         <div class="navbar-header">
 
