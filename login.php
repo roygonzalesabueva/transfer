@@ -509,19 +509,19 @@ body {
 
 
 
-<nav >
+<nav class="navbar navbar-inverse navbar-fixed-top">
 <div class="container-fluid">
         <div class="navbar-header">
 
        
         </div>
 
-    <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
     <li> <a href="#"><font color="White" size="2"><B> <p id="demo"></p> </B></font></a> </li>
     <li> <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></font></a></li>
      
       <li> <a href="http://202.137.126.58"><font color="White" size="2"><B>Home</B></font></a></li> 
-    </ul>
+      </ul>
 </div>
   
 </nav>
