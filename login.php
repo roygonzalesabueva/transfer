@@ -323,6 +323,16 @@ function myTimer() {
 
 
 
+<!--header-->
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -515,16 +525,16 @@ body {
   <!-- <nav class="navbar navbar-inverse"> -->
     <div class="container-fluid">
         <div class="navbar-header">
+
+       
+        </div>
+
         <ul class="nav navbar-nav navbar-right">
     <li> <a href="#"><font color="White" size="2"><B> <p id="demo"></p> </B></font></a> </li>
     <li> <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></font></a></li>
      
       <li> <a href="http://202.137.126.58"><font color="White" size="2"><B>Home</B></font></a></li> 
       </ul>
-       
-        </div>
-
-       
 </div>
   
 </nav>
