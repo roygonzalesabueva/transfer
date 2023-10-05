@@ -526,7 +526,7 @@ body {
 
     <li> <a href="#"><font color="White" size="2"><B><?=$_SESSION['username']?></B></font></a>
      
-    <a href="http://202.137.126.58"><font color="White" size="2"><B>   |    Home</B></font></a> <li> 
+    <a href="http://202.137.126.58/"><font color="White" size="2"><B>   |    Home</B></font></a> <li> 
       </ul>
 </div>
   
