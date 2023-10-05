@@ -191,7 +191,9 @@ function myTimer() {
         header("location: index.php");
       }
 
-
+      elseif ($_SESSION['department_id'] == 17) {
+        header("location: index.php");
+      }
 
       //header("location: dashboard.php");
       // header("location: index.php");
