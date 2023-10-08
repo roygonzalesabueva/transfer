@@ -536,6 +536,43 @@ function myTimer() {
  
     </div>
 </form></li>
+
+
+
+
+
+
+<li><form class="" action="print.php" method="post" target="_blank">
+
+<div class="form-group">
+    <select class="" name="trackid">
+        
+        <?php
+while($rows =mysqli_fetch_array($result)){
+echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
+}
+
+
+?>
+
+
+    </select>
+ 
+    <button type="submit" class="btn btn-primary" name="search" value="Search"><span class="glyphicon glyphicon-print"></span></button>
+    <!-- <input type="submit"  name="search" value="  Print"> -->
+  
+    </div>
+
+</form></li>
+
+
+
+
+
+
+
+
+
              
 </div></li> 
 
@@ -634,42 +671,6 @@ function myTimer() {
 
 
 
-
-            <form class="" action="print.php" method="post" target="_blank">
-
-            <div class="form-group">
-                <select class="" name="trackid">
-                    
-                    <?php
-	while($rows =mysqli_fetch_array($result)){
-		echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
-	}
-	
-	
-	?>
-
-
-                </select>
-             
-                <button type="submit" class="btn btn-primary" name="search" value="Search"><span class="glyphicon glyphicon-print"></span></button>
-                <!-- <input type="submit"  name="search" value="  Print"> -->
-              
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </form>
 
 
 
