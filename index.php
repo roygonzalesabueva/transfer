@@ -660,11 +660,11 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-    <center>
+    <!-- <center>
         <font size="5">
             <B> Documents Verification </B>
         </font>
-    </center> 
+    </center>  -->
 
 
 
