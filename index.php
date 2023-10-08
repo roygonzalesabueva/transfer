@@ -524,14 +524,7 @@ function myTimer() {
       <li><a href="#">Page 2</a></li>
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
-            <!-- <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>  -->
-
-             
-</div></li> 
-
-
-
-
+           
 <li><form action="index.php" method="post" enctype="multipart/form-data">
 
 <div class="form-group">
@@ -543,6 +536,12 @@ function myTimer() {
  
     </div>
 </form></li>
+             
+</div></li> 
+
+
+
+
 
 
 
