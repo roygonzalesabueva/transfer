@@ -527,7 +527,7 @@ function myTimer() {
 
 
 
-            <li><font color="BLACK" size="3">Documents Verification</font> </li>
+          
 
 
 
@@ -660,17 +660,11 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-
-  
-	
-		<hr style="border-top:1px dotted #ccc;"/>
-		
-
-    <!-- <center>
+    <center>
         <font size="5">
             <B> Documents Verification </B>
         </font>
-    </center> -->
+    </center> 
 
 
 
