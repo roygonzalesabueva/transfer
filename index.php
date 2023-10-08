@@ -488,6 +488,90 @@ function myTimer() {
 </div>
     </nav>
 
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!--<nav class="navbar navbar-inverse">-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+            <img src="davsur2.png" width="150" height="40">
+           
+
+            </div>
+
+
+            <!--  <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+    </ul>-->
+            <ul class="nav navbar-nav navbar-right">
+            <!-- <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>  -->
+
+             
+</div></li> 
+
+
+
+
+
+
+
+
+<li><button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>
+
+
+
+
+
+       
+                        </ul>
+
+                      
+  
+
+ 
+   
+  
+
+</div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- <center> -->
 
   
@@ -535,8 +619,6 @@ function myTimer() {
 
 
   
-
-            <center><button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></center> 
 
 
 
