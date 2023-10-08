@@ -511,12 +511,11 @@ function myTimer() {
 
 
 
+    <center><h3 class="text-primary"><B>Documents Verification </B></h3></center>
 
 
-    
 
-   <center><button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></center> 
-
+  
 	
 		<hr style="border-top:1px dotted #ccc;"/>
 		
@@ -527,8 +526,6 @@ function myTimer() {
         </font>
     </center> -->
 
-    <center><h3 class="text-primary"><B>Documents Verification </B></h3></center>
-
 
 
     <div class="row">
@@ -537,6 +534,9 @@ function myTimer() {
           
 
 
+  
+
+            <center><button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></center> 
 
 
 
