@@ -527,7 +527,7 @@ function myTimer() {
 
 
 
-            <li><h3>Documents Verification </h3></li>
+            <li><font color="BLACK" size="8">Documents Verification</font> </li>
 
 
 
@@ -581,7 +581,7 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-<li><B><font color="White" size="8">||||</font></B></li>
+<li><B><font color="White" size="8">|||</font></B></li>
 
 
 
