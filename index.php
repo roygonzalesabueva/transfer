@@ -350,7 +350,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 20%;
+        width: 22%;
         padding: 0 10px;
 
     }
@@ -505,11 +505,78 @@ function myTimer() {
 <!-- </center> -->
 		
 
+<div class="col-md-3"></div>
 	<!--  <div class="col-md-20 well">-->
+
+
+
+
+
+
+
+
+    <form class="" action="print.php" method="post" target="_blank">
+
+<div class="form-group">
+    <select class="" name="trackid">
+        
+        <?php
+while($rows =mysqli_fetch_array($result)){
+echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
+}
+
+
+?>
+
+
+    </select>
+ 
+    <button type="submit" class="btn btn-primary" name="search" value="Search"><span class="glyphicon glyphicon-print"></span></button>
+    <!-- <input type="submit"  name="search" value="  Print"> -->
+  
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+<form action="index.php" method="post" enctype="multipart/form-data">
+
+<div class="form-group">
+    <input type="text" name="valueToSearch" placeholder="Search ID..">
+
+    <!--<input type="submit" name="search" value="Search"> -->
+   
+    <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
+ 
+    </div>
+</form>
+
+
+
+
 
    <center><button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></center> 
 
 	
+		<hr style="border-top:1px dotted #ccc;"/>
+		
 
     <!-- <center>
         <font size="5">
@@ -616,63 +683,6 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
-
-
-
-
-
-            <form class="" action="print.php" method="post" target="_blank">
-
-            <div class="form-group">
-                <select class="" name="trackid">
-                    
-                    <?php
-	while($rows =mysqli_fetch_array($result)){
-		echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
-	}
-	
-	
-	?>
-
-
-                </select>
-             
-                <button type="submit" class="btn btn-primary" name="search" value="Search"><span class="glyphicon glyphicon-print"></span></button>
-                <!-- <input type="submit"  name="search" value="  Print"> -->
-              
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </form>
-
-
-
-
-
-
-            <form action="index.php" method="post" enctype="multipart/form-data">
-
-            <div class="form-group">
-                <input type="text" name="valueToSearch" placeholder="Search ID..">
-
-                <!--<input type="submit" name="search" value="Search"> -->
-               
-                <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
-             
-                </div>
-            </form>
 
 
 
