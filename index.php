@@ -506,9 +506,6 @@ function myTimer() {
 
 
 
-<button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button>
-
-
             </div>
 
 
@@ -527,7 +524,13 @@ function myTimer() {
 
 
 
+
+            <li> <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>
+
           
+
+
+            <li><B><font color="White" size="8">|||</font></B></li>
 
 
 
