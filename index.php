@@ -532,6 +532,19 @@ function myTimer() {
 
 
 
+<li><form action="index.php" method="post" enctype="multipart/form-data">
+
+<div class="form-group">
+    <input type="text" name="valueToSearch" placeholder="Search ID..">
+
+    <!--<input type="submit" name="search" value="Search"> -->
+   
+    <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
+ 
+    </div>
+</form></li>
+
+
 
 
 
@@ -662,19 +675,6 @@ function myTimer() {
 
 
 
-
-
-            <form action="index.php" method="post" enctype="multipart/form-data">
-
-            <div class="form-group">
-                <input type="text" name="valueToSearch" placeholder="Search ID..">
-
-                <!--<input type="submit" name="search" value="Search"> -->
-               
-                <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
-             
-                </div>
-            </form>
 
 
 
