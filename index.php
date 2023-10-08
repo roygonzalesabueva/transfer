@@ -350,7 +350,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 22%;
+        width: 20%;
         padding: 0 10px;
 
     }
