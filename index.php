@@ -527,7 +527,7 @@ function myTimer() {
 
 
 
-            <li><B>Documents Verification </B>></li>
+            <li><h3>Documents Verification </h3></li>
 
 
 
