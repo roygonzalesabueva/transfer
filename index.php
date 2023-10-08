@@ -581,7 +581,7 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-<li><B><font color="White" size="8">|||</font></B></li>
+<li><B><font color="White" size="8">||</font></B></li>
 
 
 
@@ -630,6 +630,12 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
+    <center>
+        <font size="5">
+            <B> Documents Verification </B>
+        </font>
+    </center> 
+
 
 
 
@@ -659,12 +665,6 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-
-    <center>
-        <font size="5">
-            <B> Documents Verification </B>
-        </font>
-    </center> 
 
 
 
