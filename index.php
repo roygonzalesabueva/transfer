@@ -426,7 +426,7 @@ function myTimer() {
       <li><a href="#">Page 2</a></li>
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
-            <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li> 
+            <!-- <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>  -->
 
             <li>    <a href="index.php"><div class="dropdown"></a>
     <a href="#" > <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font></a>
@@ -509,7 +509,8 @@ function myTimer() {
 	<!--  <div class="col-md-20 well">-->
 	<center><h3 class="text-primary"><B>Documents Verification </B></h3></center>
 		<hr style="border-top:1px dotted #ccc;"/>
-		
+		 <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button>
+
 
     <!-- <center>
         <font size="5">
