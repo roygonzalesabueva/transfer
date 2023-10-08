@@ -524,25 +524,14 @@ function myTimer() {
       <li><a href="#">Page 2</a></li>
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
-           
-<li><form action="index.php" method="post" enctype="multipart/form-data">
-
-<div class="form-group">
-    <input type="text" name="valueToSearch" placeholder="Search ID..">
-
-    <!--<input type="submit" name="search" value="Search"> -->
-   
-    <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
- 
-    </div>
-</form></li>
 
 
 
+            <li><h3 class="text-primary"><B>Documents Verification </B></h3></li>
 
 
 
-<li><form class="" action="print.php" method="post" target="_blank">
+            <li><form class="" action="print.php" method="post" target="_blank">
 
 <div class="form-group">
     <select class="" name="trackid">
@@ -564,6 +553,33 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
     </div>
 
 </form></li>
+
+
+
+
+
+
+
+
+
+           
+<li><form action="index.php" method="post" enctype="multipart/form-data">
+
+<div class="form-group">
+    <input type="text" name="valueToSearch" placeholder="Search ID..">
+
+    <!--<input type="submit" name="search" value="Search"> -->
+   
+    <button type="submit" class="btn btn-primary" name="search" value="Search"><i class="fa fa-search"></i></button>
+ 
+    </div>
+</form></li>
+
+
+
+
+
+
 
 
 
@@ -642,9 +658,6 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 	<!--  <div class="col-md-20 well">-->
 
 
-
-
-    <center><h3 class="text-primary"><B>Documents Verification </B></h3></center>
 
 
 
