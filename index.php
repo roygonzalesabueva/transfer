@@ -508,7 +508,7 @@ function myTimer() {
 <div class="col-md-3"></div>
 	<!--  <div class="col-md-20 well">-->
 
-    <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button>
+   <center><button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></center> 
 
 	
 		<hr style="border-top:1px dotted #ccc;"/>
