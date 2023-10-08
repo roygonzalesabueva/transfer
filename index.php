@@ -350,7 +350,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 0%;
+        width: 18%;
         padding: 0 10px;
 
     }
@@ -660,11 +660,11 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-    <!-- <center>
+     
         <font size="5">
             <B> Documents Verification </B>
         </font>
-    </center>  -->
+ 
 
 
 
