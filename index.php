@@ -496,7 +496,7 @@ function myTimer() {
 
 
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav >
         <!--<nav class="navbar navbar-inverse">-->
         <div class="container-fluid">
             <div class="navbar-header">
