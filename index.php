@@ -527,7 +527,7 @@ function myTimer() {
 
 
 
-            <li><font color="BLACK" size="8">Documents Verification</font> </li>
+            <li><font color="BLACK" size="3">Documents Verification</font> </li>
 
 
 
