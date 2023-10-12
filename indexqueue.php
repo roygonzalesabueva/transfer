@@ -91,7 +91,7 @@ if(isset($_POST['search']))
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-  <title>Del.S.U.R | Division of Davao del Sur </title>
+  <title>Project DavaoSur - Del.S.U.R  </title>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">

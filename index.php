@@ -104,7 +104,7 @@ function myTimer() {
 
 
 
-    <title>Del.S.U.R | Division of Davao del Sur </title>
+    <title>Project DavaoSur - Del.S.U.R  </title>
 
 
   <!--Header-->

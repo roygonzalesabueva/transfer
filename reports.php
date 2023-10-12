@@ -7,7 +7,7 @@ $result = mysqli_query($con,$sql);
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>Del.S.U.R | Division of Davao del Sur </title>
+<title>Project DavaoSur - Del.S.U.R  </title>
 	<meta charset="utf-8">
 	<title></title>
 	</head>

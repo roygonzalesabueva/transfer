@@ -93,7 +93,7 @@ function myTimer() {
 
 
 
-  <title>Del.S.U.R | Division of Davao del Sur </title>
+  <title>Project DavaoSur - Del.S.U.R  </title>
 	<link rel="shortcut icon" href="images/logo.png" />
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />

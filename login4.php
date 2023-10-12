@@ -281,7 +281,7 @@ function myTimer() {
 <html lang="en">
 
 <head>
-<title>Del.S.U.R | Division of Davao del Sur </title>
+<title>Project DavaoSur - Del.S.U.R  </title>
 
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

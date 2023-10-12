@@ -99,7 +99,7 @@ function myTimer() {
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>Del.S.U.R | Division of Davao del Sur </title>
+	<title>Project DavaoSur - Del.S.U.R  </title>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -298,6 +298,10 @@ div.c {
     </ul>-->
     <ul class="nav navbar-nav navbar-right">
 	<li><a <B><p id="demo"></p></B> </a> </li>
+
+	<li> <a href="chatcashier.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
+	
+
       <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li>
       <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
 	  <li><a href="indexcashier.php"> <font size="2"> <span class="glyphicon glyphicon-remove"></span><B> Close</B></font> </a></li>
