@@ -232,7 +232,7 @@ body {
     </ul>-->
     <ul class="nav navbar-nav navbar-right">
     <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
-		
+    <li> <a href="chatdpsu.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
     <li>  
     <a href="indexclient_dpsu.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
           </li>
