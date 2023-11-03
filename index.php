@@ -432,9 +432,9 @@ function myTimer() {
   
   
 
-            <li>  <a href="#"> <font color="BLUE" size="4">SECTIONS</font></a><div class="dropdown">
+            <li> <div class="dropdown">	 <a href="#"> <font color="BLUE" size="4">SECTIONS</font></a>
                 
-						
+					
 							<div class="dropdown-content">
 
               <a href="index.php">Admin</a>
