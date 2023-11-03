@@ -484,7 +484,7 @@ function myTimer() {
 
                 <li> <a href="http://202.137.126.58"><font color="White" size="4" ><B>Home</B></font></a></li>
                 
-                        </ul>
+                       
 
                       
   
@@ -494,6 +494,8 @@ function myTimer() {
   
 
 </div>
+
+</ul>
     </nav>
 
 
