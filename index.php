@@ -431,8 +431,8 @@ function myTimer() {
     
   
   
-            <li>   <a href="#"><div class="dropdown">
-     <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font></a>
+            <li>   <a href="#"><div class="dropdown"></a>
+     <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font>
 						
 							<div class="dropdown-content">
 
