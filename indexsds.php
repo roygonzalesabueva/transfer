@@ -262,8 +262,7 @@ body {
     <ul class="nav navbar-nav navbar-right">
 
 
-    <li>    <a href="index.php"><div class="dropdown"></a>
-    <a href="#" > <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font></a>
+    <li>    <div class="dropdown"><font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font>
 						
 							<div class="dropdown-content">
 
