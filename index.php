@@ -431,7 +431,24 @@ function myTimer() {
     
   
   
-            <li>  <font color="BLUE" size="4"><div class="dropdown">
+
+
+
+
+
+
+
+
+
+
+
+       
+                <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
+
+
+
+
+                <li>  <font color="BLUE" size="4"><div class="dropdown">
      <i class="fa fa-cog"></i> SECTIONS</font>
 						
 							<div class="dropdown-content">
@@ -464,9 +481,6 @@ function myTimer() {
 
 
 
-
-       
-                <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
                 <li> <a href="chat_index.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
                 <li>
                     <a href="indexclient.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction
