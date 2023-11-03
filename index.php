@@ -470,7 +470,7 @@ function myTimer() {
               <a href="index_trans.php">New Transaction / Claim</a>
              
 </div>
-</div>
+
 </li> 
 
 
