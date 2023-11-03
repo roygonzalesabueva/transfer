@@ -448,41 +448,6 @@ function myTimer() {
 
 
 
-                <li>  <div class="dropdown">
-                <font color="BLUE" size="4"> <i class="fa fa-cog"></i> SECTIONS</font>
-						
-							<div class="dropdown-content">
-
-              <a href="index.php">Admin</a>
-              <a href="indexrecord.php">Records</a>
-              <a href="indexsds.php">SDS</a>
-              <a href="indexasds.php">ASDS</a> 
-              <a href="indexhrmo.php">HRMO</a>
-              <a href="indexcid.php">CID</a>
-              <a href="indexsgod.php">SGOD</a>
-              <a href="indexsupply.php">Supply</a>
-              <a href="indexlegal.php">Legal</a>
-              <a href="indexcashier.php">Cashier</a>
-              <a href="indexdpsu.php">DPSU</a> 
-              <a href="indexacct.php">Accounting</a>
-              <a href="indexbudget.php">Budget</a>
-              <a href="indexqueue.php">Queue</a>
-              <a href="index_trans.php">New Transaction / Claim</a>
-             
-</div>
-
-</li> 
-
-
-
-
-
-
-
-
-
-
-
                 <li> <a href="chat_index.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
                 <li>
                     <a href="indexclient.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction
@@ -547,6 +512,32 @@ function myTimer() {
             <li> <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="2"> <B>Create Transaction</B></font></button></li>
 
           
+            
+
+            <li>  <div class="dropdown">
+                <font color="BLUE" size="4"> <i class="fa fa-cog"></i> SECTIONS</font>
+						
+							<div class="dropdown-content">
+
+              <a href="index.php">Admin</a>
+              <a href="indexrecord.php">Records</a>
+              <a href="indexsds.php">SDS</a>
+              <a href="indexasds.php">ASDS</a> 
+              <a href="indexhrmo.php">HRMO</a>
+              <a href="indexcid.php">CID</a>
+              <a href="indexsgod.php">SGOD</a>
+              <a href="indexsupply.php">Supply</a>
+              <a href="indexlegal.php">Legal</a>
+              <a href="indexcashier.php">Cashier</a>
+              <a href="indexdpsu.php">DPSU</a> 
+              <a href="indexacct.php">Accounting</a>
+              <a href="indexbudget.php">Budget</a>
+              <a href="indexqueue.php">Queue</a>
+              <a href="index_trans.php">New Transaction / Claim</a>
+             
+</div>
+
+</li> 
 
 
             <li><B><font color="White" size="8">|||</font></B></li>
