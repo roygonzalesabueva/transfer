@@ -412,7 +412,7 @@ function myTimer() {
            
 
             </div>
-
+            <div class="topnav-right">
 
             <!--  <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
@@ -427,7 +427,7 @@ function myTimer() {
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
             <!-- <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>  -->
-            <div class="topnav-right">
+            
     
   
   
@@ -478,14 +478,14 @@ function myTimer() {
 
 
                 <li> <a href="http://202.137.126.58"><font color="White" size="4" ><B>Home</B></font></a></li>
-                </div>
+                
                         </ul>
 
                       
   
 
                       
-   
+                        </div>
   
 
 </div>
