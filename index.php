@@ -432,7 +432,7 @@ function myTimer() {
   
   
             <li>   <a href="#"><font color="BLUE" size="4"><div class="dropdown">
-     <i class="fa fa-cog"></i> SECTIONS</font></a></li> 
+     <i class="fa fa-cog"></i> SECTIONS</font></a>
 						
 							<div class="dropdown-content">
 
@@ -452,7 +452,7 @@ function myTimer() {
               <a href="indexqueue.php">Queue</a>
               <a href="index_trans.php">New Transaction / Claim</a>
              
-</div>
+</div></li> 
 
 
 
