@@ -432,6 +432,30 @@ function myTimer() {
   
   
 
+            <li>  <div class="dropdown">
+                <font color="BLUE" size="4"> <i class="fa fa-cog"></i> SECTIONS</font>
+						
+							<div class="dropdown-content">
+
+              <a href="index.php">Admin</a>
+              <a href="indexrecord.php">Records</a>
+              <a href="indexsds.php">SDS</a>
+              <a href="indexasds.php">ASDS</a> 
+              <a href="indexhrmo.php">HRMO</a>
+              <a href="indexcid.php">CID</a>
+              <a href="indexsgod.php">SGOD</a>
+              <a href="indexsupply.php">Supply</a>
+              <a href="indexlegal.php">Legal</a>
+              <a href="indexcashier.php">Cashier</a>
+              <a href="indexdpsu.php">DPSU</a> 
+              <a href="indexacct.php">Accounting</a>
+              <a href="indexbudget.php">Budget</a>
+              <a href="indexqueue.php">Queue</a>
+              <a href="index_trans.php">New Transaction / Claim</a>
+             
+</div>
+
+</li> 
 
 
 
@@ -466,7 +490,7 @@ function myTimer() {
   
 
                       
-                        </div>
+                      
   
 
 </div>
@@ -514,30 +538,6 @@ function myTimer() {
           
             
 
-            <li>  <div class="dropdown">
-                <font color="BLUE" size="4"> <i class="fa fa-cog"></i> SECTIONS</font>
-						
-							<div class="dropdown-content">
-
-              <a href="index.php">Admin</a>
-              <a href="indexrecord.php">Records</a>
-              <a href="indexsds.php">SDS</a>
-              <a href="indexasds.php">ASDS</a> 
-              <a href="indexhrmo.php">HRMO</a>
-              <a href="indexcid.php">CID</a>
-              <a href="indexsgod.php">SGOD</a>
-              <a href="indexsupply.php">Supply</a>
-              <a href="indexlegal.php">Legal</a>
-              <a href="indexcashier.php">Cashier</a>
-              <a href="indexdpsu.php">DPSU</a> 
-              <a href="indexacct.php">Accounting</a>
-              <a href="indexbudget.php">Budget</a>
-              <a href="indexqueue.php">Queue</a>
-              <a href="index_trans.php">New Transaction / Claim</a>
-             
-</div>
-
-</li> 
 
 
             <li><B><font color="White" size="8">|||</font></B></li>
