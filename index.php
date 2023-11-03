@@ -427,7 +427,10 @@ function myTimer() {
     </ul>-->
             <ul class="nav navbar-nav navbar-right">
             <!-- <li>  <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal" data-target="#form_modal"> <font size="3"> <B>Create Transaction</B></font></button></li>  -->
-
+            <div class="topnav-right">
+    
+  
+  
             <li>    <a href="index.php"><div class="dropdown"></a>
     <a href="#" > <font color="BLUE" size="4"><i class="fa fa-cog"></i> SECTIONS</font></a>
 						
@@ -481,7 +484,7 @@ function myTimer() {
                       
   
 
- 
+                        </div>
    
   
 
