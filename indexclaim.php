@@ -239,7 +239,7 @@ body {
 
 
 
-	<img src="davsur2.png" width="290" height="70">
+	<img src="davsur2.png" width="200" height="50">
 <h4></h4>
 
 	<nav class="navbar navbar-default">

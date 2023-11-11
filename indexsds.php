@@ -252,7 +252,7 @@ body {
     <div class="container-fluid">
         <div class="navbar-header">
 
-        <img src="davsur2.png" width="290" height="70">
+        <img src="davsur2.png" width="200" height="50">
         </div>
   
       
