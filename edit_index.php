@@ -319,7 +319,8 @@ else{
 
 <select type="text" name="section" value="<?php  echo $section;    ?>">
  
-        <option type="text" value="<?php  echo $section;?>"</option>   
+        <option type="text" value="<?php  echo $section;?>"</option>  
+        <option value="Admin">Admin</option> 
         <option value="Records">Records</option>
         <option value="Cashier">Cashier</option>
           <option value="SDS">SDS</option>
