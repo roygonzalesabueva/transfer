@@ -201,7 +201,7 @@ function myTimer() {
       $_SESSION['user']= $username;
       //header("location: dashboard.php");
     //  header("location: index.php");
-  echo"<script>alert('Error=Incorrect User Name or password.')</script>";
+  echo"<script>alert('Error=Incorrect User Name.')</script>";
    
 
 
@@ -252,9 +252,6 @@ function myTimer() {
 
 
   
-
-
-
 
 
 
