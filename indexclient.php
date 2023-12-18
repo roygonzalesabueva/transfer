@@ -58,8 +58,10 @@ if(isset($_POST['search']))
         $query ="SELECT * FROM `memberclient` ORDER BY mem_id DESC";
         $search_result = filterTable($query);
 		
-        
+         
     }
+	
+
     
     function filterTable($query)
     {
@@ -396,6 +398,17 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 			<div class="col-lg-10"><div class="form-group">
 				<!-- <label for="search">View</label> -->
 				<input type="tel" class="form-control-lg form-control" name="trackid">
+
+				<?php
+while($rows =mysqli_fetch_array($result)){
+echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
+}
+
+
+?>
+
+
+
 			</div></div>
 			<div class="col-lg-2"><button type="submit" class="btn btn-primary" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>   View </button></center></div>
 			
