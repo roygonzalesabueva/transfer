@@ -400,14 +400,7 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 				<input type="tel" class="form-control-lg form-control" name="trackid">
 
 				
-				<?php
-
-
-echo"<script>confirm('No found record')</script>";
-
-
-
-?>
+			
 
 
 			</div></div>
