@@ -401,7 +401,9 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 
 				<?php
 while($rows =mysqli_fetch_array($result)){
-echo 'Invalid';
+
+	echo"<script>confirm('No found record')</script>";
+
 }
 
 
