@@ -405,7 +405,7 @@ $trackid = 0;
 
 // True because $a is empty
 if (empty($trackid)) {
-	echo"<script>window.location='indexclient.php'</script>";
+	header("refresh:1; url=indexclient.php");
 }
 
 ?>
