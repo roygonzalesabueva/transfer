@@ -399,8 +399,18 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 				<!-- <label for="search">View</label> -->
 				<input type="tel" class="form-control-lg form-control" name="trackid">
 
-				
 			
+				<?php
+$trackid = 0;
+
+// True because $a is empty
+if (empty($trackid)) {
+  echo "Variable 'trackid' is empty.<br>";
+}
+
+?>
+
+
 
 
 			</div></div>
