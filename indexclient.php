@@ -397,7 +397,7 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 		<div class="col-lg-4 offset-col-3">
 			<div class="col-lg-10"><div class="form-group">
 				<!-- <label for="search">View</label> -->
-				<input type="tel" class="form-control-lg form-control" name="trackid"  required="required" readonly/>
+				<input type="tel" class="form-control-lg form-control" name="trackid"  required="required"/>
 
 			
 
