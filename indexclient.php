@@ -399,7 +399,14 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 				<!-- <label for="search">View</label> -->
 				<input type="tel" class="form-control-lg form-control" name="trackid">
 
-				<?php
+				
+
+
+
+			</div></div>
+			<div class="col-lg-2"><button type="submit" class="btn btn-primary" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>   View </button></center></div>
+			
+			<?php
 while($rows =mysqli_fetch_array($result)){
 
 	echo"<script>confirm('No found record')</script>";
@@ -410,10 +417,6 @@ while($rows =mysqli_fetch_array($result)){
 ?>
 
 
-
-			</div></div>
-			<div class="col-lg-2"><button type="submit" class="btn btn-primary" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>   View </button></center></div>
-			
 			
 
 		</div>
