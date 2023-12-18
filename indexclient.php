@@ -400,21 +400,20 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 				<input type="tel" class="form-control-lg form-control" name="trackid">
 
 				
+				<?php
 
+
+echo"<script>confirm('No found record')</script>";
+
+
+
+?>
 
 
 			</div></div>
 			<div class="col-lg-2"><button type="submit" class="btn btn-primary" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>   View </button></center></div>
 			
-			<?php
-while($rows =mysqli_fetch_array($result)){
-
-	echo"<script>confirm('No found record')</script>";
-
-}
-
-
-?>
+			
 
 
 			
