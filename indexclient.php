@@ -405,7 +405,7 @@ $trackid = 0;
 
 // True because $a is empty
 if (empty($trackid)) {
-  echo "Variable 'trackid' is empty.<br>";
+	echo"<script>window.location='indexclient.php'</script>";
 }
 
 ?>
