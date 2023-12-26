@@ -314,7 +314,7 @@ div.c {
     <ul class="nav navbar-nav navbar-right">
 
 
-	<li><a href="#"><font color="Black " size="2"><B><?=$_SESSION['username']?></B></a></font></li>
+	<!-- <li><a href="#"><font color="Black " size="2"><B><?=$_SESSION['username']?></B></a></font></li> -->
 	<li> <a href="http://202.137.126.58"><font color="Black " size="2"><B>Home</B></a></font> </li>
 
       <!-- <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li> -->
