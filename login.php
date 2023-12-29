@@ -87,6 +87,13 @@ if (isset($_POST['login'])) {
       header("location: index_trans.php");
     } elseif ($_SESSION['department_id'] == 16) {
       header("location: index.php");
+    } else {
+      echo ` <script>
+                  $(document).ready(function(){  
+                      $("#Select_Department").modal();
+                  });
+              </script>      
+            `;
     }
 
     //header("location: dashboard.php");
@@ -107,14 +114,11 @@ if (isset($_POST['login'])) {
 
 <?php
     echo `    
-    <script type="text/javascript">
-    $(function () {
-        $("#Select_Department").modal("show");
-        $("#btnClosePopup").click(function () {
-            $("#Select_Department").modal("hide");
-        });
-    });
-  </script>
+    <script>
+$(document).ready(function(){  
+    $("#myModal").modal();
+});
+</script>
       
       `;
 
