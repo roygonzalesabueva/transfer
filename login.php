@@ -99,15 +99,9 @@ if (isset($_POST['login'])) {
     echo "<script>alert('Failed! User not Found!.')</script>";
   }
 }
-
-
 //else {
-
 //	echo"<script>alert('error=Incorrect User Name or password.')</script>";
 //	}
-
-
-
 
 //sql statement
 //$sql = "SELECT * FROM userschat WHERE username='$username' ";
@@ -116,18 +110,15 @@ if (isset($_POST['login'])) {
 //require_once('conn.php');
 
 //qry
-// $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-// $count = mysqli_num_rows($qry);
-// if($count==1)
-// {
-//   $_SESSION['user']= $username;
+//$qry = mysqli_query ($conn, $sql) or die ("Login problem");
+//$count = mysqli_num_rows($qry);
+//if($count==1)
+//{
+//$_SESSION['user']= $username;
 //header("location: dashboard.php");
-//   header("location: chat_client.php");
+//header("location: chat_client.php");
 
 // }     
-
-
-
 
 ?>
 
@@ -293,8 +284,6 @@ if (isset($_POST['login'])) {
 
           <!-- <center><label><font color="White" size="4"> <B><h4>CHOOSE DEPARTMENT/SECTION</h4></B> </font></label></center> -->
 
-
-
           <a href="indexclient.php" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
 
           <input type="hidden" name="email" value="<?php echo $_SESSION['username'];  ?>">
@@ -303,13 +292,9 @@ if (isset($_POST['login'])) {
 
         <!-- <a href="login.php" class="btn btn-primary btn-block btn-lg"> DEPARTMENTAL DASHBOARD</a> -->
 
-
-
         <!-- <div class="input-container">
                   
-                
-
-                  <select type="text" name="username" class="form-control" required="required"/>
+        <select type="text" name="username" class="form-control" required="required"/>
 
         <option type="text" value="<?php  //echo $username;
                                     ?>"</option>   
@@ -337,26 +322,12 @@ if (isset($_POST['login'])) {
 
 
       </div>
-
-
-
-
-
     </div>
   </div>
-  <!-- content-wrapper ends -->
 
-  <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-
-  <!-- endinject -->
-
 
   <!-- page-body-wrapper ends -->
-
-
   <div class="modal fade" aria-hidden="true" id="form_modal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -367,13 +338,6 @@ if (isset($_POST['login'])) {
           <div class="modal-body">
             <div class="col-md-2"></div>
             <div class="col-md-16">
-
-
-              <!--	<div class="form-group">
-                      
-                    <label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
-                    </div>-->
-
 
               <div class="form-group">
                 <label>Username</label>
