@@ -131,7 +131,7 @@
       // $_SESSION['security_key'];
 
       //inserting new account
-      $script = "INSERT INTO `user_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
+      $script = "INSERT INTO `users_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
     VALUES ('" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','user','active','0')";
 
       $result = mysqli_query($conn, $script) or die("Server Error!");
