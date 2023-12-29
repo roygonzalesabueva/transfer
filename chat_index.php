@@ -370,7 +370,7 @@ function myTimer() {
                             </B></font>
                     </li>
                     <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
-                                class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
+                                class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
 
                     <li> <a href="index.php">Close</a></li>
@@ -420,7 +420,7 @@ function myTimer() {
                         <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
 
-                        <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
+                        <option value="<?php echo $_SESSION['username'];?>"><?php echo $_SESSION['username'];?></option>
 
                         </select>
 
