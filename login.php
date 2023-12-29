@@ -1,55 +1,29 @@
 
-
-
-
-
-
-
-
 <?php
   session_start();
-
-
+  // Database Connection
+  require_once('db.php');
+  // $_SESSION['user_id'];
+  // $_SESSION['username'];
+  // $_SESSION['user_role'];
+  // $_SESSION['security_key'];
 
   if(!isset($_SESSION['username'])){
-
     header("Location: http://202.137.126.58/");
     exit();
-
   }
-  
-
 ?>
 
 
 
 
-
-
-<link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
-
-
-<script>
-setInterval(myTimer, 1000);
-function myTimer() {
-  const d = new Date();
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <script>
+    setInterval(myTimer, 1000);
+    function myTimer() {
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+  </script>
 
 
 <?php
@@ -64,8 +38,8 @@ function myTimer() {
   if(isset($_POST['login'])){
     //getting the form data
     // $username = verify($_POST['username']);
-      // $password = verify($_POST['password']);
-     $username=strtolower($_SESSION['user_role']);
+    // $password = verify($_POST['password']);
+    $username=strtolower($_SESSION['user_role']);
       
         
 
@@ -76,7 +50,7 @@ function myTimer() {
       //    setcookie('uname' , $username, time()+60*60*24*10,"/");
       //     setcookie('password' , $password, time()+60*60*24*10,"/");
  
-   //     }
+    //     }
 
 
 
@@ -84,7 +58,7 @@ function myTimer() {
     //$sql = "SELECT * FROM users WHERE username='$username' ";
  
     //Db Connection
-    require_once('db.php');
+    
 
     //qry
    // $qry = mysqli_query ($conn, $sql) or die ("Login problem");
@@ -114,17 +88,17 @@ function myTimer() {
 
     //sql statement
     $sql = "SELECT * FROM users_tbl WHERE username='$username'";
+
     // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
-    //Db Connection
-    
 
     //qry
     $qry = mysqli_query ($conn, $sql) or die ("Login problem");
     $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
+
+    // if user exist
+    if($count==1){ 
       $row=mysqli_fetch_assoc($qry);
-    //  $_SESSION['user_role']
+      //  $_SESSION['user_role']
       $_SESSION['id']= $row['id'];
       //$_SESSION['username']= $row['username'];
       $_SESSION['email']= $row['email'];
@@ -139,19 +113,15 @@ function myTimer() {
       elseif ($_SESSION['department_id'] == 2) {
         header("location: indexsds.php");
       }
-
       elseif ($_SESSION['department_id'] == 3) {
         header("location: indexrecord.php");
       }
-
       elseif ($_SESSION['department_id'] == 4) {
         header("location: indexqueue.php");
       }
-
       elseif ($_SESSION['department_id'] == 5) {
         header("location: indexhrmo.php");
       }
-
       elseif ($_SESSION['department_id'] == 6) {
         header("location: indexsgod.php");
       }
@@ -162,143 +132,107 @@ function myTimer() {
       elseif ($_SESSION['department_id'] == 8) {
         header("location: indexacct.php");
       }
-
       elseif ($_SESSION['department_id'] == 10) {
         header("location: indexsupply.php");
       }
-
       elseif ($_SESSION['department_id'] == 11) {
         header("location: indexbudget.php");
       }
-
       elseif ($_SESSION['department_id'] == 12) {
         header("location: indexcashier.php");
       }
-
       elseif ($_SESSION['department_id'] == 13) {
         header("location: indexlegal.php");
       }
-
       elseif ($_SESSION['department_id'] == 14) {
         header("location: indexdpsu.php");
       }
-
       elseif ($_SESSION['department_id'] == 15) {
         header("location: index_trans.php");
       }
-
       elseif ($_SESSION['department_id'] == 16) {
         header("location: index.php");
       }
 
       //header("location: dashboard.php");
-      // header("location: index.php");
+      //header("location: index.php");
       
-    }
-
-    if($count===1);
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-    //  header("location: index.php");
-  echo"<script>alert('Error=Incorrect User Name.')</script>";
-   
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //else {
-
-		//	echo"<script>alert('error=Incorrect User Name or password.')</script>";
-	//	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM userschat WHERE username='$username' ";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: chat_client.php");
+    }else{
       
-    }
-    
+      # create new account to this system
+      $script = "INSERT INTO `users_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
+      VALUES ('".$_SESSION['username']."','".$_SESSION['username']."','".$_SESSION['username']."','user','active', 0 )";
+      $qry = mysqli_query ($conn, $sql) or die ("Server Error!");
 
-  }
+      # select new registered user
+      $sql = "SELECT * FROM users_tbl WHERE username='$username'";
+
+        // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
+
+        //qry
+        $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+        $count = mysqli_num_rows($qry);
+
+          // if user exist
+          if($count==1){ 
+
+            $row=mysqli_fetch_assoc($qry);
+            //  $_SESSION['user_role']
+
+            $_SESSION['id']= $row['id'];
+            //$_SESSION['username']= $row['username'];
+
+            $_SESSION['email']= $row['email'];
+            $_SESSION['password']= $row['password'];
+            $_SESSION['status']= $row['status'];
+            $_SESSION['role']= $row['role'];
+            $_SESSION['department_id']= $row['department_id'];
+
+            if ($_SESSION['department_id'] == 0) {
+              header("Location: http://202.137.126.58/");
+            exit();
+            }
 
 
+                
+      }
+
+      if($count===1){
+        $_SESSION['user']= $username;
+        //header("location: dashboard.php");
+        //  header("location: index.php");
+        echo"<script>alert('Error=Incorrect User Name.')</script>"; 
+      }
 
 
+      //else {
+
+        //	echo"<script>alert('error=Incorrect User Name or password.')</script>";
+      //	}
 
 
+    {
 
-
-
-
-    
-  }
-
-
-
+      //sql statement
+      $sql = "SELECT * FROM userschat WHERE username='$username' ";
   
+      //Db Connection
+      require_once('conn.php');
+
+      //qry
+      $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+      $count = mysqli_num_rows($qry);
+      if($count==1)
+      {
+        $_SESSION['user']= $username;
+        //header("location: dashboard.php");
+        header("location: chat_client.php");
+        
+      }
+      
+
+    }                 
+  }
 
 ?>  
 
@@ -314,32 +248,13 @@ function myTimer() {
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-<!--supply allert-->
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+  <link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--supply allert-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-
-
-
-
-
-
-
-  
-
 <!-- icons sa Pass and User -->
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
