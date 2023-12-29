@@ -93,7 +93,7 @@ if (isset($_POST['login'])) {
 
 
   //sql statement
-  $sql = "SELECT * FROM users_tbl WHERE username='$username'";
+  $sql = "SELECT * FROM users_tbl WHERE email='" . $_SESSION['username']."'";
 
   // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
 
