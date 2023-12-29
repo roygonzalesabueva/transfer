@@ -350,7 +350,7 @@ body {
     <ul class="nav navbar-nav navbar-right">
 	
 	<li><font color="Black"><B><p id="demo"></p></B></font> </li>
-      <li><a href="#"><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
+      <li><a href="#"><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></a></li>
 	<!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
 	
 	   <li> <a href="indexhrmo.php">Close</a></li>
@@ -484,7 +484,7 @@ body {
 					<tr>
 					<!--	<td><?php echo $fetch['trackid']?></td>-->
 						
-						<td><?php echo $fetch['firstname']?></td>
+					<td><?php echo $_SESSION['username'];?></td>
 						<td><?php echo $fetch['lastname']?></td>
 						
 							
