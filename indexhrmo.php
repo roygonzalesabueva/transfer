@@ -253,7 +253,7 @@ body {
     <a href="indexclient_hrmo.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
           </li>
         
-        <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></font></a></li>
+        <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></B></font></a></li>
       
      
       <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></font></a></li>
@@ -334,7 +334,7 @@ body {
 					
 					<td><?php echo $fetch['trackid']?></td>
 					
-						<td><?php echo $_SESSION['user'];?></td>
+						<td><?php echo $_SESSION['username'];?></td>
 						<td><?php echo $fetch['lastname']?></td>
 						
 						
