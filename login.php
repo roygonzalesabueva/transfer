@@ -112,9 +112,9 @@
       } else {
         echo ' <script>
 
-        $(document).ready(function(){  
-          confirm("No Department");
-       });
+                $(document).ready(function(){  
+                window.location = window.location.href + "?openmodal=1";
+              });
                   
               </script>      
             ';
@@ -179,6 +179,16 @@ $(document).ready(function(){
 
   ?>
 
+    <?php
+  if ($_GET['openmodal'] == 1) { ?>
+    <script>
+    $(function() {
+        $('#Select_Department').modal('show');
+    });
+    </script>
+    <?php
+  }
+  ?>
 
     <!-- icons sa Pass and User -->
 
