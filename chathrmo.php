@@ -400,7 +400,7 @@ body {
                         <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
 
-                        <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
+                        <option value="<?php echo $_SESSION['username'];?>"><?php echo $_SESSION['username'];?></option>
 
                         </select>
 
@@ -484,7 +484,7 @@ body {
 					<tr>
 					<!--	<td><?php echo $fetch['trackid']?></td>-->
 						
-					<td><?php echo $_SESSION['username'];?></td>
+          <td><?php echo $fetch['firstname']?></td>
 						<td><?php echo $fetch['lastname']?></td>
 						
 							
