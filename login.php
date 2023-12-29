@@ -43,7 +43,6 @@ if (isset($_POST['login'])) {
   //getting the form data
   // $username = verify($_POST['username']);
   // $password = verify($_POST['password']);
-  // $username = verify($_POST['user_role2']);
   $username = strtolower($_SESSION['user_role']);
 
   // $username = $_SESSION['username'];
@@ -93,7 +92,7 @@ if (isset($_POST['login'])) {
 
 
   //sql statement
-  $sql = "SELECT * FROM users_tbl WHERE email='" . $_SESSION['username']."'";
+  $sql = "SELECT * FROM users_tbl WHERE email='" . $_SESSION['username'] . "'";
 
   // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
 
@@ -354,7 +353,7 @@ if (isset($_POST['login'])) {
                     <a href="indexclient.php" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
 
                     <input type="hidden" name="user_role2" value="<?= $_SESSION['user_role']  ?>">
-                    <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
+                    <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn mt-5"
                         name="login" value="DEPARTMENTAL DASHBOARD" />
 
 
@@ -487,15 +486,6 @@ if (isset($_POST['login'])) {
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
     <div class="modal fade" aria-hidden="true" id="form_modal2">
         <div class="modal-dialog">
