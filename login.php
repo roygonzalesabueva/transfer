@@ -92,7 +92,7 @@ if (isset($_POST['login'])) {
     } else {
       echo ` <script>
                   $(document).ready(function(){  
-                      $("#Select_Department").show();
+                      $("#Select_Department").modal("show")
                   });
               </script>      
             `;
