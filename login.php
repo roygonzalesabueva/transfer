@@ -2,7 +2,7 @@
 <?php
   session_start();
   // Database Connection
-  require_once('db.php');
+  
   // $_SESSION['user_id'];
   // $_SESSION['username'];
   // $_SESSION['user_role'];
@@ -44,9 +44,9 @@
     //getting the form data
     // $username = verify($_POST['username']);
     // $password = verify($_POST['password']);
-    // $username=strtolower($_SESSION['user_role']);
+    $username = strtolower($_SESSION['user_role']);
     
-    $username = $_SESSION['username'];
+    // $username = $_SESSION['username'];
         
 
      // Cookie - last nani ayaw e apil sa first code na login
@@ -64,7 +64,7 @@
     //$sql = "SELECT * FROM users WHERE username='$username' ";
  
     //Db Connection
-    
+    require_once('db.php');
 
     //qry
    // $qry = mysqli_query ($conn, $sql) or die ("Login problem");
