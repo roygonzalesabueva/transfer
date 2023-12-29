@@ -165,51 +165,15 @@
       
     }
     else{
-      
-      # create new account to this system
-      $script = "INSERT INTO `users_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
-      VALUES ('".$_SESSION['username']."','".$_SESSION['username']."','".$_SESSION['username']."','user','active', 0 )";
-      $qry = mysqli_query ($conn, $sql) or die ("Server Error!");
-
-      # select new registered user
-      $sql = "SELECT * FROM users_tbl WHERE username='$username'";
-
-        // $sql = "SELECT * FROM users_tbl WHERE username='$username' and password='$password'";
-
-        //qry
-        $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-        $count = mysqli_num_rows($qry);
-
-          // if user exist
-          if($count==1){ 
-
-            $row=mysqli_fetch_assoc($qry);
-            //  $_SESSION['user_role']
-
-            $_SESSION['id']= $row['id'];
-            //$_SESSION['username']= $row['username'];
-
-            $_SESSION['email']= $row['email'];
-            $_SESSION['password']= $row['password'];
-            $_SESSION['status']= $row['status'];
-            $_SESSION['role']= $row['role'];
-            $_SESSION['department_id']= $row['department_id'];
-
-            if ($_SESSION['department_id'] == 0) {
-              header("Location: http://202.137.126.58/");
-            exit();
-            }
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      //  header("location: index.php");
+      echo"<script>alert('Error=Incorrect User Name.')</script>"; 
+    }
 
 
                 
-          }
-
-          if($count===1){
-            $_SESSION['user']= $username;
-            //header("location: dashboard.php");
-            //  header("location: index.php");
-            echo"<script>alert('Error=Incorrect User Name.')</script>"; 
-          }
+  }
 
 
       //else {
@@ -221,25 +185,25 @@
     
 
       //sql statement
-      $sql = "SELECT * FROM userschat WHERE username='$username' ";
+      //$sql = "SELECT * FROM userschat WHERE username='$username' ";
   
       //Db Connection
-      require_once('conn.php');
+      //require_once('conn.php');
 
       //qry
-      $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-      $count = mysqli_num_rows($qry);
-      if($count==1)
-      {
-        $_SESSION['user']= $username;
+      // $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+      // $count = mysqli_num_rows($qry);
+      // if($count==1)
+      // {
+      //   $_SESSION['user']= $username;
         //header("location: dashboard.php");
-        header("location: chat_client.php");
+      //   header("location: chat_client.php");
         
-      }     
+      // }     
 
                     
-    }
-  }
+    
+  
 ?>  
 
 <!DOCTYPE html>
