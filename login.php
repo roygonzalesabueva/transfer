@@ -7,10 +7,10 @@ session_start();
 // $_SESSION['user_role'];
 // $_SESSION['security_key'];
 
-  if (!isset($_SESSION['username'])) {
-    header("Location: http://202.137.126.58/");
-    exit();
-  } 
+if (!isset($_SESSION['username'])) {
+  header("Location: http://202.137.126.58/");
+  exit();
+}
 
 
 ?>
@@ -350,7 +350,7 @@ if (isset($_POST['login'])) {
 
                     <a href="indexclient.php" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
 
-                    <input type="hidden" name="email" value="<?php echo $user  ?>">
+                    <input type="hidden" name="email" value="<?php echo $_SESSION['username'];  ?>">
                     <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn mt-3"
                         name="login" value="DEPARTMENTAL DASHBOARD" />
 
