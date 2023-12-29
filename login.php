@@ -44,8 +44,8 @@
     //getting the form data
     // $username = verify($_POST['username']);
     // $password = verify($_POST['password']);
-    $username = verify($_POST['user_role2']);
-    // $username = strtolower($_SESSION['user_role']);
+    // $username = verify($_POST['user_role2']);
+    $username = strtolower($_SESSION['user_role']);
     
     // $username = $_SESSION['username'];
         
