@@ -401,7 +401,7 @@ body {
                         <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
 
-                        <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
+                        <option value="<?php echo $_SESSION['username'];?>"><?php echo $_SESSION['username'];?></option>
 
                         </select>
 
