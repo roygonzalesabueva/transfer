@@ -111,9 +111,10 @@
         header("location: index.php");
       } else {
         echo ` <script>
-                  $(document).ready(function(){  
-                      $("#Select_Department").modal("show")
-                  });
+        alert("hello");
+                  // $(document).ready(function(){  
+                  //     $("#Select_Department").modal("show");
+                  // });
               </script>      
             `;
       }
