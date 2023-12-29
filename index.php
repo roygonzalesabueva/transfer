@@ -629,9 +629,9 @@ function myTimer() {
                     <?php while ($fetch = mysqli_fetch_array($search_result)) : ?>
                     <tr>
                         <td><?php echo $fetch['trackid'] ?></td>
-                        <td><?php echo $_SESSION['username'];?></td>
+                        <!-- <td><?php echo $_SESSION['username'];?></td> -->
 
-                        <!-- <td><?php echo $fetch['firstname'] ?></td> -->
+                        <td><?php echo $fetch['firstname'] ?></td>
                         <td><?php echo $fetch['lastname'] ?></td>
                         <td><?php echo $fetch['section'] ?></td>
                         <td><?php echo $fetch['address'] ?></td>
