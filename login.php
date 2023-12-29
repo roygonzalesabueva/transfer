@@ -63,7 +63,7 @@
     //qry
    // $qry = mysqli_query ($conn, $sql) or die ("Login problem");
    // $count = mysqli_num_rows($qry);
-  //  if($count==1)
+        //  if($count==1)
    // {
      // $_SESSION['username']= $username;
       //header("location: dashboard.php");
@@ -72,15 +72,15 @@
    // }
 
    // if($count<>1);
-  //  {
+    //  {
    //   $_SESSION['username']= $username;
       //header("location: dashboard.php");
     //  header("location: index.php");
-  //echo"<script>alert('Error=Incorrect User Name or password.')</script>";
+    //echo"<script>alert('Error=Incorrect User Name or password.')</script>";
    
 
 
-  //  }
+    //  }
 
 
 
@@ -157,7 +157,8 @@
       //header("location: dashboard.php");
       //header("location: index.php");
       
-    }else{
+    }
+    else{
       
       # create new account to this system
       $script = "INSERT INTO `users_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
@@ -195,14 +196,14 @@
 
 
                 
-      }
+          }
 
-      if($count===1){
-        $_SESSION['user']= $username;
-        //header("location: dashboard.php");
-        //  header("location: index.php");
-        echo"<script>alert('Error=Incorrect User Name.')</script>"; 
-      }
+          if($count===1){
+            $_SESSION['user']= $username;
+            //header("location: dashboard.php");
+            //  header("location: index.php");
+            echo"<script>alert('Error=Incorrect User Name.')</script>"; 
+          }
 
 
       //else {
@@ -211,7 +212,7 @@
       //	}
 
 
-    {
+    
 
       //sql statement
       $sql = "SELECT * FROM userschat WHERE username='$username' ";
@@ -231,9 +232,9 @@
       }
       
 
-    }                 
+                    
+    }
   }
-
 ?>  
 
 <!DOCTYPE html>
@@ -527,7 +528,7 @@ body {
                <!-- <B> <label>PASSWORD</label></B> -->
                <div class="input-container">
                   <!-- <i class="fa fa-key icon"></i> -->
-<!--                
+                  <!--                
                   <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Password"
                    value="<?php if(isset($_COOKIE['upass'])) echo $_COOKIE['upass'];?>">
                 </div> -->
@@ -535,11 +536,9 @@ body {
              <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="ENTER" />  -->
              <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="ENTER" />  -->
         
-            </div><br>
+                </div>
+                <br>
                
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button> -->
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button> -->
-                
               </form>
            
         </div>
@@ -557,75 +556,65 @@ body {
     <!-- page-body-wrapper ends -->
 
  
-    <div class="modal fade" aria-hidden="true" id="form_modal">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<form method="POST" action="save2.php">
-				<div class="modal-header">
+        <div class="modal fade" aria-hidden="true" id="form_modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form method="POST" action="save2.php">
+                <div class="modal-header">   
+                  <h3 class="modal-title">Register</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-16">
+                    
+                    
+                  <!--	<div class="form-group">
+                      
+                    <label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
+                    </div>-->
 
 
-        
+                    <div class="form-group">
+                      <label>Username</label>
+                      <input type="text" name="username" class="form-control" required="required"/>
+                    </div>
 
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" name="password" class="form-control" required="required"/>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" name="email" class="form-control" required="required"/>
+                    </div>
 
-
-
-
-
-
-					<h3 class="modal-title">Register</h3>
-				</div>
-				<div class="modal-body">
-					<div class="col-md-2"></div>
-					<div class="col-md-16">
-						
-						
-					<!--	<div class="form-group">
-							
-						<label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
-						</div>-->
-
-
-						<div class="form-group">
-							<label>Username</label>
-							<input type="text" name="username" class="form-control" required="required"/>
-						</div>
-
-            <div class="form-group">
-							<label>Password</label>
-							<input type="password" name="password" class="form-control" required="required"/>
-						</div>
-						
-						<div class="form-group">
-							<label>Email</label>
-							<input type="text" name="email" class="form-control" required="required"/>
-						</div>
-
-            <div class="form-group">
-							<label>School</label>
-							<input type="text" name="school" class="form-control" required="required"/>
-						</div>
+                    <div class="form-group">
+                      <label>School</label>
+                      <input type="text" name="school" class="form-control" required="required"/>
+                    </div>
 
 
 
 
-            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-					<button  class="btn btn-primary" name="save2"  ><span class="glyphicon glyphicon-save"></span> Save</button>
-					
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                  <button  class="btn btn-primary" name="save2"  ><span class="glyphicon glyphicon-save"></span> Save</button>
+                  
 
 
-					</div>
-				</div>
-			
-				
+                  </div>
+                </div>
+              
+                
 
 
 
 
-				
-			</form>
-		</div>
-	</div>
-</div>	
+                
+              </form>
+            </div>
+          </div>
+        </div>	
 
 
 
@@ -636,95 +625,91 @@ body {
 
 
 
-<div class="modal fade" aria-hidden="true" id="form_modal2">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<form method="POST" action="save3.php">
-				<div class="modal-header">
-					<h3 class="modal-title">Forgot Password</h3>
-				</div>
-				<div class="modal-body">
-					<div class="col-md-2"></div>
-					<div class="col-md-16">
-						
-						
-					<!--	<div class="form-group">
-							
-						<label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
-						</div>-->
-            <div class="form-group">
-							<label>Email</label>
-							<input type="text" name="email" class="form-control" required="required"/>
-						</div>
+        <div class="modal fade" aria-hidden="true" id="form_modal2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form method="POST" action="save3.php">
+                <div class="modal-header">
+                  <h3 class="modal-title">Forgot Password</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-16">
+                    
+                    
+                  <!--	<div class="form-group">
+                      
+                    <label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
+                    </div>-->
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" name="email" class="form-control" required="required"/>
+                    </div>
 
-						<div class="form-group">
-							<label>Username</label>
-							<input type="text" name="username" class="form-control" required="required"/>
-						</div>
+                    <div class="form-group">
+                      <label>Username</label>
+                      <input type="text" name="username" class="form-control" required="required"/>
+                    </div>
 
-            <div class="form-group">
-							<label>Change Password</label>
-							<input type="password" name="password" class="form-control" required="required"/>
-						</div>
-						
-						
-
-
-
-
-            <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-					<button  class="btn btn-primary" name="save3"  ><span class="glyphicon glyphicon-save"></span>YES</button>
-					
-
-
-					</div>
-				</div>
-			
-				
+                    <div class="form-group">
+                      <label>Change Password</label>
+                      <input type="password" name="password" class="form-control" required="required"/>
+                    </div>
+                    
+                    
 
 
 
 
-				
-			</form>
-		</div>
-	</div>
-</div>	
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                  <button  class="btn btn-primary" name="save3"  ><span class="glyphicon glyphicon-save"></span>YES</button>
+                  
+
+
+                  </div>
+                </div>
+              
+                
 
 
 
 
-<!-- SUpply alert -->
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
-
-
-
-<!-- Supply alert -->
-<script>
-
-function login(data_id) {
-    Swal.fire({
-        title: 'Are you sure?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, transfer it!',
-        closeOnConfirm: false,
-        closeOnCancel: false
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location = ("transfersupply_record.php?mem_id=" + data_id);   
-            
-            
-        }
-    })
-}
-</script>
+                
+              </form>
+            </div>
+          </div>
+        </div>	
 
 
 
+
+        <!-- SUpply alert -->
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
+
+
+
+        <!-- Supply alert -->
+        <script>
+
+          function login(data_id) {
+              Swal.fire({
+                  title: 'Are you sure?',
+                  icon: 'warning',
+                  showCancelButton: true,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Yes, transfer it!',
+                  closeOnConfirm: false,
+                  closeOnCancel: false
+              }).then((result) => {
+                  if (result.isConfirmed) {
+                      window.location = ("transfersupply_record.php?mem_id=" + data_id);   
+                      
+                  }
+              });
+          }
+        </script>
 
 </body>
 
