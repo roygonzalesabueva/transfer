@@ -41,11 +41,12 @@
 
   if(isset($_POST['login'])){
     
-  //getting the form data
+    //getting the form data
     // $username = verify($_POST['username']);
     // $password = verify($_POST['password']);
-    $username=strtolower($_SESSION['user_role']);
-      
+    // $username=strtolower($_SESSION['user_role']);
+    
+    $username = $_SESSION['username'];
         
 
      // Cookie - last nani ayaw e apil sa first code na login
@@ -234,8 +235,7 @@
         //header("location: dashboard.php");
         header("location: chat_client.php");
         
-      }
-      
+      }     
 
                     
     }
