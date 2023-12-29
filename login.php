@@ -50,7 +50,7 @@ if (isset($_POST['login'])) {
     // $_SESSION['user_role']
     $_SESSION['id'] = $row['id'];
 
-    // $_SESSION['username']= $row['username'];
+    //$_SESSION['username']= $row['username'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['password'] = $row['password'];
     $_SESSION['status'] = $row['status'];
@@ -91,12 +91,39 @@ if (isset($_POST['login'])) {
 
     //header("location: dashboard.php");
     //header("location: index.php");
-
   } else {
+    // $_SESSION['user_id'];
+    // $_SESSION['username'];
+    // $_SESSION['user_role'];
+    // $_SESSION['security_key'];
+
+    //inserting new account
+    $script = "INSERT INTO `users_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
+    VALUES ('" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','user','active','0')";
+
+    $result = mysqli_query($conn, $script) or die("Server Error!");
+
+?>
+
+<?php
+    echo `    
+    <script type="text/javascript">
+    $(function () {
+        $("#Select_Department").modal("show");
+        $("#btnClosePopup").click(function () {
+            $("#Select_Department").modal("hide");
+        });
+    });
+  </script>
+      
+      `;
+
     //$_SESSION['user'] = $username;
     //header("location: dashboard.php");
     //header("location: index.php");
-    echo "<script>alert('Failed! User not Found!.')</script>";
+
+    // echo "<script>alert('Failed! User not Found!.')</script>";
+
   }
 }
 //else {
@@ -320,7 +347,6 @@ if (isset($_POST['login'])) {
 
         <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="Continue" /> -->
 
-
       </div>
     </div>
   </div>
@@ -358,25 +384,11 @@ if (isset($_POST['login'])) {
                 <label>School</label>
                 <input type="text" name="school" class="form-control" required="required" />
               </div>
-
-
-
-
               <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
               <button class="btn btn-primary" name="save2"><span class="glyphicon glyphicon-save"></span>
                 Save</button>
-
-
-
             </div>
           </div>
-
-
-
-
-
-
-
         </form>
       </div>
     </div>
@@ -392,12 +404,6 @@ if (isset($_POST['login'])) {
           <div class="modal-body">
             <div class="col-md-2"></div>
             <div class="col-md-16">
-
-
-              <!--	<div class="form-group">
-                      
-                    <label>ID</label>	<input type="text" name="id" class="form-control" required="required"/>
-                    </div>-->
               <div class="form-group">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" required="required" />
@@ -412,40 +418,58 @@ if (isset($_POST['login'])) {
                 <label>Change Password</label>
                 <input type="password" name="password" class="form-control" required="required" />
               </div>
-
-
-
-
-
-
               <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
               <button class="btn btn-primary" name="save3"><span class="glyphicon glyphicon-save"></span>YES</button>
-
-
-
             </div>
           </div>
-
-
-
-
-
-
-
         </form>
       </div>
     </div>
   </div>
 
+  <!-- Department Modal -->
+  <div id="Select_Department" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;</button>
+          <h4 class="modal-title">
+            Select Department
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="departmentOps">Select Department</label>
+            </div>
+            <select class="custom-select" id="departmentOps">
+              <option selected>Select...</option>
+              <option value="1">ASDS</option>
+              <option value="8">ACCOUNTING</option>
+              <option value="11">BUDGET</option>
+              <option value="12">CASHIER</option>
+              <option value="7">CID</option>
+              <option value="14">DPSU</option>
+              <option value="13">LEGAL</option>
+              <option value="16">RECORDS INCOMING</option>
+              <option value="3">RECORDS RELEASING</option>
+              <option value="2">SDS</option>
+              <option value="6">SGOD</option>
+              <option value="10">SUPPLY</option>
+            </select>
+          </div>
 
-
-
+        </div>
+        <div class="modal-footer">
+          <input type="button" id="btnClosePopup" value="Close" class="btn btn-danger" />
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- SUpply alert -->
-
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
-
-
-
   <!-- Supply alert -->
   <script>
     function login(data_id) {
