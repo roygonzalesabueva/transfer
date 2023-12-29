@@ -283,7 +283,7 @@ body {
     <ul class="nav navbar-nav navbar-right">
 	<li><a href="#"> <font color="White" size="4"><B><p id="demo"></p></B> </font></a></li>
      		
-  <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></B></font></a></li>
+  <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></B></font></a></li>
 	  
 	 
 	  <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></font></a></li>
