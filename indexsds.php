@@ -388,8 +388,8 @@ body {
 					<tr>
 					
 					<td><?php echo $fetch['trackid']?></td>
-					
-						<td><?php echo $_SESSION['user'];?></td>
+					<td><?php echo $fetch['firstname']?></td>
+						<!-- <td><?php echo $_SESSION['user'];?></td> -->
 						<td><?php echo $fetch['lastname']?></td>
 						
 						
