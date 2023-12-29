@@ -37,7 +37,6 @@ function verify($data)
 if (isset($_POST['login'])) {
 
   $email = verify($_POST['email']);
-  echo $email;
 
   //sql statement
   $sql = "SELECT * FROM users_tbl WHERE email='" . $email . "'";
