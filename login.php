@@ -44,7 +44,8 @@
     //getting the form data
     // $username = verify($_POST['username']);
     // $password = verify($_POST['password']);
-    $username = strtolower($_SESSION['user_role']);
+    $username = verify($_POST['user_role2']);
+    // $username = strtolower($_SESSION['user_role']);
     
     // $username = $_SESSION['username'];
         
@@ -165,7 +166,7 @@
       
     }
     else{
-      $_SESSION['user']= $username;
+      // $_SESSION['user']= $username;
       //header("location: dashboard.php");
       //  header("location: index.php");
       echo"<script>alert('Error=Incorrect User Name.')</script>"; 
@@ -443,7 +444,7 @@ body {
          
           
           <br><br><br>
-              <form class="pt-3" method="post" name="login" action="login.php">
+              <form class="pt-3" method="post" action="login.php">
               <img src="davsur2.png" width="350" height="80">
             
               <br><br><br>
@@ -454,7 +455,7 @@ body {
              
 <a href="indexclient.php" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
 
-           
+           <input type="hidden" name="user_role2" value="<?= $_SESSION['user_role']  ?>">
 <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login"  value="DEPARTMENTAL DASHBOARD" /> 
             
 
