@@ -14,14 +14,14 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 
-<script>
+<!-- <script>
   setInterval(myTimer, 1000);
 
   function myTimer() {
     const d = new Date();
     document.getElementById("demo").innerHTML = d.toLocaleTimeString();
   }
-</script>
+</script> -->
 
 
 <?php
