@@ -53,6 +53,7 @@ if (isset($_POST['login'])) {
     $row = mysqli_fetch_assoc($result);
     // $_SESSION['user_role']
     $_SESSION['id'] = $row['id'];
+
     // $_SESSION['username']= $row['username'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['password'] = $row['password'];
@@ -99,7 +100,7 @@ if (isset($_POST['login'])) {
     // $_SESSION['user']= $username;
     //header("location: dashboard.php");
     //  header("location: index.php");
-    echo "<script>alert('Error=Incorrect User Name.')</script>";
+    echo "<script>alert('Failed: User not Found!.')</script>";
   }
 }
 
