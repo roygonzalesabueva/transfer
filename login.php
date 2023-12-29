@@ -35,6 +35,8 @@
     return $data;
   }
 
+  if(isset($_POST['login'])){
+    
   //getting the form data
     // $username = verify($_POST['username']);
     // $password = verify($_POST['password']);
@@ -233,9 +235,7 @@
 
                     
     }
-  // if(isset($_POST['login'])){
-    
-  // }
+  }
 ?>  
 
 <!DOCTYPE html>
