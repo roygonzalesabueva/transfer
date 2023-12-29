@@ -6,27 +6,28 @@ $result = mysqli_query($con,$sql);
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Project DavaoSur - Del.S.U.R  </title>
-	<meta charset="utf-8">
-	<title></title>
-	</head>
-	<body>
-	<form class="" action="fpdfdemo2.php" method="post" target="_blank">
-	<select class="" name="mem_id">
-	<?php
+    <title>Project DavaoSur - Del.S.U.R </title>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <form class="" action="fpdfdemo2.php" method="post" target="_blank">
+        <select class="" name="mem_id">
+            <?php
 	while($rows =mysqli_fetch_array($result)){
 		echo '<option value="'.$rows["mem_id"].'">'.$rows["mem_id"].'</option>';
 	}
 	
-	
 	?>
-	
-	
-	</select>
-	
-	<button type="submit" name="button">Generate report</button>
-	</form>
-	</body>
-	</html>
-	
+
+
+        </select>
+
+        <button type="submit" name="button">Generate report</button>
+    </form>
+</body>
+
+</html>
