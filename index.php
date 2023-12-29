@@ -1,7 +1,7 @@
 <?php
-$conn = mysqli_connect("localhost","root","@DavaosurDB2023","db_transfer");
+$conn = mysqli_connect("localhost", "root", "@DavaosurDB2023", "db_transfer");
 $sql = "SELECT * FROM `member1` ORDER BY mem_id ASC";
-$result = mysqli_query($conn,$sql);
+$result = mysqli_query($conn, $sql);
 ?>
 
 
@@ -19,29 +19,25 @@ include_once("session.php")
 
 
 
-if(isset($_POST['search']))
-{
+if (isset($_POST['search'])) {
     $valueToSearch = $_POST['valueToSearch'];
-	$query = "SELECT * FROM `member1` WHERE  CONCAT(`trackid`)LIKE '%".$valueToSearch."%'";
-  //  $query = "SELECT * FROM `membertracking` WHERE  CONCAT(`mem_id`, `trackid`, `firstname`, `lastname`, `address`)LIKE '%".$valueToSearch."%'";
+    $query = "SELECT * FROM `member1` WHERE  CONCAT(`trackid`)LIKE '%" . $valueToSearch . "%'";
+    //  $query = "SELECT * FROM `membertracking` WHERE  CONCAT(`mem_id`, `trackid`, `firstname`, `lastname`, `address`)LIKE '%".$valueToSearch."%'";
     $search_result = filterTable($query);
-    
+} else {
+    $query = "SELECT * FROM `member1` ORDER BY mem_id ASC";
+    $search_result = filterTable($query);
 }
-    else {
-        $query ="SELECT * FROM `member1` ORDER BY mem_id ASC";
-        $search_result = filterTable($query);
-        
-    }
-    
-    function filterTable($query)
-    {
-        $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "db_transfer");
-        $filter_Result = mysqli_query($connect, $query);
-        return $filter_Result;
-    }
-        
-    
-    
+
+function filterTable($query)
+{
+    $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "db_transfer");
+    $filter_Result = mysqli_query($connect, $query);
+    return $filter_Result;
+}
+
+
+
 
 ?>
 
@@ -162,13 +158,6 @@ function myTimer() {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-
-
-
-
-
-
-
     <!--responsive-->
 
     <style>
@@ -225,17 +214,6 @@ function myTimer() {
         }
     }
     </style>
-
-
-
-
-
-
-
-
-
-
-
 
     <!--notificion-->
 
@@ -436,24 +414,12 @@ function myTimer() {
                         </div>
                     </li>
 
-
-
-
-
-
-
-
-
-
-
                     <li> <a href="#">
-                            <font color="White" size="4"><B>
+                            <font color="White" size="4"><b>
                                     <p id="demo"></p>
-                                </B></font>
-                        </a> </li>
-
-
-
+                                </b></font>
+                        </a>
+                    </li>
 
                     <li> <a href="chat_index.php">
                             <font color="White" size="4"><B>Chat Room</B></font>
@@ -467,7 +433,7 @@ function myTimer() {
 
                     <li><a href="#">
                             <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i> <span
-                                        class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></B></font>
+                                        class="nav-profile-name"><?php echo $_SESSION['username']; ?> </span></B></font>
                         </a></li>
 
 
@@ -502,46 +468,29 @@ function myTimer() {
         <div class="container-fluid">
             <div class="navbar-header">
 
-
-
-
-
-
             </div>
 
 
             <!--  <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-    </ul>-->
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Page 2</a></li>
+                    </ul>-->
             <ul class="nav navbar-nav navbar-right">
-
-
-
 
                 <li> <button class="btn btn-primary" onclick="generateTrackingID()" type="button" data-toggle="modal"
                         data-target="#form_modal">
                         <font size="2"> <B>Create Transaction</B></font>
                     </button></li>
-
-
-
-
-
-
                 <li><B>
                         <font color="White" size="8">|||</font>
                     </B></li>
-
-
-
                 <li>
                     <form class="" action="print.php" method="post" target="_blank">
 
@@ -549,14 +498,10 @@ function myTimer() {
                             <select class="" name="trackid">
 
                                 <?php
-while($rows =mysqli_fetch_array($result)){
-echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
-}
-
-
-?>
-
-
+                                while ($rows = mysqli_fetch_array($result)) {
+                                    echo '<option value="' . $rows["trackid"] . '">' . $rows["trackid"] . '</option>';
+                                }
+                                ?>
                             </select>
 
                             <button type="submit" class="btn btn-primary" name="search" value="Search"><span
@@ -568,17 +513,9 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
                     </form>
                 </li>
 
-
-
-
-
                 <li><B>
                         <font color="White" size="8">|||</font>
                     </B></li>
-
-
-
-
                 <li>
                     <form action="index.php" method="post" enctype="multipart/form-data">
 
@@ -594,79 +531,18 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
                     </form>
                 </li>
 
-
-
-
-
-
-
                 <li><B>
                         <font color="White" size="8">||</font>
                     </B></li>
-
-
-
-
-
-
-
-
         </div>
         </li>
-
-
-
-
-
-
-
-
-
-
-
 
         </ul>
 
 
-
-
-
-
-
-
         </div>
     </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- <center> -->
-
-
-
-
-
-
-
 
     <!--  
 
@@ -679,82 +555,20 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
     <div class="col-md-3"></div>
     <!--  <div class="col-md-20 well">-->
 
-
-
-
-
     <font size="5">
         <B> Documents Verification </B>
     </font>
 
-
-
-
     <div class="row">
         <div class="column">
             <div class="card">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <h3><B>Window 1<B></h3>
                 <p>New Transaction ID</p>
-
-
-
-
-
-
-
-
-
-
                 <table class="table table-bordered">
-
-
-
-
-
-
-
-
-
-
-
                     <thead class="alert-info">
                         <tr>
                             <th>On queue</th>
                             <!--  <th>Action</th>-->
-
-
-
-
-
-
                         </tr>
                     </thead>
                     <tbody>
@@ -763,22 +577,22 @@ echo '<option value="'.$rows["trackid"].'">'.$rows["trackid"].'</option>';
 
 
 
-require'conn.php';
-$query=mysqli_query($conn, "SELECT * FROM `member1` ORDER BY mem_id ASC ") or die(mysqli_error());
-while($fetch=mysqli_fetch_array($query)){
-
- 
+                        require 'conn.php';
+                        $query = mysqli_query($conn, "SELECT * FROM `member1` ORDER BY mem_id ASC ") or die(mysqli_error());
+                        while ($fetch = mysqli_fetch_array($query)) {
 
 
-?>
+
+
+                        ?>
 
 
 
                         <tr>
-                            <td><?php echo $fetch['trackid']?></td>
+                            <td><?php echo $fetch['trackid'] ?></td>
 
                             <!--			<td>
-            <a href="transferclaim_record.php?mem_id=<?php echo $fetch['mem_id']?>">Claim</a>
+            <a href="transferclaim_record.php?mem_id=<?php echo $fetch['mem_id'] ?>">Claim</a>
             </td>-->
 
                         </tr>
@@ -786,49 +600,19 @@ while($fetch=mysqli_fetch_array($query)){
 
 
                         <?php
-						}
+                        }
 
-         
-					?>
+
+                        ?>
 
                     </tbody>
 
                 </table>
             </div>
         </div>
-
-
-
         <br>
-
-
         <div class="column">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <table class="table table-bordered">
-
-
-
-
-
-
-
-
-
-
                 <thead class="alert-info">
                     <tr>
                         <th>Transaction_ID</th>
@@ -841,32 +625,25 @@ while($fetch=mysqli_fetch_array($query)){
                         <th>Notification</th>
                         <th>Action</th>
                         <th>Update</th>
-
-
-
-
-
                     </tr>
                 </thead>
 
                 <tbody>
 
-
-
-                    <?php while($fetch = mysqli_fetch_array($search_result)): ?>
+                    <?php while ($fetch = mysqli_fetch_array($search_result)) : ?>
                     <tr>
-                        <td><?php echo $fetch['trackid']?></td>
+                        <td><?php echo $fetch['trackid'] ?></td>
 
-                        <td><?php echo $_SESSION['user'];?></td>
-                        <td><?php echo $fetch['lastname']?></td>
-
-
-                        <td><?php echo $fetch['section']?></td>
+                        <td><?php echo $_SESSION['username']; ?></td>
+                        <td><?php echo $fetch['lastname'] ?></td>
 
 
+                        <td><?php echo $fetch['section'] ?></td>
 
-                        <td><?php echo $fetch['address']?></td>
-                        <td><?php echo $fetch['date_created']?></td>
+
+
+                        <td><?php echo $fetch['address'] ?></td>
+                        <td><?php echo $fetch['date_created'] ?></td>
 
                         <td>
 
@@ -875,13 +652,6 @@ while($fetch=mysqli_fetch_array($query)){
                                         style="font-size:20px"></i><span class="badge">1</span></a>
 
                                 <div class="dropdown-content">
-
-
-
-
-
-
-
                                     <!-- 
                 <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Records</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmasds" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to ASDS</button>
@@ -896,10 +666,6 @@ while($fetch=mysqli_fetch_array($query)){
               <button type="button" class="btn btn-link" data-target="#modal_confirmacct" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Accounting</button>
               <button type="button" class="btn btn-link" data-target="#modal_confirmlegal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forward to Legal</button>
               -->
-
-
-
-
 
                                     <a onclick="indexrecord('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link">
                                         <i class="fas fa-share"></i>Records</a>
@@ -928,39 +694,48 @@ while($fetch=mysqli_fetch_array($query)){
                                             class="fas fa-share"></i>Legal</a>
 
 
-                                    <!-- <a type="button" class="btn btn-link" href="transferrecord.php?mem_id=<?php //echo $fetch['mem_id']?>">Records</a> -->
-                                    <!-- <a type="button" class="btn btn-link" href="transferhrmo.php?mem_id=<?php// echo $fetch['mem_id']?>">HRMO</a> -->
-                                    <!-- <a type="button" class="btn btn-link" href="transfersds.php?mem_id=<?php //echo $fetch['mem_id']?>">SDS</a> -->
-                                    <!-- <a type="button" class="btn btn-link" href="transferasds.php?mem_id=<?php //echo $fetch['mem_id']?>">ASDS</a> -->
-                                    <!-- <a type="button" class="btn btn-link" href="transfersgod.php?mem_id=<?php //echo $fetch['mem_id']?>">SGOD</a> -->
-                                    <!-- <a type="button" class="btn btn-link" href="transferscid.php?mem_id=<?php //echo $fetch['mem_id']?>">CID</a> -->
-                                    <!-- <a type="button" class="btn btn-link" href="transferdpsu.php?mem_id=<?php //echo $fetch['mem_id']?>">DPSU</a>
-                                        <a type="button" class="btn btn-link" href="transfersupply.php?mem_id=<?php //echo $fetch['mem_id']?>">Supply</a>
-                                        <a type="button" class="btn btn-link" href="transfercashier.php?mem_id=<?php //echo $fetch['mem_id']?>">Cashier</a>
-                                        <a type="button" class="btn btn-link" href="transferbudget.php?mem_id=<?php// echo $fetch['mem_id']?>">Budget</a>
-                                        <a type="button" class="btn btn-link" href="transferacct.php?mem_id=<?php //echo $fetch['mem_id']?>">Accounting</a>
+                                    <!-- <a type="button" class="btn btn-link" href="transferrecord.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                    ?>">Records</a> -->
+                                    <!-- <a type="button" class="btn btn-link" href="transferhrmo.php?mem_id=<? php // echo $fetch['mem_id']
+                                                                                                                    ?>">HRMO</a> -->
+                                    <!-- <a type="button" class="btn btn-link" href="transfersds.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                ?>">SDS</a> -->
+                                    <!-- <a type="button" class="btn btn-link" href="transferasds.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                    ?>">ASDS</a> -->
+                                    <!-- <a type="button" class="btn btn-link" href="transfersgod.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                    ?>">SGOD</a> -->
+                                    <!-- <a type="button" class="btn btn-link" href="transferscid.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                    ?>">CID</a> -->
+                                    <!-- <a type="button" class="btn btn-link" href="transferdpsu.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                    ?>">DPSU</a>
+                                        <a type="button" class="btn btn-link" href="transfersupply.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                ?>">Supply</a>
+                                        <a type="button" class="btn btn-link" href="transfercashier.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                ?>">Cashier</a>
+                                        <a type="button" class="btn btn-link" href="transferbudget.php?mem_id=<? php // echo $fetch['mem_id']
+                                                                                                                ?>">Budget</a>
+                                        <a type="button" class="btn btn-link" href="transferacct.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                            ?>">Accounting</a>
                                         
-                                        <a type="button" class="btn btn-link" href="transferlegal.php?mem_id=<?php //echo $fetch['mem_id']?>">Legal</a> -->
+                                        <a type="button" class="btn btn-link" href="transferlegal.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                                ?>">Legal</a> -->
                                 </div>
                             </div>
 
                         </td>
                         <td>
 
-                            <!-- <a type="button" class="btn btn-success" href="del.php?mem_id=<?php //echo $fetch['mem_id']?>"><font color="White" size="2">Delete</font></a>
+                            <!-- <a type="button" class="btn btn-success" href="del.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                    ?>"><font color="White" size="2">Delete</font></a>
                                    -->
                             <a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger">
                                 <i class="fas fa-solid fa-trash"></i>Delete</a>
 
-
-
-
-
-
                         </td>
 
                         <td>
-                            <!-- <a type="button" class="btn btn-success" href="edit_index.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-edit"
+                            <!-- <a type="button" class="btn btn-success" href="edit_index.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                            ?>"><i class="fa fa-edit"
                                     style='font-size:16px;color:White'>
                                     <font size="4"><B>Edit
                                </B></font>
@@ -968,24 +743,12 @@ while($fetch=mysqli_fetch_array($query)){
 
 
                             <a class=" btn btn-sm btn-success"
-                                href="edit_index.php?mem_id=<?php echo $fetch['mem_id']?>"><i
+                                href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?>"><i
                                     class="fa fa-edit"></i>Update</a>
 
-
-
-
                         </td>
-
-
-
-
-
-
-
-
-
                     </tr>
-                    <?php endwhile;?>
+                    <?php endwhile; ?>
                 </tbody>
 
             </table>
@@ -993,37 +756,10 @@ while($fetch=mysqli_fetch_array($query)){
         </div>
         </center>
 
-
-
-
-
-
-
-
-
-
     </div>
 
     </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="modal fade" aria-hidden="true" id="form_modal">
         <div class="modal-dialog">
@@ -1055,11 +791,6 @@ while($fetch=mysqli_fetch_array($query)){
                                 <label>Transaction/Description</label>
                                 <input type="text" name="lastname" class="form-control" required="required" />
                             </div>
-
-
-
-
-
 
                             <div class="form-group">
                                 <label>Receiver</label>
@@ -1095,11 +826,6 @@ while($fetch=mysqli_fetch_array($query)){
                                 class="glyphicon glyphicon-remove"></span> Close</button>
                         <button class="btn btn-primary" name="save"><span class="glyphicon glyphicon-save"></span>
                             Submit</button>
-
-
-
-
-
                     </div>
                 </form>
             </div>
@@ -1207,20 +933,20 @@ while($fetch=mysqli_fetch_array($query)){
                         </thead>
                         <tbody>
                             <?php
-						require'conn.php';
-						$query=mysqli_query($conn, "SELECT * FROM `serving`") or die(mysqli_error());
-						while($fetch=mysqli_fetch_array($query)){
-					?>
+                            require 'conn.php';
+                            $query = mysqli_query($conn, "SELECT * FROM `serving`") or die(mysqli_error());
+                            while ($fetch = mysqli_fetch_array($query)) {
+                            ?>
                             <tr>
-                                <td><?php echo $fetch['trackid']?></td>
+                                <td><?php echo $fetch['trackid'] ?></td>
                             </tr>
 
 
 
 
                             <?php
-						}
-					?>
+                            }
+                            ?>
                         </tbody>
 
                     </table>
@@ -1228,7 +954,8 @@ while($fetch=mysqli_fetch_array($query)){
 
 
                 <div class="modal-footer">
-                    <!--	<cemter><a href="del.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:20px;'></i>Del</a></center>-->
+                    <!--	<cemter><a href="del.php?mem_id=<?php //echo $fetch['mem_id']
+                                                            ?>"><i class="fa fa-trash" style='font-size:20px;'></i>Del</a></center>-->
 
 
                     <!--   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
@@ -1585,7 +1312,7 @@ function generateTrackingID() {
     //var inputT = document.getElementById("datetoday");
 
     inputF.setAttribute('value', year + "-" + (month + 1) + "" + (day) + "-" + (Math.floor(Math.random() * 100000) +
-    1));
+        1));
 
     inputD.setAttribute('value', year + "-" + (month + 1) + "-" + (day) + "-" + d.getHours() + ":" + d.getMinutes());
     //inputT.setAttribute('value', year+"-"+(month+1)+"-"+(day)+"-"+d.getHours()+":"+d.getMinutes());
