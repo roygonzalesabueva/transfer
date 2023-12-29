@@ -110,15 +110,15 @@
       } elseif ($_SESSION['department_id'] == 16) {
         header("location: index.php");
       } else {
-        echo ` <script>
+        echo ' <script>
         alert("hello");
-                  // $(document).ready(function(){  
+                  
+              </script>      
+            ';
+      }
+// $(document).ready(function(){  
                   //     $("#Select_Department").modal("show");
                   // });
-              </script>      
-            `;
-      }
-
       //header("location: dashboard.php");
       //header("location: index.php");
     } else {
