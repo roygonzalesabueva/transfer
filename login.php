@@ -12,6 +12,7 @@ if (!isset($_SESSION['username'])) {
   exit();
 }
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- <script>
   setInterval(myTimer, 1000);
 
@@ -90,7 +91,7 @@ if (isset($_POST['login'])) {
     } else {
       echo ` <script>
                   $(document).ready(function(){  
-                      $("#Select_Department").modal();
+                      $("#Select_Department").show();
                   });
               </script>      
             `;
