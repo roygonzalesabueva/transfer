@@ -272,7 +272,7 @@ else{
     <div class="card">
       
 
-
+    <a href="#"><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></a></li>
 
 
 
