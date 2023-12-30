@@ -132,7 +132,7 @@
 
             //inserting new account
             $script = "INSERT INTO `users_tbl`(`username`, `email`, `password`, `role`, `status`, `department_id`) 
-    VALUES ('" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','user','active','0')";
+            VALUES ('" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','" . $_SESSION['username'] . "','user','active','0')";
 
             $result = mysqli_query($conn, $script) or die("Server Error!");
 
@@ -155,6 +155,12 @@ $(document).ready(function(){
             // echo "<script>alert('Failed! User not Found!.')</script>";
 
         }
+    }
+
+    if (isset($_POST['update_department'])) {
+        $scpt = "UPDATE `users_tbl` SET `department_id`='" . isset($_POST['department']) .
+            "' WHERE email='" . $_SESSION['username'] . "'";
+        $result = mysqli_query($conn, $scpt) or die("Server Error!");
     }
     //else {
     //	echo"<script>alert('error=Incorrect User Name or password.')</script>";
@@ -460,31 +466,32 @@ $(document).ready(function(){
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Department</label>
-                        <select class="custom-select">
-                            <option selected>Select Department...</option>
-                            <option selected>Select...</option>
-                            <option value="1">ASDS</option>
-                            <option value="8">ACCOUNTING</option>
-                            <option value="11">BUDGET</option>
-                            <option value="12">CASHIER</option>
-                            <option value="7">CID</option>
-                            <option value="14">DPSU</option>
-                            <option value="13">LEGAL</option>
-                            <option value="16">RECORDS INCOMING</option>
-                            <option value="3">RECORDS RELEASING</option>
-                            <option value="2">SDS</option>
-                            <option value="6">SGOD</option>
-                            <option value="10">SUPPLY</option>
-                        </select>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Department</label>
+                            <select class="custom-select" name="department">
+                                <option selected>Select Department...</option>
+                                <option value="1">ASDS</option>
+                                <option value="8">ACCOUNTING</option>
+                                <option value="11">BUDGET</option>
+                                <option value="12">CASHIER</option>
+                                <option value="7">CID</option>
+                                <option value="14">DPSU</option>
+                                <option value="13">LEGAL</option>
+                                <option value="16">RECORDS INCOMING</option>
+                                <option value="3">RECORDS RELEASING</option>
+                                <option value="2">SDS</option>
+                                <option value="6">SGOD</option>
+                                <option value="10">SUPPLY</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" name="update_department">Save changes</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
