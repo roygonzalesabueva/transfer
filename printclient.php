@@ -131,7 +131,7 @@ $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST[
 $h=7;
 while($rows=mysqli_fetch_array($query)){
 
-    $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'C');
+    $pdf->Cell(28, $h, $rows['trackid'], 1, 'C');
     $y= $pdf->GetY();
     
 
@@ -139,11 +139,9 @@ while($rows=mysqli_fetch_array($query)){
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
-    $pdf->Cell(58,$h,'');
     $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
-    $pdf->Cell(103,$h,'');
     $pdf->Cell(103,$h,'');
     $pdf->Cell(28, $h, $rows['section'], 1, 0, 'C');
     
