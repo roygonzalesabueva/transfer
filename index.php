@@ -737,6 +737,21 @@ function myTimer() {
                                     class="fa fa-edit"></i>Update</a>
 
                         </td>
+
+                        <td>
+                            <!-- <a type="button" class="btn btn-success" href="edit_index.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                                                            ?>"><i class="fa fa-edit"
+                                    style='font-size:16px;color:White'>
+                                    <font size="4"><B>Edit
+                               </B></font>
+                               </i></a> -->
+
+
+                            <a class=" btn btn-sm btn-success"
+                                href="acceptindex.php?mem_id=<?php echo $fetch['mem_id'] ?>"><i
+                                    class="fa fa-edit"></i>Accept</a>
+
+                        </td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
@@ -975,6 +990,35 @@ function myTimer() {
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+
+
+    <script>
+    function acceptindex(data_id) {
+        Swal.fire({
+            title: 'Are you sure accept?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, accept it!',
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = ("acceptindex.php?mem_id=" + data_id);
+            }
+        })
+    }
+    </script>
+
+
+
+
+
+
+
 
     <!-- Supply alert -->
     <script>
