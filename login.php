@@ -158,7 +158,9 @@ $(document).ready(function(){
     }
 
     if (isset($_POST['update_department'])) {
-        $scpt = "UPDATE `users_tbl` SET `department_id`='" . isset($_POST['department']) .
+        $department =
+            isset($_POST['department']);
+        $scpt = "UPDATE `users_tbl` SET `department_id`='" .  $department .
             "' WHERE email='" . $_SESSION['username'] . "'";
         $result = mysqli_query($conn, $scpt) or die("Server Error!");
     }
