@@ -114,7 +114,7 @@ $this->Image('logo3.png',25,270,160,0);
 $pdf = new MyPDF();
 $pdf->AddPage();
 
-$pdf->SetFont('Arial', 'B', 12); // Font for table headers
+$pdf->SetFont('Arial', 'B', 8); // Font for table headers
 $pdf->SetFont ('Arial', '', 10); // Font for table content
 
 $pdf->Cell(28, 10, 'Transaction ID', 1, 0,  'C');
@@ -135,17 +135,17 @@ while($rows=mysqli_fetch_array($query)){
     $y= $pdf->GetY();
     
 
-    $pdf->MultiCell(30, $h, $rows['firstname'], 1, 0, 'C');
+    $pdf->MultiCell(30, $h, $rows['firstname'], 1, 'C');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
-    $pdf->MultiCell(45, $h, $rows['lastname'], 1, 0, 'C');
+    $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(103,$h,'');
-    $pdf->Cell(28, $h, $rows['section'], 1, 0, 'C');
+    $pdf->Cell(28, $h, $rows['section'], 1,  'C');
     
-    $pdf->Cell(35, $h, $rows['date_created'], 1, 0, 'C');
+    $pdf->Cell(35, $h, $rows['date_created'], 1,  'C');
     
     $pdf->MultiCell(26, $h, $rows['address'], 1, 'C');
     $pdf->SetY($y1+0);
