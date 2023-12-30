@@ -300,8 +300,8 @@ else{
 <i class="fa fa-user icon"></i>
 <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
-<!-- <option type="text" value="<?php echo $_SESSION['username']; ?>"</option>   -->
-        <option value="<?php echo $_SESSION['username']; ?>">Records</option>
+
+        <option value="Records">Records</option>
         </select>
 </div>
 
