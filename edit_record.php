@@ -316,12 +316,13 @@ else{
 <B>Receiver</B>
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
-
+<input type="text" name="section" value="<?php  echo $section;    ?>">
+<!-- 
 <select type="text" name="section" value="<?php  echo $section;    ?>">
  
-        <option type="text" value="<?php  echo $section;?>"</option>  
+        <option type="text" value="<?php  echo $section;?>"</option>   -->
         <!-- <option value="Client">Client</option> -->
-     <option value="Cashier">CASHIER</option>
+     <!-- <option value="Cashier">CASHIER</option>
           <option value="SDS">SDS</option>
           <option value="ASDS">ASDS</option>
           <option value="SGOD">SGOD</option>
@@ -332,7 +333,7 @@ else{
           <option value="Supply">SUPPLY</option>
           <option value="Legal">LEGAL</option>
           <option value="DPSU">DPSU</option>
-        </select>
+        </select> -->
 </div>
 
 <B>Remarks/Status</B>
