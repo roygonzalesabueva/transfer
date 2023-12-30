@@ -549,16 +549,7 @@ while($fetch=mysqli_fetch_array($query)){
 </div>
 
 </td>			
-<td>
-<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
-<!--<center><a href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:Blue'><font size="4"><B>Claimed</B></font></i></a></center>-->
-<!-- <a type="button" class="btn btn-success" href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>">Claimed</a> -->
-<a onclick="acceptrecord('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
 
-
-
-
-</td>
 <td>
 							
 <!-- <a class="btn btn-success" href="edit_record.php?mem_id=<?php// echo $fetch['mem_id']?>"><i class="fa fa-edit" style="font-size:16px;color:White"><font size="4"><B>Update</B></font></i></a> -->
@@ -570,7 +561,23 @@ while($fetch=mysqli_fetch_array($query)){
 
 				 	</td>
 
-						
+           <td>
+<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
+<!--<center><a href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:Blue'><font size="4"><B>Claimed</B></font></i></a></center>-->
+<!-- <a type="button" class="btn btn-success" href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>">Claimed</a> -->
+<a onclick="acceptrecord('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
+
+
+
+
+</td>			
+          
+
+
+
+
+
+
 
            <td>
 <!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
