@@ -272,7 +272,7 @@ else{
     <div class="card">
       
 
-    <a href="#"><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></a></li>
+
 
 
 
@@ -297,26 +297,14 @@ else{
 
 <B>Sender/Client</B>
 
-<!-- 
 <div class="input-container">                
-<i class="fa fa-user icon"></i> -->
-
-<select type="text" name="firstname" placeholder="" class="form-control" required="required"
-                            readonly />
-
-                        <option value="<?php echo $_SESSION['username'];?>"><?php echo $_SESSION['username'];?></option>
-
-                        </select>
-
-
-
-<!-- 
+<i class="fa fa-user icon"></i>
 <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
-
+<!-- <option type="text" value="<?php  echo $section;?>"</option>   -->
         <option value="Records">Records</option>
-        </select> -->
-<!-- </div> -->
+        </select>
+</div>
 
 
 <B>Transaction/Description</B>
