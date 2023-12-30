@@ -621,7 +621,7 @@ function myTimer() {
                         <th>Notification</th>
                         <th>Action</th>
                         <th>Update</th>
-                        <th>Accpet</th>
+                        <th>Accept</th>
                     </tr>
                 </thead>
 
