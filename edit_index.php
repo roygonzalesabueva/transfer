@@ -297,9 +297,9 @@ else{
 
 <B>Sender/Client</B>
 
-
+<!-- 
 <div class="input-container">                
-<i class="fa fa-user icon"></i>
+<i class="fa fa-user icon"></i> -->
 
 <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
@@ -316,7 +316,7 @@ else{
 
         <option value="Records">Records</option>
         </select> -->
-</div>
+<!-- </div> -->
 
 
 <B>Transaction/Description</B>
