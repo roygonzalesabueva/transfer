@@ -621,6 +621,7 @@ function myTimer() {
                         <th>Notification</th>
                         <th>Action</th>
                         <th>Update</th>
+                        <th>Accpet</th>
                     </tr>
                 </thead>
 
@@ -748,8 +749,7 @@ function myTimer() {
 
 
                             <a class=" btn btn-sm btn-success"
-                                href="acceptindex.php?mem_id=<?php echo $fetch['mem_id'] ?>"><i
-                                    class="fa fa-edit"></i>Accept</a>
+                                href="acceptindex.php?mem_id=<?php echo $fetch['mem_id'] ?>"><i class="fa fa-check"></i>Accept</a>
 
                         </td>
                     </tr>
