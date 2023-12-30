@@ -1003,12 +1003,12 @@ function myTimer() {
     <script>
     function acceptindex(data_id) {
         Swal.fire({
-            title: 'Are you sure accept?',
+            title: 'Are you sure?',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, accept it!',
+            confirmButtonText: 'Yes, I accept it!',
             closeOnConfirm: false,
             closeOnCancel: false
         }).then((result) => {
