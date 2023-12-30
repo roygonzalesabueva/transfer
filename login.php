@@ -26,12 +26,13 @@
     // $_SESSION['user_id'];
     // $_SESSION['username'];
     // $_SESSION['user_role'];
-    // $_SESSION['security_key'];
+    // $_SESSION['security_key'];   
 
     if (!isset($_SESSION['username'])) {
         header("Location: http://202.137.126.58/");
         exit();
     }
+    $_SESSION['user'] = $_SESSION['username'];
     ?>
 
     <!-- <script>
@@ -158,8 +159,7 @@ $(document).ready(function(){
     }
 
     if (isset($_POST['update_department'])) {
-        $department =
-            isset($_POST['department']);
+        $department = verify($_POST['department']);
         $scpt = "UPDATE `users_tbl` SET `department_id`='" .  $department .
             "' WHERE email='" . $_SESSION['username'] . "'";
         $result = mysqli_query($conn, $scpt) or die("Server Error!");
