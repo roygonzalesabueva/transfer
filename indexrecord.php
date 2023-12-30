@@ -490,9 +490,10 @@ while($fetch=mysqli_fetch_array($query)){
 						<th>Remarks/Status</th>
 						<th>Date/Time</th>
 						<th>Notification</th>
-						<th>Action</th>
-						<th>Update</th>
 						
+						<th>Update</th>
+						<th>Action</th>
+            <th>Delete</th>
 						
 					</tr>
 				</thead>
@@ -552,7 +553,7 @@ while($fetch=mysqli_fetch_array($query)){
 <!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
 <!--<center><a href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:Blue'><font size="4"><B>Claimed</B></font></i></a></center>-->
 <!-- <a type="button" class="btn btn-success" href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>">Claimed</a> -->
-<a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Claimed</a>
+<a onclick="acceptrecord('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Accept</a>
 
 
 
@@ -570,6 +571,21 @@ while($fetch=mysqli_fetch_array($query)){
 				 	</td>
 
 						
+
+           <td>
+<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
+<!--<center><a href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:Blue'><font size="4"><B>Claimed</B></font></i></a></center>-->
+<!-- <a type="button" class="btn btn-success" href="del_record.php?mem_id=<?php //echo $fetch['mem_id']?>">Claimed</a> -->
+<a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Claimed</a>
+
+
+
+
+</td>
+
+
+
+          
 						
 						
 					</tr>
@@ -634,6 +650,35 @@ while($fetch=mysqli_fetch_array($query)){
     <a class="btn btn-link" href="transferrecord_budget.php?mem_id=<?php //echo $fetch['mem_id']?>">Budget</a>
 	<a class="btn btn-link" href="transferrecord_acct.php?mem_id=<?php //echo $fetch['mem_id']?>">Accounting</a>
     <a class="btn btn-link" href="transferrecord_legal.php?mem_id=<?php //echo $fetch['mem_id']?>">Legal</a> -->
+
+
+<!-- Supply alert -->
+<script>
+
+function acceptrecord(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, I Accept it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("acceptrecord.php?mem_id=" + data_id);        
+        }
+    })
+}
+</script>
+
+
+
+
+
+
+
 
 
 
