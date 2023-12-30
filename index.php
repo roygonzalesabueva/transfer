@@ -619,9 +619,9 @@ function myTimer() {
                         <th>Remarks/Status</th>
                         <th>Date/Time</th>
                         <th>Notification</th>
-                        <th>Action</th>
                         <th>Update</th>
-                        <th>DELETE</th>
+                        <th>Action</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
 
