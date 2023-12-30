@@ -621,7 +621,7 @@ function myTimer() {
                         <th>Notification</th>
                         <th>Action</th>
                         <th>Update</th>
-                        <th>Accept</th>
+                        <th>DELETE</th>
                     </tr>
                 </thead>
 
@@ -714,15 +714,7 @@ function myTimer() {
                             </div>
 
                         </td>
-                        <td>
-
-                            <!-- <a type="button" class="btn btn-success" href="del.php?mem_id=<?php //echo $fetch['mem_id']
-                                                                                                    ?>"><font color="White" size="2">Delete</font></a>
-                                   -->
-                            <a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger">
-                                <i class="fas fa-solid fa-trash"></i>Delete</a>
-
-                        </td>
+                       
 
                         <td>
                             <!-- <a type="button" class="btn btn-success" href="edit_index.php?mem_id=<?php //echo $fetch['mem_id']
@@ -758,6 +750,17 @@ function myTimer() {
 
 
                         </td>
+
+                        <td>
+
+<!-- <a type="button" class="btn btn-success" href="del.php?mem_id=<?php //echo $fetch['mem_id']
+                                                                        ?>"><font color="White" size="2">Delete</font></a>
+       -->
+<a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger">
+    <i class="fas fa-solid fa-trash"></i>Delete</a>
+
+</td>
+
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
