@@ -199,10 +199,7 @@ body {
 
 </head>
 <body>
-<a href="#">
-                            <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i> <span
-                                        class="nav-profile-name"><?php echo $_SESSION['username']; ?> </span></B></font>
-                        </a>
+
 <?php
 
 //include('conn.php');
@@ -304,7 +301,10 @@ else{
 <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
       
-        <option <?php echo $_SESSION['username']; ?><?php echo $_SESSION['username']; ?></option>
+        <option value="Records"><a href="#">
+                            <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i> <span
+                                        class="nav-profile-name"><?php echo $_SESSION['username']; ?> </span></B></font>
+                        </a></option>
         </select>
 </div>
 
