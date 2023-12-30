@@ -301,7 +301,7 @@ else{
 <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
       
-        <option value="<?php echo $_SESSION['username']; ?>"><?php echo $_SESSION['username']; ?></option>
+        <option value="Records"><?php echo $_SESSION['username']; ?></option>
         </select>
 </div>
 
