@@ -114,7 +114,7 @@ $this->Image('logo3.png',25,270,160,0);
 $pdf = new MyPDF();
 $pdf->AddPage();
 
-$pdf->SetFont('Arial', 'B', 8); // Font for table headers
+$pdf->SetFont('Arial', 'B', 10); // Font for table headers
 $pdf->SetFont ('Arial', '', 10); // Font for table content
 
 $pdf->Cell(28, 10, 'Transaction ID', 1, 0,  'C');
