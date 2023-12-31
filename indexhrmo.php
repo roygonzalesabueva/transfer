@@ -407,6 +407,7 @@ body {
 
 
 				 	</td>
+                    
                      <td>
 <!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
 <!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
