@@ -362,7 +362,7 @@ body {
        
 
 
-<div class="row">
+<!-- <div class="row"> -->
   <!-- <div class="column">
     <div class="card">
       <h3>Window 2</h3>
@@ -622,7 +622,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 		</div>
-	</div>
+	<!-- </div> -->
 
 
 
