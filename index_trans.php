@@ -320,7 +320,7 @@ body {
     <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
 		
 	<li>  
-	<a href="indexclient_trans.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
+	<a href="http://202.137.126.59/transfer/indexclient.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
         </li>
 			
        
