@@ -372,8 +372,9 @@ body {
 						<th>Remarks/Status</th>
 						<th>Date/Time</th>
 						<th>Notification</th>
+                        <th>Update</th>
 						<th>Action</th>
-						<th>Update</th>
+						<th>Delete</th>
 						
 						
 						
@@ -440,13 +441,7 @@ body {
 </div>
 
 </td>			
-<td>
-<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
-<!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
-<a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Delete</a>
 
-
-</td>
 
 <td>
 <!-- <a class="btn btn-success" href="edit_sds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-edit" style="font-size:16px;color:White"><font size="4"><B>Update</B></font></i></a> -->
@@ -482,7 +477,21 @@ body {
 
 
 				 	</td>
+                     <td>
+<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
+<!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
+<a onclick="acceptsds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
 
+
+</td>
+
+<td>
+<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
+<!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
+<a onclick="delete_data('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i>Delete</a>
+
+
+</td>
 						
 						
 						
@@ -555,6 +564,35 @@ body {
 
 <script src="js/jquery-3.2.1.min.js"></script>	
 <script src="js/bootstrap.js"></script>	
+
+
+
+
+<!-- Supply alert -->
+<script>
+
+function acceptsds(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("acceptsds.php?mem_id=" + data_id);        
+        }
+    })
+}
+</script>
+
+
+
+
+
 
 
 <!-- Supply alert -->
