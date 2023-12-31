@@ -549,13 +549,13 @@ function myTimer() {
 
 
     <div class="col-md-3"></div>
-    <!--  <div class="col-md-20 well">-->
+   
 
     <font size="5">
         <B> Documents Verification </B>
     </font>
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="column">
             <div class="card">
                 <h3><B>Window 1<B></h3>
@@ -564,7 +564,7 @@ function myTimer() {
                     <thead class="alert-info">
                         <tr>
                             <th>On queue</th>
-                            <!--  <th>Action</th>-->
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -587,9 +587,7 @@ function myTimer() {
                         <tr>
                             <td><?php echo $fetch['trackid'] ?></td>
 
-                            <!--			<td>
-            <a href="transferclaim_record.php?mem_id=<?php echo $fetch['mem_id'] ?>">Claim</a>
-            </td>-->
+                           
 
                         </tr>
 
@@ -607,7 +605,22 @@ function myTimer() {
             </div>
         </div>
         <br>
-        <div class="column">
+        <div class="column"> -->
+
+
+
+
+        <div class="col-md-1"></div>
+		<div class="col-md-5">
+		
+		
+			<div class="card-header">
+					<div class="card-title">
+					
+					</div>	
+			</div>
+
+
             <table class="table table-bordered">
                 <thead class="alert-info">
                     <tr>
