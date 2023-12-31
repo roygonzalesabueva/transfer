@@ -348,7 +348,7 @@ body {
 
 <br><br><br><br>
   
-<center>	
+
 <h2> <B>RELEASING SECTION </B></h2>
 
 		
