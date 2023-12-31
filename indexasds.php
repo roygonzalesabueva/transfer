@@ -314,6 +314,7 @@ body {
 						<th>Remarks/Status</th>
 						<th>Date/Time</th>
 						<th>Notification</th>
+                        <th>Update</th>
 						<th>Action</th>
 						<!-- <th>Update</th> -->
 						
@@ -469,12 +470,12 @@ function acceptasds(data_id) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, transfer it!',
+        confirmButtonText: 'Yes, I accept it!',
         closeOnConfirm: false,
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferasds_record.php?mem_id=" + data_id);   
+            window.location = ("acceptasds.php?mem_id=" + data_id);   
             
             
         }
