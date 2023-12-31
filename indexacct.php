@@ -342,6 +342,8 @@ body {
 						<th>Remarks/Status</th>
 						<th>Date/Time</th>
 						<th>Notification</th>
+
+                        <th>Update</th>
 						<th>Action</th>
 						<!-- <th>Update</th> -->
 						
@@ -354,7 +356,7 @@ body {
 					
 					<td><?php echo $fetch['trackid']?></td>
 					
-						<td><?php echo $_SESSION['user'];?></td>
+                    <td><?php echo $fetch['firstname']?></td>
 						<td><?php echo $fetch['lastname']?></td>
 						
 						
@@ -424,14 +426,22 @@ body {
 		
 <a class=" btn btn-sm btn-success" href="edit_acct.php?mem_id=<?php echo $fetch['mem_id']?>" ><i class="fa fa-edit" ></i>Update</a>
 
-
-
-
-
-								
+					
 				 	</td>
 						
-						
+			
+   
+<td>
+<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
+<!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
+<a onclick="acceptacct('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
+
+
+</td>
+                 
+
+
+
 						
 					</tr>
 					<?php endwhile;?>
@@ -478,6 +488,39 @@ body {
 
 <script src="js/jquery-3.2.1.min.js"></script>	
 <script src="js/bootstrap.js"></script>	
+
+
+
+
+<!-- Supply alert -->
+<script>
+
+function acceptacct(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, I accept it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("acceptacct.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+
+
+
+
+
 
 
 
