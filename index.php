@@ -791,7 +791,7 @@ function myTimer() {
     <div class="modal fade" aria-hidden="true" id="form_modal">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" action="save.php">
+                <form method="POST" action="save4.php">
                     <div class="modal-header">
                         <h3 class="modal-title">Create Transaction ID</h3>
                     </div>
@@ -851,7 +851,7 @@ function myTimer() {
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal"><span
                                 class="glyphicon glyphicon-remove"></span> Close</button>
-                        <button class="btn btn-primary" name="save"><span class="glyphicon glyphicon-save"></span>
+                        <button class="btn btn-primary" name="save4"><span class="glyphicon glyphicon-save"></span>
                             Submit</button>
                     </div>
                 </form>
