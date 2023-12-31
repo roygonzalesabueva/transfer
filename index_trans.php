@@ -325,7 +325,8 @@ body {
 			
        
 	 
-	  <li> <a href="logout.php"><font color="White" size="4"><B>Logout</B></a></font></li>
+	
+		<li> <a href="http://202.137.126.58"><font color="White" size="4"><B>Home</B></font></a></li>
     </ul>
 
   </div>
