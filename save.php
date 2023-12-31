@@ -17,10 +17,9 @@
 		mysqli_query($conn, "INSERT INTO `memberclient` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 		
 	
-		header("location: index.php");
-		header("refresh:1; url=index_trans.php");
-		header("refresh:1; url=indexclient.php");
-		header("refresh:1; url=index.php");
+		header("location: http://202.137.126.59/transfer/index_trans.php");
+		// header("refresh:1; url=index_trans.php");
+		
 	}
 ?>
 
