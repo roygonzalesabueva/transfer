@@ -65,7 +65,7 @@ class MyPDF extends FPDF {
 function Footer()
 {
 	
-	$this->Image('STAMP.jpg',65,200,80,0);
+	$this->Image('STAMP.png',65,200,80,0);
 	
     $this->Image('sds.jpg',65,230,80,0);
 	
