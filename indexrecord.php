@@ -346,10 +346,12 @@ body {
   </div>
 </nav>
 
-<br><br><br><br>
+<br><br><br>
+<center><h2> <B>RELEASING SECTION </B></h2></center>
+<br>
   
 
-<h2> <B>RELEASING SECTION </B></h2>
+
 
 		
 
