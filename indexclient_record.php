@@ -365,21 +365,22 @@ DELIVERY SYSTEM FOR UNIFIED RECORDS<br>
 	
 
 	
-	<form class="" action="printclient.php" method="post" target="_blank">
+	
+		  <form class="" action="printclient.php" method="post" target="_blank">
 
 	
 
 	
-	<input type="text"  name="trackid">
-	<!-- <input type="submit" name="search"  value="Print"> -->
-	 <button type="submit" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>    Print </button>
+<input type="text"  name="trackid">
+<!-- <input type="submit" name="search"  value="Print"> -->
+ <button type="submit" name="search" value="Print"><span class="glyphicon glyphicon-print"></span>    Print </button>
 
-	<!--<select class="" name="trackid">-->
-	
-	
-	
-	
-	</form>
+<!--<select class="" name="trackid">-->
+
+
+
+
+</form>
 	
 
 
