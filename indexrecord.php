@@ -477,7 +477,7 @@ while($fetch=mysqli_fetch_array($query)){
 		
 		<!--<input type="submit" name="search" value="Search"> -->
 		
-		<button type="submit" name="search" value="Search"><i class="fa fa-search"></i></button>
+		<button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>
 		
         
         
