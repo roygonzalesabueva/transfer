@@ -394,12 +394,15 @@ body {
 <a class=" btn btn-sm btn-success" href="edit_asds.php?mem_id=<?php echo $fetch['mem_id']?>" ><i class="fa fa-edit" ></i>Update</a>
 		
 
+</td>
+
+<td>
+<!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
+<!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
+<a onclick="acceptasds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
 
 
-
-
-								
-				 	</td>
+</td>
 
 						
 						
@@ -450,6 +453,36 @@ body {
 
 <script src="js/jquery-3.2.1.min.js"></script>	
 <script src="js/bootstrap.js"></script>	
+
+
+
+
+
+
+<!-- Supply alert -->
+<script>
+
+function acceptasds(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferasds_record.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
 
 
 
