@@ -454,6 +454,16 @@ while($fetch=mysqli_fetch_array($query)){
    
 	
 
+  <div class="col-md-1"></div>
+		<div class="col-md-5">
+		
+		
+			<div class="card-header">
+					<div class="card-title">
+					
+					</div>	
+			</div>
+
 
 
   <form action="indexrecord.php" method="post" enctype="multipart/form-data">
@@ -617,7 +627,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 
-
+    </div>
 
 
 
