@@ -419,7 +419,7 @@ body {
 						<th>Date/Time</th>
 						
 						
-						<th>Update</th>
+						<!-- <th>Update</th> -->
 						
 		
 	
@@ -448,10 +448,9 @@ body {
 						
 						
 	
-
+<!-- 
 <td>
 				
-
 
 <a type="button" class="btn btn-success" href="edit_indextrans.php?mem_id=<?php echo $fetch['mem_id']?>"><i class="fa fa-edit"
                                     style='font-size:16px;color:White'>
@@ -459,14 +458,9 @@ body {
                                </B></font>
                                </i></a>
 
-
-
-
-
-
 								
 				 	</td>
-	
+	 -->
 
 
 
