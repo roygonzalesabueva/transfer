@@ -316,8 +316,9 @@ else{
 <B>Receiver</B>
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
+<input type="text" name="section" value="<?php  echo $section;    ?>">
 
-<select type="text" name="section" value="<?php  echo $section;    ?>">
+<!-- <select type="text" name="section" value="<?php  echo $section;    ?>">
  
         <option type="text" value="<?php  echo $section;?>"</option>   
         <option value="Records">RECORDS</option>
@@ -332,7 +333,7 @@ else{
           <option value="Supply">SUPPLY</option>
           <option value="Legal">LEGAL</option>
           <option value="DPSU">DPSU</option>
-        </select>
+        </select> -->
 </div>
 
 
