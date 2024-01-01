@@ -512,6 +512,16 @@ function myTimer() {
                 <li><B>
                         <font color="White" size="8">|||</font>
                     </B></li>
+
+                    <li><B>
+                        <font color="White" size="8">|||</font>
+                    </B></li>
+                    <li><B>
+                        <font color="White" size="8">|||</font>
+                    </B></li>
+                    <li><B>
+                        <font color="White" size="8">|||</font>
+                    </B></li>
                 <li>
                     <form action="index.php" method="post" enctype="multipart/form-data">
 
