@@ -300,7 +300,9 @@ else{
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
 
-<?php echo $_SESSION['username']; ?>
+<input type="text" name="firstname" value="<?php  echo $firstname;    ?>">
+
+<option type="text" value="<?php  echo $firstname;?>"</option>  
 
 <!-- <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
