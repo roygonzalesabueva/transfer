@@ -299,14 +299,13 @@ else{
 
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
-<input type="text" name="<?php echo $_SESSION['username'];?>" value="<?php echo $_SESSION['username'];?>">
-<!-- <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
+<select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
+<!-- <option type="text" value="<?php  echo $section;?>"</option>   -->
+        <option value="Records">Records</option>
 
-        <option value="<?php echo $_SESSION['username'];?>"><?php echo $_SESSION['username'];?></option>
-
-      
-        </select> -->
+        
+        </select>
 </div>
 
 
