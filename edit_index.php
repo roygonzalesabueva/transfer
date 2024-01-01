@@ -300,14 +300,11 @@ else{
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
 
-<select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
 
-<option type="text" value="<?php  echo $firstname;?>"</option>  
-<!-- 
 <select type="text" name="firstname" value="<?php  echo $firstname;    ?>">
  
 
-        <option value="Records">Records</option> -->
+        <option value="Records">Records</option> 
 
         
         </select> 
