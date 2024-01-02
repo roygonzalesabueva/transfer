@@ -67,8 +67,8 @@ function Footer()
 	
 	$this->Image('STAMP.png',10,225,80,0);
 	
-    $this->Image('sds.jpg',120,235,80,0);
-	
+   // $this->Image('sds.jpg',120,235,80,0);
+		$this->Image('logo4.png',120,235,80,0);
 		$this->SetFont('Arial','B',12);
 $this->Cell(195,190,'',0,0,'C');
 $this->SetFont('Arial','',12);
