@@ -72,8 +72,8 @@ function Footer()
 {
 	
 	
-	
-    $this->Image('sds.jpg',65,230,80,0);
+	$this->Image('logo4.png',65,230,80,0);
+  //  $this->Image('sds.jpg',65,230,80,0);
 	
 		$this->SetFont('Arial','B',12);
 $this->Cell(195,190,'',0,0,'C');
@@ -81,7 +81,7 @@ $this->SetFont('Arial','',12);
 $this->Cell(-195,200,'',0,0,'C');	
 	
 
-$this->Image('logo4.png',10,200,65,0);
+
 	
 	
 	
