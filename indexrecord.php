@@ -486,7 +486,7 @@ while($fetch=mysqli_fetch_array($query)){
 
 
 	
-          <form class="" action="printclient2.php" method="post" target="_blank">
+          <form class="" action="printclient.php" method="post" target="_blank">
 
 	
 
