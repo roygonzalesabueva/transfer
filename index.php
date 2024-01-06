@@ -1045,7 +1045,7 @@ function myTimer() {
                
                
                 window.location = ("acceptindex.php?mem_id=" + data_id);
-                echo"<script>window.location='edit_index.php'</script>";
+                window.location = ("edit_index.php?mem_id=" + data_id);
               
             }
         })
