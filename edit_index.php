@@ -29,8 +29,8 @@
 		
 
 
-		// echo"<script>alert('Transaction successfully deleted.')</script>";
-		echo"<script>window.location='edit_index.php'</script>";
+		echo"<script>alert('Transaction Accepted')</script>";
+//echo"<script>window.location='edit_index.php'</script>";
 		
 		
 	}
