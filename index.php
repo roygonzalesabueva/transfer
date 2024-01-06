@@ -1043,9 +1043,9 @@ function myTimer() {
         }).then((result) => {
             if (result.isConfirmed) {
                
-               
-                window.location = ("acceptindex.php?mem_id=" + data_id);
                 window.location = ("edit_index.php?mem_id=" + data_id);
+                window.location = ("acceptindex.php?mem_id=" + data_id);
+               
               
             }
         })
