@@ -752,7 +752,7 @@ function myTimer() {
 
 
                             <a  class=" btn btn-sm btn-success"  
-                                href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> " href="acceptindex.php" >  <i
+                                href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> "  >  <i
                                     class="fa fa-edit"> </i>Update</a>
 
                         </td>
@@ -1043,6 +1043,8 @@ function myTimer() {
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location = ("acceptindex.php?mem_id=" + data_id);
+                window.location = ("edit_index.php?mem_id=" + data_id);
+                
             }
         })
     }
