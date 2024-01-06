@@ -41,7 +41,7 @@
 
 
 		// echo"<script>alert('Transaction successfully deleted.')</script>";
-		echo"<script>window.location='edit_index.php?mem_id='$mem_id'</script>";
+		echo"<script>window.location='index.php'</script>";
 		
 	}
 ?>
