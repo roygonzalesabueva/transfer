@@ -39,9 +39,9 @@
 		//mysqli_query($conn, "DELETE FROM `member1` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
 		
 
-
+ header("refresh:1; url=edit_index.php?mem_id");
 		// echo"<script>alert('Transaction successfully deleted.')</script>";
-		echo"<script>window.location='index.php'</script>";
+		//echo"<script>window.location='index.php'</script>";
 		
 	}
 ?>

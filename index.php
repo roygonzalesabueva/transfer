@@ -1079,7 +1079,7 @@ function myTimer() {
             if (result.isConfirmed) {
                 window.location = ("del.php?mem_id=" + data_id);
 
-                <a href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> "></a>
+               
             }
         })
     }
