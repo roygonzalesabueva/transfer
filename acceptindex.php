@@ -42,5 +42,6 @@
 
 		// echo"<script>alert('Transaction successfully deleted.')</script>";
 		echo"<script>window.location='index.php'</script>";
+		echo"<script>window.location='edit_index.php'</script>";
 	}
 ?>
