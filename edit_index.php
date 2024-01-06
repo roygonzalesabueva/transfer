@@ -240,7 +240,7 @@ if($result){
 
     echo "Updated";
    
-    header("refresh:1; url=acceptindex.php");
+    header("refresh:1; url=index.php");
 
 }
 else{
