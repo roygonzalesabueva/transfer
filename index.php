@@ -1047,20 +1047,40 @@ function myTimer() {
                
             }
 
+        })
+    }
+    </script>
+
+
+
+
+
+<script>
+    function acceptindex(data_id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, I accept it!',
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }).then((result) => {
             if (result.isConfirmed) {
                 window.location = ("edit_index.php?mem_id=" + data_id);
-                window.location = ("acceptindex.php?mem_id=" + data_id);
+              
                
             }
-            
-          
-
-
-
 
         })
     }
     </script>
+
+
+
+
+
 
 
 
