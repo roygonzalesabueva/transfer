@@ -769,7 +769,7 @@ function myTimer() {
                             <!-- <a class=" btn btn-sm btn-success"
                                 href="acceptindex.php?mem_id=<?php echo $fetch['mem_id'] ?>"><i class="fa fa-check"></i>Accept</a> -->
 
-                                <a onclick="acceptindex('<?php echo $fetch['mem_id']; ?>')"   href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> " class=" btn btn-sm btn-success">
+                                <a onclick="acceptindex('<?php echo $fetch['mem_id']; ?>')"    class=" btn btn-sm btn-success">
                                 <i class="fa fa-check"></i>Accept</a>
 
 
@@ -1078,6 +1078,8 @@ function myTimer() {
         }).then((result) => {
             if (result.isConfirmed) {
                 window.location = ("del.php?mem_id=" + data_id);
+
+                <a href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> "></a>
             }
         })
     }
