@@ -1047,8 +1047,15 @@ function myTimer() {
                
             }
 
-            window.location = ("edit_index.php?mem_id=" + data_id);
 
+            .then((result) => {
+            if (result.isConfirmed) {
+                window.location = ("edit_index.php?mem_id=" + data_id);
+              
+               
+            }
+         
+        }
 
 
 
