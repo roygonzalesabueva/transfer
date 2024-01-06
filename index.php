@@ -751,7 +751,7 @@ function myTimer() {
                                </i></a> -->
 
 
-                            <a  class=" btn btn-sm btn-success"  
+                            <a  class=" btn btn-sm btn-success"  href="acceptindex.php?mem_id=<?php echo $fetch['mem_id'] ?>
                                 href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> "  >  <i
                                     class="fa fa-edit"> </i>Update</a>
 
