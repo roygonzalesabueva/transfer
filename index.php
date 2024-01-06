@@ -751,9 +751,9 @@ function myTimer() {
                                </i></a> -->
 
 
-                            <a  class=" btn btn-sm btn-success" onclick="acceptindex('<?php echo $fetch['mem_id']; ?>')"
-                                href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?>"> <i
-                                    class="fa fa-edit"></i>Update</a>
+                            <a  class=" btn btn-sm btn-success" 
+                                href="edit_index.php?mem_id=<?php echo $fetch['mem_id'] ?> " onclick="acceptindex('<?php echo $fetch['mem_id']; ?>')">  <i
+                                    class="fa fa-edit"> </i>Update</a>
 
                         </td>
 
