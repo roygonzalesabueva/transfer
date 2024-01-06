@@ -110,7 +110,9 @@
                 header("location: index_trans.php");
             } elseif ($_SESSION['department_id'] == 16) {
                 header("location: index.php");
-            } else {
+            } 
+            
+            else {
                 echo ' <script>
 
                 $(document).ready(function(){  
