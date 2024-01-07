@@ -367,12 +367,12 @@ else{
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
 
-<input type="text" name="section" value="<?php  echo $section;    ?>">
+<!-- <input type="text" name="section" value="<?php  echo $section;    ?>"> -->
 
-<!-- <select type="text" name="section" value="<?php  echo $section;    ?>">
+<select type="text" name="section" value="<?php  echo $section;    ?>">
  
-        <option type="text" value="<?php  echo $section;?>"</option>  
-        <option value="Admin">Admin</option> 
+        <option type="text" value="<?php echo $_SESSION['username']; ?>"</option>  
+        <!-- <option value="Admin">Admin</option> 
         <option value="Records">Records</option>
         <option value="Cashier">Cashier</option>
           <option value="SDS">SDS</option>
@@ -384,8 +384,8 @@ else{
           <option value="Budget">Budget</option>
           <option value="Supply">Supply</option>
           <option value="Legal">Legal</option>
-          <option value="DPSU">DPSU</option>
-        </select> -->
+          <option value="DPSU">DPSU</option> -->
+        </select> 
 </div>
 
 <B>Remarks/Status</B>
