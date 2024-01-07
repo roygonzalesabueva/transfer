@@ -367,12 +367,12 @@ else{
 <div class="input-container">                
 <i class="fa fa-user icon"></i>
 
-<!-- <input type="text" name="section" value="<?php  echo $section;    ?>"> -->
+<input type="text" name="section" value="<?php  echo $section;    ?>"> -->
 
-<select type="text" name="section" value="<?php  echo $section;    ?>">
+<!-- <select type="text" name="section" value="<?php  echo $section;    ?>">
  
-        <option type="text" value="<?php echo $_SESSION['username']; ?>"</option>  
-        <!-- <option value="Admin">Admin</option> 
+        <option type="text" value="<?php  echo $section;?>"</option>  
+        <option value="Admin">Admin</option> 
         <option value="Records">Records</option>
         <option value="Cashier">Cashier</option>
           <option value="SDS">SDS</option>
@@ -384,8 +384,8 @@ else{
           <option value="Budget">Budget</option>
           <option value="Supply">Supply</option>
           <option value="Legal">Legal</option>
-          <option value="DPSU">DPSU</option> -->
-        </select> 
+          <option value="DPSU">DPSU</option> 
+        </select>  -->
 </div>
 
 <B>Remarks/Status</B>
@@ -406,44 +406,6 @@ else{
 
 
 
-
-
-
-
-<?php
-	require_once'conn.php';
-
-
-
-	
-	if(ISSET($_REQUEST['mem_id'])){
-		$mem_id=$_REQUEST['mem_id'];
-		
-		$query=mysqli_query($conn, "SELECT * FROM `member1` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
-		$fetch=mysqli_fetch_array($query);
-		
-		$trackid=$fetch['trackid'];
-		$firstname=$fetch['firstname'];
-		$lastname=$fetch['lastname'];
-		$section=$fetch['section'];
-		$address=$fetch['address'];
-
-		
-		
-		//mysqli_query($conn, "INSERT INTO `membertracking` VALUES('','$trackid','$firstname', '$lastname', '', '$address')") or die(mysqli_error());
-	//mysqli_query($conn, "INSERT INTO `memberrecord` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
-		mysqli_query($conn, "INSERT INTO `memberclient` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
-		//mysqli_query($conn, "DELETE FROM `member1` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
-		
-
-		echo"<script>alert('Transaction Accepted')</script>";
-		// echo"<script>alert('Transaction successfully deleted.')</script>";
-		//echo"<script>window.location='index.php'</script>";
-		//echo"<script>window.location='edit_index.php'</script>";
-		
-		
-	}
-?>
 
 
 
