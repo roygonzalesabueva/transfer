@@ -302,7 +302,7 @@ div.c {
 	<li> <a href="chatcashier.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
 	
 
-      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </span></a></li>
+      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <B> <span class="nav-profile-name"><?php echo $_SESSION['username'];?></B> </span></a></li>
       <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
 	  <li><a href="indexcashier.php"> <font size="2"> <span class="glyphicon glyphicon-remove"></span><B> Close</B></font> </a></li>
 	

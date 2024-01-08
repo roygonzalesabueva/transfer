@@ -310,7 +310,7 @@ div.c {
     </ul>-->
     <ul class="nav navbar-nav navbar-right">
     <li> <a href="#"><font color="White" size="4"><B> <p id="demo"></p> </B></font></a> </li>
-      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <font color="White" size="4"><B> <span class="nav-profile-name"><?php echo $_SESSION['user'];?></B> </font></span></a></li>
+      <li><a href="#"><i class="fa fa-fw fa-user"></i>  <font color="White" size="4"><B> <span class="nav-profile-name"><?php echo $_SESSION['username'];?></B> </font></span></a></li>
       <!--<li> <a href="logout.php"><B>Logout</B></a></li>-->
     </ul>
 
