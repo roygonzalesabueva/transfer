@@ -271,6 +271,7 @@ body {
               <a href="indexsds.php">SDS</a>
               <a href="indexasds.php">ASDS</a> 
               <a href="indexhrmo.php">HRMO</a>
+              <a href="indexgaso.php">GASO</a>
               <a href="indexcid.php">CIS</a>
               <a href="indexsgod.php">SGOD</a>
               <a href="indexsupply.php">Supply</a>
