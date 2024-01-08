@@ -561,7 +561,7 @@ function sds(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_sds.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_sds.php?mem_id=" + data_id);   
             
             
         }
