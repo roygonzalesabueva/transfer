@@ -39,7 +39,7 @@
 		//mysqli_query($conn, "DELETE FROM `member1` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
 		
 
-		echo"<script>alert('Transaction Accepted')</script>";
+		echo"<script>confirm('Transaction Accepted.')</script>";
 		// echo"<script>alert('Transaction successfully deleted.')</script>";
 		echo"<script>window.location='index.php'</script>";
 		//echo"<script>window.location='edit_index.php'</script>";
