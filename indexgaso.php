@@ -511,7 +511,7 @@ function record(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_record.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_record.php?mem_id=" + data_id);   
             
             
         }
