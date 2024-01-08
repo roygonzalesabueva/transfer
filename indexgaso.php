@@ -657,7 +657,7 @@ function dpsu(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_dpsu.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_dpsu.php?mem_id=" + data_id);   
             
             
         }

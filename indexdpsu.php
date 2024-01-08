@@ -345,6 +345,7 @@ body {
 						
 							<div class="dropdown-content">
             <a onclick="record('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>Records</a>
+            <a onclick="gaso('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>GASO</a>
               <a onclick="hrmo('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>HRMO</a>
               <a onclick="sds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>SDS</a>
               <a onclick="asds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i class="fas fa-share"></i>ASDS</a>
@@ -625,6 +626,42 @@ function cid(data_id) {
     })
 }
 </script>
+
+
+<!-- Supply alert -->
+<script>
+
+function gaso(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, transfer it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferdpsu_gaso.php?mem_id=" + data_id);   
+            
+            
+        }
+    })
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Supply alert -->
 <script>
