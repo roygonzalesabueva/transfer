@@ -110,6 +110,8 @@
                 header("location: index_trans.php");
             } elseif ($_SESSION['department_id'] == 16) {
                 header("location: index.php");
+            } elseif ($_SESSION['department_id'] == 18) {
+                header("location: indexgaso.php");
             } 
             
             else {
@@ -488,6 +490,8 @@ $(document).ready(function(){
                                 <option value="2">SDS</option>
                                 <option value="6">SGOD</option>
                                 <option value="10">SUPPLY</option>
+                                <option value="5">HRMO</option>
+                                <option value="18">GASO</option>
                             </select>
                         </div>
                     </div>
