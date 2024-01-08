@@ -411,7 +411,7 @@ body {
                      <td>
 <!--<button class="btn"><i class="fa fa-trash"></i> Trash</button>-->
 <!-- <center><a class="btn btn-success" href="delsds.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-trash" style='font-size:16px;color:White'><font size="4"><B>Del</B></font></i></a></center> -->
-<a onclick="accepthrmo('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
+<a onclick="acceptgaso('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-check"></i>Accept</a>
 
 
 </td>			
@@ -468,7 +468,7 @@ body {
 <!-- Supply alert -->
 <script>
 
-function accepthrmo(data_id) {
+function acceptgaso(data_id) {
     Swal.fire({
         title: 'Are you sure?',
         icon: 'warning',
@@ -480,7 +480,7 @@ function accepthrmo(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("accepthrmo.php?mem_id=" + data_id);   
+            window.location = ("acceptgaso.php?mem_id=" + data_id);   
             
             
         }
