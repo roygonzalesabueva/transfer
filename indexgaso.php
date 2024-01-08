@@ -779,7 +779,7 @@ function legal(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_legal.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_legal.php?mem_id=" + data_id);   
             
             
         }
