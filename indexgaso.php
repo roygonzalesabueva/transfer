@@ -705,7 +705,7 @@ function cashier(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_cashier.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_cashier.php?mem_id=" + data_id);   
             
             
         }
