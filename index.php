@@ -687,6 +687,11 @@ function myTimer() {
 
                                     <a onclick="indexrecord('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link">
                                         <i class="fas fa-share"></i>Records</a>
+
+                                        <a onclick="indexgaso('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i
+                                            class="fas fa-share"></i>GASO</a>
+
+
                                     <a onclick="indexhrmo('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i
                                             class="fas fa-share"></i>HRMO</a>
                                     <a onclick="indexsds('<?php echo $fetch['mem_id']; ?>')" class=" btn btn-link"> <i
@@ -1117,6 +1122,36 @@ function myTimer() {
         })
     }
     </script>
+
+
+<!-- Supply alert -->
+<script>
+    function indexgaso(data_id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, transfer it!',
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location = ("transfergaso.php?mem_id=" + data_id);
+
+
+            }
+        })
+    }
+    </script>
+
+
+
+
+
+
+
 
 
 
