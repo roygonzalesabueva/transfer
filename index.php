@@ -392,12 +392,13 @@ function myTimer() {
 
                                 <a href="index.php">Admin</a>
                                 <a href="indexrecord.php">Records</a>
+                                <a href="indexgaso.php">GASO</a>
                                 <a href="indexsds.php">SDS</a>
                                 <a href="indexasds.php">ASDS</a>
                                 <a href="indexhrmo.php">HRMO</a>
                                 <a href="indexcid.php">CID</a>
                                 <a href="indexsgod.php">SGOD</a>
-                                <a href="indexgaso.php">GASO</a>
+                                
                                 <a href="indexsupply.php">Supply</a>
                                 <a href="indexlegal.php">Legal</a>
                                 <a href="indexcashier.php">Cashier</a>

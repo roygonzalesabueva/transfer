@@ -308,6 +308,7 @@ body {
 
               <a href="index.php">Admin</a>
               <a href="indexrecord.php">Records</a>
+              <a href="indexgaso.php">GASO</a>
               <a href="indexsds.php">SDS</a>
               <a href="indexasds.php">ASDS</a> 
               <a href="indexhrmo.php">HRMO</a>
