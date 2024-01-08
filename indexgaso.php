@@ -755,7 +755,7 @@ function acctg(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_acct.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_acct.php?mem_id=" + data_id);   
             
             
         }
