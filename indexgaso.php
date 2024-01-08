@@ -401,7 +401,7 @@ body {
 <td>
 		
 <!-- <a class="btn btn-success" href="edit_hrmo.php?mem_id=<?php //echo $fetch['mem_id']?>"><i class="fa fa-edit" style="font-size:16px;color:Wihite"><font size="4"><B>Update</B></font></i></a> -->
-<a class=" btn btn-sm btn-success" href="edit_hrmo.php?mem_id=<?php echo $fetch['mem_id']?>" ><i class="fa fa-edit" ></i>Update</a>
+<a class=" btn btn-sm btn-success" href="edit_gaso.php?mem_id=<?php echo $fetch['mem_id']?>" ><i class="fa fa-edit" ></i>Update</a>
 
 
 
