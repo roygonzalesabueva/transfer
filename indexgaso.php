@@ -250,7 +250,7 @@ body {
     <li> <a href="chatgaso.php"><font color="White" size="4"><B>Chat Room</B></font></a></li>
 		
     <li>  
-    <a href="indexclient_hrmo.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
+    <a href="indexclient_gaso.php"> <i class="fa fa-bar-chart" style="font-size:18px"></i><font color="White" size="4"><B>Transaction Status</B></font></a>
           </li>
         
         <li><a href="#"> <font color="White" size="4"><B><i class="fa fa-fw fa-user"></i>   <span class="nav-profile-name"><?php echo $_SESSION['username'];?> </span></B></font></a></li>
