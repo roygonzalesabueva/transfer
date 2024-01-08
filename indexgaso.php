@@ -634,7 +634,7 @@ function cid(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferhrmo_cid.php?mem_id=" + data_id);   
+            window.location = ("transfergaso_cid.php?mem_id=" + data_id);   
             
             
         }
