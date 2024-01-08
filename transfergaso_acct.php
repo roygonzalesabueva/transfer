@@ -21,7 +21,7 @@
 		mysqli_query($conn, "DELETE FROM `membergaso` WHERE `mem_id`='$mem_id'") or die(mysqli_error());
 		
 		// echo"<script>confirm('Data successfully transfer')</script>";
-		echo"<script>window.location='indexhrmo.php'</script>";
+		echo"<script>window.location='indexgaso.php'</script>";
 		
 		header("refresh:1; url=indexacct.php");
 	}
