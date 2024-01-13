@@ -132,7 +132,7 @@ $pdf->Cell(26, 8, 'Remarks', 1, 1, 'C');
 require'conn.php';
 
 $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST['trackid']}'  ") or die(mysqli_error());
-$h=12;
+$h=5;
 while($rows=mysqli_fetch_array($query)){
 
    
@@ -146,7 +146,7 @@ while($rows=mysqli_fetch_array($query)){
     $pdf->Cell(58,$h,'');
     $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
     $y4= $pdf->GetY();
-    $pdf->SetY($y);
+    // $pdf->SetY($y);
     $pdf->Cell(103,$h,'');
     $pdf->MultiCell(28, $h, $rows['section'], 1,'C');
     
