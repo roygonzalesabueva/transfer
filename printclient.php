@@ -46,8 +46,8 @@ class MyPDF extends FPDF {
         $this->SetFont('Arial', 'B', 12);
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
 
-        $this->Cell(50,30,'TRANSACTIONS HISTORY',0,0,'C');
-        $this->Ln();
+        $this->Cell(50,60,'TRANSACTIONS HISTORY',0,0,'C');
+       
        
         // $this->SetFont('Times','B',16);
 
