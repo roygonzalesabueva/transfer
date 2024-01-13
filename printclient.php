@@ -47,12 +47,12 @@ class MyPDF extends FPDF {
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
         $this->Ln();
        
-        // $this->SetFont('Times','B',16);
+        $this->SetFont('Times','B',16);
 
         
       
-        // $this->Cell(195,-10,'TRANSACTIONS HISTORY',0,0,'C');	
-        // $this->Ln();	
+        $this->Cell(195,0,'TRANSACTIONS HISTORY',0,0,'C');	
+        $this->Ln();	
        
 		
         
