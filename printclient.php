@@ -47,7 +47,7 @@ class MyPDF extends FPDF {
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
         $this->Ln();
        
-        $this->SetFont('Times','B',18);
+        $this->SetFont('Times','B',16);
 
         
       
