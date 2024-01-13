@@ -132,38 +132,37 @@ $pdf->Cell(26, 8, 'Remarks', 1, 1, 'C');
 require'conn.php';
 
 $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST['trackid']}'  ") or die(mysqli_error());
-// $h=5;
+$h=5;
 while($rows=mysqli_fetch_array($query)){
 
-    $pdf->Cell($rows['trackid']);
-
-    // $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'C');
-    // $y= $pdf->GetY();
+   
+    $pdf->Cell(28, $h, $rows['trackid'], 2, 0, 'C');
+    $y= $pdf->GetY();
     
 
-    // $pdf->MultiCell(30, $h, $rows['firstname'], 1, 'C');
-    // $y1= $pdf->GetY();
-    // $pdf->SetY($y);
-    // $pdf->Cell(58,$h,'');
-    // $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
-    // $y1= $pdf->GetY();
-    // $pdf->SetY($y);
-    // $pdf->Cell(103,$h,'');
-    // $pdf->MultiCell(28, $h, $rows['section'], 1,'C');
+    $pdf->MultiCell(30, $h, $rows['firstname'], 2, 'C');
+    $y1= $pdf->GetY();
+    $pdf->SetY($y);
+    $pdf->Cell(58,$h,'');
+    $pdf->MultiCell(45, $h, $rows['lastname'], 2, 'C');
+    $y1= $pdf->GetY();
+    $pdf->SetY($y);
+    $pdf->Cell(103,$h,'');
+    $pdf->MultiCell(28, $h, $rows['section'], 2,'C');
     
-    // $y2= $pdf->GetY();
-    // $pdf->SetY($y);
-    // $pdf->Cell(131,$h,'');
+    $y2= $pdf->GetY();
+    $pdf->SetY($y);
+    $pdf->Cell(131,$h,'');
 
     
-    // $pdf->Cell(35, $h, $rows['date_created'], 1, 0, 'C');
+    $pdf->Cell(35, $h, $rows['date_created'], 2, 0, 'C');
 
   
 
     
-    // $pdf->MultiCell(26, $h, $rows['address'], 1, 'C');
+    $pdf->MultiCell(26, $h, $rows['address'], 2, 'C');
    
-    // $pdf->SetY($y1+0);
+    $pdf->SetY($y1+0);
     
    
   
