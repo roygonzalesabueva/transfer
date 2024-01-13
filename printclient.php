@@ -48,7 +48,7 @@ class MyPDF extends FPDF {
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
 
 
-        $this->Image('history.png',30,60,50,0);
+        $this->Image('history.png',30,55,80,0);
         
         $this->Ln();
 
