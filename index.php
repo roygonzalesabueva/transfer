@@ -813,7 +813,7 @@ function myTimer() {
             <div class="modal-content">
                 <form method="POST" action="save4.php">
                     <div class="modal-header">
-                        <h3 class="modal-title">Create Transaction ID</h3>
+                        <h3 class="modal-title">Create New Transaction</h3>
                     </div>
                     <div class="modal-body">
                         <div class="col-md-2"></div>
