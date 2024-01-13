@@ -46,7 +46,7 @@ class MyPDF extends FPDF {
         $this->SetFont('Arial', 'B', 12);
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
 
-        $this->Cell(0,40,'TRANSACTIONS HISTORY',0,0,'C');
+        
         $this->Ln();
        
         // $this->SetFont('Times','B',16);
@@ -59,7 +59,9 @@ class MyPDF extends FPDF {
         
 
 	}
-
+{
+    $this->Cell(0,50,'TRANSACTIONS HISTORY',0,0,'C');
+}
 
 // Page footer
 function Footer()
