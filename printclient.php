@@ -136,31 +136,31 @@ $h=5;
 while($rows=mysqli_fetch_array($query)){
 
    
-    $pdf->Cell(28, $h, $rows['trackid'], 0, 0, 'C');
+    $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'R');
     $y= $pdf->GetY();
     
 
-    $pdf->MultiCell(30, $h, $rows['firstname'], 0, 'C');
+    $pdf->MultiCell(30, $h, $rows['firstname'], 1, 'R');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
-    $pdf->MultiCell(45, $h, $rows['lastname'], 0, 'C');
+    $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'R');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(103,$h,'');
-    $pdf->MultiCell(28, $h, $rows['section'], 0,'C');
+    $pdf->MultiCell(28, $h, $rows['section'], 1,'R');
     
     $y2= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(131,$h,'');
 
     
-    $pdf->Cell(35, $h, $rows['date_created'], 0, 0, 'C');
+    $pdf->Cell(35, $h, $rows['date_created'], 1, 0, 'R');
 
   
 
     
-    $pdf->MultiCell(26, $h, $rows['address'], 0, 'C');
+    $pdf->MultiCell(26, $h, $rows['address'], 1, 'R');
    
     $pdf->SetY($y1+0);
     
