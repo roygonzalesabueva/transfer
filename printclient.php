@@ -48,7 +48,7 @@ class MyPDF extends FPDF {
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
 
 
-        $this->Image('history.png',74,60,60,0);
+        $this->Image('history.png',73,60,60,0);
         
         $this->Ln();
 
@@ -69,10 +69,10 @@ class MyPDF extends FPDF {
 function Footer()
 {
 	
-	$this->Image('STAMP.png',10,240,80,0);
+	$this->Image('STAMP.png',10,210,80,0);
 	
    // $this->Image('sds.jpg',120,235,80,0);
-		$this->Image('logo4.png',120,240,80,0);
+		$this->Image('logo4.png',120,210,80,0);
 		$this->SetFont('Arial','B',12);
 $this->Cell(195,190,'',0,0,'C');
 $this->SetFont('Arial','',12);
