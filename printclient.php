@@ -52,9 +52,9 @@ class MyPDF extends FPDF {
        
         $this->SetFont('Times','B',16);
 
-        $this->Cell(195,0,'TRANSACTIONS HISTORY',0,0,'C');	
+        $this->Cell(195,20,'TRANSACTIONS HISTORY',0,0,'C');	
         $this->Ln();	
-        $this->Ln();
+       
 		
         
 
