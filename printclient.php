@@ -46,12 +46,12 @@ class MyPDF extends FPDF {
         $this->SetFont('Arial', 'B', 12);
         $this->Cell(0, 55, date("d-m-Y "), 0, 0, 'R');
 
-       
+        $this->Ln();	
        
        
         $this->SetFont('Times','B',16);
 
-        $this->Cell(60,60,'TRANSACTIONS HISTORY',0,0,'C');	
+        $this->Cell(195,20,'TRANSACTIONS HISTORY',0,0,'C');	
         $this->Ln();	
        
 		
@@ -116,7 +116,7 @@ $this->Image('logo3.png',25,270,160,0);
 $pdf = new MyPDF();
 $pdf->AddPage();
 
-$pdf->SetFont('Arial', 'B', 10); // Font for table headers
+$pdf->SetFont('Arial', 'B', 12); // Font for table headers
 $pdf->SetFont ('Arial', '', 8); // Font for table content
 
 $pdf->Cell(28, 8, 'Transaction ID', 1, 0,  'C');
