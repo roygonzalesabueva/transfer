@@ -160,9 +160,9 @@ while($rows=mysqli_fetch_array($query)){
 
     
     $pdf->MultiCell(26, $h, $rows['address'], 1, 'C');
-    $y3= $pdf->GetY();
-    $pdf->SetY($y3+0);
-    $pdf->Cell(131,$h,'');
+    $y1= $pdf->GetY();
+    $pdf->SetY($y1+0);
+   
   
        
 						}
