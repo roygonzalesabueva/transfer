@@ -49,7 +49,7 @@ class MyPDF extends FPDF {
 
         $this->Ln();
 
-        $this->Cell(-195,80,'TRANSACTIONS HISTORY',0,0,'C');	
+        $this->Cell(-100,80,'TRANSACTIONS HISTORY',0,0,'C');	
         
 
         // $this->Ln();	
