@@ -128,7 +128,7 @@ $pdf->Cell(26, 10, 'Remarks', 1, 1, 'C');
 require'conn.php';
 
 $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST['trackid']}'  ") or die(mysqli_error());
-$h=7;
+$h=14;
 while($rows=mysqli_fetch_array($query)){
 
     $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'C');
