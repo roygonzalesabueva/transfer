@@ -41,7 +41,7 @@ class MyPDF extends FPDF {
                 
         $this->SetFont('Times','B',12);
         $this->Cell(60,-55,'Office of the Division Records',0,0,'C');
-     
+        $this->Ln();
        
         $this->SetFont('Arial', 'B', 12);
         $this->Cell(0, -55, date("d-m-Y "), 0, 0, 'R');
