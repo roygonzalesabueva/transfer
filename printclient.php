@@ -69,10 +69,10 @@ class MyPDF extends FPDF {
 function Footer()
 {
 	
-	$this->Image('STAMP.png',10,240,60,0);
+	$this->Image('STAMP.png',10,255,60,0);
 	
    // $this->Image('sds.jpg',120,235,80,0);
-		$this->Image('logo4.png',120,240,60,0);
+		$this->Image('logo4.png',120,255,60,0);
 		$this->SetFont('Arial','B',12);
 $this->Cell(195,190,'',0,0,'C');
 $this->SetFont('Arial','',12);
