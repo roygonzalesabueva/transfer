@@ -146,7 +146,7 @@ while($rows=mysqli_fetch_array($query)){
     $pdf->Cell(28, $h, $rows['section'], 1, 0, 'C');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
-    $pdf->Cell(103,$h,'');
+    $pdf->Cell(150,$h,'');
 
     
     $pdf->Cell(35, $h, $rows['date_created'], 1, 0, 'C');
