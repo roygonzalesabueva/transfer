@@ -49,6 +49,12 @@ class MyPDF extends FPDF {
 
 
         $this->Image('history.png',73,60,60,0);
+
+        $this->SetFont('Times','B',12);
+        $this->Cell(45, $h, $rows['lastname'], 0,0,'C');
+        $this->Ln();
+
+        
         
         $this->Ln();
 
@@ -128,18 +134,14 @@ $pdf->Cell(28, 8, 'Receiver', 1, 0, 'C');
 $pdf->Cell(35, 8, 'Date/Time', 1, 0, 'C');
 $pdf->Cell(26, 8, 'Remarks', 1, 1, 'C');
 
-    
 
 require'conn.php';
 
 $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST['trackid']}'  ") or die(mysqli_error());
 $h=5;
-
-$pdf->Cell(20, $h, $rows['lastname'], 1, 1,'C');
-
 while($rows=mysqli_fetch_array($query)){
 
-    
+   
     $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'C');
     $y= $pdf->GetY();
     
@@ -148,7 +150,10 @@ while($rows=mysqli_fetch_array($query)){
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
-    
+//     $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
+//     $y4= $pdf->GetY();
+//     $pdf->SetY($y);
+//  $pdf->Cell(103,$h,'');
     $pdf->MultiCell(28, $h, $rows['section'], 1,'C');
     
     $y2= $pdf->GetY();
