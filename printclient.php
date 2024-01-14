@@ -51,7 +51,7 @@ class MyPDF extends FPDF {
         $this->Image('history.png',73,60,60,0);
 
         $this->SetFont('Times','B',12);
-        $this->Cell(45, $h, $rows['lastname'], 0,0,'C');
+        $this->Cell(45, -50, $rows['lastname'], 0,0,'C');
         $this->Ln();
 
         
