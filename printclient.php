@@ -141,7 +141,7 @@ while($rows=mysqli_fetch_array($query)){
     
 
     $pdf->MultiCell(30, $h, $rows['firstname'], 1, 'C');
-    $y4= $pdf->GetY();
+    $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
     $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
@@ -150,7 +150,7 @@ while($rows=mysqli_fetch_array($query)){
     $pdf->Cell(103,$h,'');
     $pdf->MultiCell(28, $h, $rows['section'], 1,'C');
     
-    $y2= $pdf->GetY();
+    $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(131,$h,'');
 
