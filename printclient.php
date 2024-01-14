@@ -127,7 +127,7 @@ $pdf->Cell(45, 8, 'Transaction/Description', 1, 0, 'C');
 $pdf->Cell(28, 8, 'Receiver', 1, 0, 'C');
 $pdf->Cell(35, 8, 'Date/Time', 1, 0, 'C');
 $pdf->Cell(26, 8, 'Remarks', 1, 1, 'C');
-$pdf->Cell(45, 8, $rows['lastname'], 1, 1,'C');
+
     
 
 require'conn.php';
@@ -136,7 +136,7 @@ $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST[
 $h=5;
 while($rows=mysqli_fetch_array($query)){
 
-   
+    $pdf->Cell(45, $h, $rows['lastname'], 1, 1,'C');
     $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'C');
     $y= $pdf->GetY();
     
