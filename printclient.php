@@ -119,14 +119,14 @@ $pdf = new MyPDF();
 $pdf->AddPage();
 
 $pdf->SetFont('Arial', 'B', 12); // Font for table headers
-$pdf->SetFont ('Arial', '', 8); // Font for table content
+$pdf->SetFont ('Arial', '', 12); // Font for table content
 
-$pdf->Cell(28, 8, 'Transaction ID', 1, 0,  'C');
-$pdf->Cell(30, 8, 'Sender/Client', 1, 0, 'C');
-$pdf->Cell(45, 8, 'Transaction/Description', 1, 0, 'C');
-$pdf->Cell(28, 8, 'Receiver', 1, 0, 'C');
-$pdf->Cell(35, 8, 'Date/Time', 1, 0, 'C');
-$pdf->Cell(26, 8, 'Remarks', 1, 1, 'C');
+$pdf->Cell(28, 12, 'Transaction ID', 1, 0,  'C');
+$pdf->Cell(30, 12, 'Sender/Client', 1, 0, 'C');
+$pdf->Cell(45, 12, 'Transaction/Description', 1, 0, 'C');
+$pdf->Cell(28, 12, 'Receiver', 1, 0, 'C');
+$pdf->Cell(35, 12, 'Date/Time', 1, 0, 'C');
+$pdf->Cell(26, 812, 'Remarks', 1, 1, 'C');
 
 
 require'conn.php';
