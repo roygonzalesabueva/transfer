@@ -49,12 +49,6 @@ class MyPDF extends FPDF {
 
 
         $this->Image('history.png',73,60,60,0);
-
-        $this->SetFont('Times','B',12);
-        $this->Cell(45, -50, $rows['lastname'], 0,0,'C');
-        $this->Ln();
-
-        
         
         $this->Ln();
 
@@ -150,10 +144,10 @@ while($rows=mysqli_fetch_array($query)){
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
-//     $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
-//     $y4= $pdf->GetY();
-//     $pdf->SetY($y);
-//  $pdf->Cell(103,$h,'');
+    $pdf->MultiCell(45, $h, $rows['lastname'], 1, 'C');
+    $y4= $pdf->GetY();
+    $pdf->SetY($y);
+ $pdf->Cell(103,$h,'');
     $pdf->MultiCell(28, $h, $rows['section'], 1,'C');
     
     $y2= $pdf->GetY();
