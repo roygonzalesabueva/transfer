@@ -119,7 +119,7 @@ $pdf = new MyPDF();
 $pdf->AddPage();
 
 $pdf->SetFont('Arial', 'B', 10); // Font for table headers
-//$pdf->SetFont ('Arial', '', 8); // Font for table content
+$pdf->SetFont ('Arial', '', 8); // Font for table content
 
 $pdf->Cell(28, 8, 'Transaction ID', 1, 0,  'C');
 $pdf->Cell(30, 8, 'Sender/Client', 1, 0, 'C');
@@ -162,7 +162,7 @@ while($rows=mysqli_fetch_array($query)){
     
     $pdf->MultiCell(26, $h, $rows['address'], 1, 'C');
    
-    $pdf->SetY($y1+0);
+    $pdf->SetY($y1+5);
     
    
   
