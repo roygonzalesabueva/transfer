@@ -134,9 +134,12 @@ require'conn.php';
 
 $query=mysqli_query($conn, "SELECT * FROM `memberclient` WHERE trackid='{$_POST['trackid']}'  ") or die(mysqli_error());
 $h=5;
+
+$pdf->Cell(20, $h, $rows['lastname'], 1, 1,'C');
+
 while($rows=mysqli_fetch_array($query)){
 
-    $pdf->Cell(20, $h, $rows['lastname'], 1, 1,'C');
+    
     $pdf->Cell(28, $h, $rows['trackid'], 1, 0, 'C');
     $y= $pdf->GetY();
     
