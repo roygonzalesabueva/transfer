@@ -127,7 +127,8 @@ $pdf->Cell(45, 8, 'Transaction/Description', 1, 0, 'C');
 $pdf->Cell(28, 8, 'Receiver', 1, 0, 'C');
 $pdf->Cell(35, 8, 'Date/Time', 1, 0, 'C');
 $pdf->Cell(26, 8, 'Remarks', 1, 1, 'C');
-
+$pdf->Cell(45, 8, $rows['lastname'], 1, 1,'C');
+    
 
 require'conn.php';
 
@@ -140,14 +141,11 @@ while($rows=mysqli_fetch_array($query)){
     $y= $pdf->GetY();
     
 
-    $pdf->MultiCell(30, $h, $rows['lastname'], 1, 'C');
+    $pdf->MultiCell(30, $h, $rows['firstname'], 1, 'C');
     $y1= $pdf->GetY();
     $pdf->SetY($y);
     $pdf->Cell(58,$h,'');
-    $pdf->MultiCell(45, $h, $rows['firstname'], 1, 'C');
-    $y4= $pdf->GetY();
-    $pdf->SetY($y);
- $pdf->Cell(103,$h,'');
+    
     $pdf->MultiCell(28, $h, $rows['section'], 1,'C');
     
     $y2= $pdf->GetY();
