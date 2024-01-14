@@ -126,7 +126,7 @@ $pdf->Cell(30, 12, 'Sender/Client', 1, 0, 'C');
 $pdf->Cell(45, 12, 'Transaction/Description', 1, 0, 'C');
 $pdf->Cell(28, 12, 'Receiver', 1, 0, 'C');
 $pdf->Cell(35, 12, 'Date/Time', 1, 0, 'C');
-$pdf->Cell(26, 812, 'Remarks', 1, 1, 'C');
+$pdf->Cell(26, 12, 'Remarks', 1, 1, 'C');
 
 
 require'conn.php';
