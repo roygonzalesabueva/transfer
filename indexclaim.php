@@ -3,7 +3,7 @@
 // Your PHP code and processing here
 
 // Refresh the page after 3 seconds (adjust the value as needed)
-$refreshDelay = 10;
+$refreshDelay = 60;
 header("refresh: $refreshDelay");
 
 // The rest of your PHP code and HTML content
