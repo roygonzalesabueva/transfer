@@ -10,15 +10,6 @@ include_once("session.php")
 <link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
 
 
-<?php
-// Your PHP code and processing here
-
-// Refresh the page after 3 seconds (adjust the value as needed)
-$refreshDelay = 60;
-header("refresh: $refreshDelay");
-
-// The rest of your PHP code and HTML content
-?>
 
 
 <?php
