@@ -1,12 +1,4 @@
-<?php
-// Your PHP code and processing here
 
-// Refresh the page after 3 seconds (adjust the value as needed)
-$refreshDelay = 10;
-header("refresh: $refreshDelay");
-
-// The rest of your PHP code and HTML content
-?>
 
 <?php
 include_once("session.php")
@@ -22,7 +14,7 @@ include_once("session.php")
 // Your PHP code and processing here
 
 // Refresh the page after 3 seconds (adjust the value as needed)
-$refreshDelay = 15;
+$refreshDelay = 35;
 header("refresh: $refreshDelay");
 
 // The rest of your PHP code and HTML content
