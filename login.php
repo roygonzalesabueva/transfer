@@ -114,16 +114,20 @@
                 header("location: indexgaso.php");
             } 
             
-            else {
-                echo ' <script>
+            // else {
+            //     echo ' <script>
 
-                $(document).ready(function(){  
-                window.location = window.location.href + "?openmodal=1";
-              });
+            //     $(document).ready(function(){  
+            //     window.location = window.location.href + "?openmodal=1";
+            //   });
                   
-              </script>      
-            ';
-            }
+            //   </script>      
+            // ';
+            // }
+
+
+
+            
             // $(document).ready(function(){  
             //     $("#Select_Department").modal("show");
             // });
