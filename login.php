@@ -349,6 +349,10 @@ $(document).ready(function(){
 
                     <input type="hidden" name="email" value="<?php echo $_SESSION['username'];  ?>">
                     <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn mt-3" name="login"> DEPARTMENTAL DASHBOARD </button>
+                    <a href="http://202.137.126.59/
+transfer/index_trans.php  
+
+" class="btn btn-primary btn-block btn-lg"> CLIENT FILES LOCATOR</a>
                 </form>
 
                 <!-- <a href="login.php" class="btn btn-primary btn-block btn-lg"> DEPARTMENTAL DASHBOARD</a> -->
