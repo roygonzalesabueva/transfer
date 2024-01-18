@@ -127,7 +127,7 @@
 
 
 
-            
+
             // $(document).ready(function(){  
             //     $("#Select_Department").modal("show");
             // });
@@ -356,7 +356,7 @@ $(document).ready(function(){
                     <a href="http://202.137.126.59/
 transfer/index_trans.php  
 
-" class="btn btn-primary btn-block btn-lg">CREATE TRANSACTION</a>
+" class="btn btn-primary btn-block btn-lg">CREATE NEW TRANSACTION</a>
                 </form>
 
                 <!-- <a href="login.php" class="btn btn-primary btn-block btn-lg"> DEPARTMENTAL DASHBOARD</a> -->
