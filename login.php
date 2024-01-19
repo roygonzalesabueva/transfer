@@ -172,9 +172,9 @@ $(document).ready(function(){
             "' WHERE email='" . $_SESSION['username'] . "'";
         $result = mysqli_query($conn, $scpt) or die("Server Error!");
     }
-    //else {
-    //	echo"<script>alert('error=Incorrect User Name or password.')</script>";
-    //	}
+    else {
+    	echo"<script>alert('error=Incorrect User Name or password.')</script>";
+    	}
 
     //sql statement
     //$sql = "SELECT * FROM userschat WHERE username='$username' ";
