@@ -161,7 +161,7 @@ $(document).ready(function(){
             //header("location: dashboard.php");
             //header("location: index.php");
 
-            // echo "<script>alert('Failed! User not Found!.')</script>";
+            echo "<script>alert('Failed! User not Found!.')</script>";
 
         }
     }
