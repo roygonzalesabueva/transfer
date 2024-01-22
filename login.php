@@ -117,7 +117,7 @@
 
 
 else {
-	echo"<script>alert('error=Incorrect User Name or password.')</script>";
+	echo"<script>alert('error=Incorrect User Name.')</script>";
     	}
 
 
