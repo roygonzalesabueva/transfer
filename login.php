@@ -116,9 +116,9 @@
             
 
 
-// else {
-// 	echo"<script>alert('error=Incorrect User Name.')</script>";
-//     	}
+else {
+	echo"<script>alert('error=Incorrect User Name.')</script>";
+    	}
 
 
 
