@@ -29,7 +29,7 @@
     // $_SESSION['security_key'];   
 
     if (!isset($_SESSION['username'])) {
-        header("Location: http://subsystems.projectdavaosur.com/");
+        header("Location: http://projectdavaosur.com/");
         exit();
     }
     $_SESSION['user'] = $_SESSION['username'];
